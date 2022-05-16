@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tao form don gian</title>
+    <style>
+        .wufoo{
+            font-family: sans-serif, "lucida Grande", "lucida sans unicode", Tahoma;
+        }
+        .boderexam1{
+            border-top: 10px solid cyan;
+            border-bottom: 15px solid cyan;
+            border-left: 20px solid cyan;
+            border-right: 20px solid cyan;
+        }
+        . boderexam2{
+            border: 10px solid yellow;
+        }
+    </style>
+</head>
+<body>
+<form method="get" action="tao form don gian" class="wufoo">
+    <table class="boderexam1" cellspacing="0" >
+        <colgroup>
+            <col width="100" span="1">
+            <col width="150" span="3">
+        </colgroup>
+    <tr>
+        <th colspan="4"style="text-align-all: center; background-color: red; color: white "> SỞ THÍCH CỦA BẠN </th>
+    </tr>
+    <tr>
+        <td style="text-align: right; color: blue"> Họ và tên </td>
+        <td colspan="3"><input type="text" name="yourname" size="30" /></td>
+    </tr>
+    <tr>
+        <td style="text-align: right; color: blue">Email</td>
+        <td colspan="3"><input type="text"name="email"size="25"></td>
+    </tr>
+    <tr>
+        <td rowspan="4" style="text-align: right; color: blue" valign="top">Sở thích</td>
+        <td style="color: orange"><input type="checkbox"name="1">Thể thao</td>
+        <td style="color: orange"><input type="checkbox"name="2">Âm nhạc</td>
+        <td style="color: orange"><input type="checkbox"name="3">Đọc sách</td>
+    </tr>
+    <tr>
+        <td style="color: orange"><input type="checkbox"name="4">Lướt Web</td>
+        <td style="color: orange"><input type="checkbox"name="5">Chơi game</td>
+        <td style="color: orange"><input type="checkbox"name="6">Điện ảnh</td>
+    </tr>
+    <tr>
+        <td style="color: orange"><input type="checkbox"name="7">Du lịch</td>
+    </tr>
+        <tr>
+            <td colspan="3"><input type="submit" name="gui" value="Gửi thông tin"><input type="reset"name="huy"value="Nhập lại"></td>
+        </tr>
+</table>
+    <br>
+    <br>
+    <br>
+
+    <table class="boderexam2" style="background-color: yellow" cellspacing="0">
+        <colgroup>
+            <col width="100" span="1">
+            <col width="150" span="3">
+        </colgroup>
+        <tr>
+            <th colspan="4" style="text-align: left; background-color: aquamarine; color: blue">ĐĂNG KÝ HỌC VIÊN</th>
+        </tr>
+        <tr>
+            <td style="text-align: left; color: blue">Họ và tên</td>
+            <td colspan="3"><input type="text"name="yourname"size="30" </td>
+         <tr/>
+        <tr>
+            <td style="text-align: left; color: blue">Ngày sinh</td>
+            <td colspan="2"><input type="text"birth="yourname"size="20" </td>
+        </tr>
+        <tr>
+            <td style="text-align: left; color: blue">Giới tính</td>
+                <td style="color: black"><input type="radio" value="Nam">Nam <input type="radio" value="Nữ">Nữ</td>
+        </tr>
+        <tr>
+            <td style="text-align: left; color: blue ; vertical-align: top"> Địa chỉ </td>
+            <td><textarea rows="4" cols="30" name="address"></textarea>  </td>
+        </tr>
+        <tr>
+            <td style="text-align: left; color: blue">Lớp</td>
+            <td>
+                <select name="chọn lớp">
+                    <option chọn lớp</option>
+                    <option>a1</option>
+                    <option>a2</option>
+                    <option>a3</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: left; color: blue">Email</td>
+            <td><input type="text"birth="mail"size="20" </td>
+        </tr>
+        <tr>
+            <td style="text-align: left; color: blue">Điện thoại</td>
+            <td><input type="text"birth="phone"size="20" </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" name="gui" value="Đăng kí"><input type="reset"name="huy"value="Nhập lại"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
