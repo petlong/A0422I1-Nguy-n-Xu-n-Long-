@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>may_tinh</title>
+</head>
+<body>
+<h2>Caculater</h2>
+<p><input type="text"id="number1">
+<input type="text"id="number2"></p>
+
+    <input id="add"type="button"onclick="cal1()" value="Addition(+)">
+    <input id="sub"type="button"onclick="cal2()" value="Subtrction(-)">
+    <input id="mul" type="button"onclick="cal3()" value="Multiplication(X)">
+    <input id="div" type="button"onclick="cal4()" value="Division(/)">
+
+<p id="result">Result Division:</p>
+
+<script>
+    function cal1()
+    {
+        let so1=parseInt(document.getElementById('number1').value)
+        let so2=parseInt(document.getElementById('number2').value)
+        let tong=so1+so2
+            document.getElementById('result').innerHTML="Result Division:"+ tong;
+
+    }
+    function cal2()
+    {
+        let so1=parseInt(document.getElementById('number1').value)
+        let so2=parseInt(document.getElementById('number2').value)
+        let sub=so1-so2
+        document.getElementById('result').innerHTML="Result Division:"+ sub;
+    }
+    function cal3()
+    {
+        let so1=parseInt(document.getElementById('number1').value)
+        let so2=parseInt(document.getElementById('number2').value)
+        let mul=so1*so2
+        document.getElementById('result').innerHTML="Result Division:"+ mul;
+    }
+    function cal4()
+    {
+        let so1=parseInt(document.getElementById('number1').value)
+        let so2=parseInt(document.getElementById('number2').value)
+        let div=so1/so2
+        document.getElementById('result').innerHTML="Result Division:"+ div;
+    }
+     </script>
+</body>
+</html>

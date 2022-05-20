@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai_1</title>
+    <script type="text/javascript" >
+        function tinh()
+        {
+            let diemVatLy=parseInt(document.getElementById('diemLy').value)
+            let diemHoa=parseInt(document.getElementById('diemHoa').value)
+            let diemSinh=parseInt(document.getElementById('diemSinh').value)
+
+            let TrungBinh=(diemVatLy+diemHoa+diemSinh)/3;
+            document.getElementById('diemTrungbinh').value=TrungBinh;
+        }
+    </script>
+</head>
+<body>
+<table>
+    <tr>
+        <td>Điểm vật lý:</td>
+        <td><input type="text" name="dtb" id="diemLy"></td>
+    </tr>
+    <tr>
+    <td>Điểm Hóa:</td>
+    <td><input type="text" name="dtb" id="diemHoa"></td>
+</tr>
+    <tr>
+        <td>Điểm Sinh:</td>
+        <td><input type="text" name="dtb" id="diemSinh"></td>
+    </tr>
+
+    <tr>
+        <td>Điểm Trung bình:</td>
+        <td><input type="text" name="dtb" id="diemTrungbinh"></td>
+        <td><input type="button"value="Tính" onclick="tinh()"></td>
+    </tr>
+</table>
+</body>
+</html>
