@@ -15,3 +15,4 @@ function cals1()
     let C=pi*2*R;
     document.getElementById('chuVi').value=C;
 }
+

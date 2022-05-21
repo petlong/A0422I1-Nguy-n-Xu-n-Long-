@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>if_else_if</title>
+</head>
+<body>
+<script>
+    let username=prompt('Enter your name');
+    if (username=='Admin'){
+        let pass=prompt('Please enter password');
+        if(pass=='TheMaster'){
+            alert('Welcome');
+        }else if(pass == null){
+            alert('canceled');
+        } else {
+            alert('Wrong passwword');
+        }
+    } else if(username == null){
+        alert('canceled');}
+     else {
+         alert("I don't khow you");
+    }
+</script>
+</body>
+</html>

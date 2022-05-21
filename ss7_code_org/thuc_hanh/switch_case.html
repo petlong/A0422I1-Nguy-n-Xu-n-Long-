@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>switch_case</title>
+</head>
+<body>
+<script>
+    //bài 1
+    let browser = prompt("enter browser");
+    switch (browser) {
+        case 'Edge':
+            alert("you 've got the edge");
+            break;
+        case 'Chrome':
+        case 'Firefox':
+        case 'Safari':
+        case 'Opera':
+            alert('Okay we support these browsers too');
+            break;
+         default:
+             alert('We hope that this page looks ok!');
+    }
+    //bài 2
+    let a = parseInt(prompt('a?', ''));
+    switch (a) {
+        case 0:
+            alert(0);
+            break;
+        case 1:
+            alert(1);
+            break;
+        case 2:
+        case 3:
+            alert('2,3');
+            break;
+    }
+    //bài 3 if-else
+    let value=prompt('Type a number', 0);
+    let value1 =;
+    if (value>0){
+        alert(1);
+    } else if (value<0){
+          alert(-1)
+    }else {
+        alert(0)
+    }
+
+    
+    // bài 3 chuyển if-else sang lệnh switch case
+    function check_negative_positive_number(n){
+        //lệnh kiểm tra số âm hay dương
+        //flag = -1 => số âm
+        //flag =  0 =>  số 0
+        //flag =  1 => số dương
+
+        let flag = 0;
+        if (n >0){ flag = 1;}
+        else if (n<0) {flag = -1;}
+        return flag;
+    }//lệnh trên là lệnh kiểm tra số âm số dương
+    let n= prompt('type a number', 0);
+    let check= check_negative_positive_number(n)
+    switch (check) {
+        case 1:
+            alert(1);
+            break;
+        case -1:
+            alert(-1);
+            break;
+        default:
+            alert(0)
+    }
+
+</script>
+</body>
+</html>
