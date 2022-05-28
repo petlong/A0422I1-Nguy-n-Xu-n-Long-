@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính số ngày trong một tháng</title>
+</head>
+<body>
+<form>
+<p><input type="text" id="enterNumber"><input type="button" onclick="numberDay()" value="Tính số ngày" ></p>
+<b><p id="displayNumberDay">Kết quả</p></b>
+</form>
+<script>
+    function numberDay() {
+        let number = parseInt(document.getElementById('enterNumber').value);
+        switch (number) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                document.getElementById('displayNumberDay').innerHTML="Tháng " + number + " có 31 ngày";
+                break;
+            case 2:
+                document.getElementById('displayNumberDay').innerHTML="Tháng " + number + " có 28 hoặc 29 ngày";
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                document.getElementById('displayNumberDay').innerHTML="Tháng " + number + " có 30 ngày";
+                break;
+            default:
+                 document.getElementById('displayNumberDay').innerHTML="Yêu cầu nhập số (hoặc nhập lại số từ 1 đến 12)";
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>simple_calculator</title>
+    <style type="text/css">
+        table{
+            border: 10px solid black;
+            padding: 5px;
+        }
+        th{
+            color: blue;
+            border: 5px solid gray;
+            width: 100px;
+            height: 100px;
+            font-size: xx-large;
+        }
+        .button{
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <tr>
+        <th colspan="4" id="result"></th>
+    </tr>
+    <tr class="button">
+        <th><input id=oneNumber type="button" value="1" onclick="oneNumber()"></th>
+        <th><input id=twoNumber type="button" value="2" onclick="twoNumber()"></th>
+        <th><input id=threeNumber type="button" value="3" onclick="threeNumber()"></th>
+        <th><input id=addNumber type="button" value="+" onclick="addNumber()"></th>
+    </tr>
+    <tr>
+        <th><input id=fourNumber type="button" value="4" onclick="fourNumber()"></th>
+        <th><input id=fiveNumber type="button" value="5" onclick="fiveNumber()"></th>
+        <th><input id=sixNumber type="button" value="6" onclick="sixNumber())"></th>
+        <th><input id=subNumber type="button" value="-" onclick="subNumber()"></th>
+    </tr>
+    <tr>
+        <th><input id=sevenNumber type="button" value="7" onclick="sevenNumber()"></th>
+        <th><input id=eightNumber type="button" value="8" onclick="eightNumber()"></th>
+        <th><input id=nineNumber type="button" value="9" onclick="nineNumber()"></th>
+        <th><input id=mulNumber type="button" value="x" onclick="mulNumber()"></th>
+    </tr>
+    <tr>
+        <th><input id=cNumber type="button" value="C" onclick="cNumber()"></th>
+        <th><input id=zeroNumber type="button" value="0" onclick="zeroNumber()"></th>
+        <th><input id=equaNumber type="button" value="=" onclick="equaNumber()"></th>
+        <th><input id=divNumber type="button" value="/" onclick="divNumber()"></th>
+    </tr>
+</table>
+<script>
+    function oneNumber() {
+        document.getElementById('result').innerText += 1;
+    }
+    function twoNumber() {
+        document.getElementById('result').innerText += 2;
+    }
+    function threeNumber() {
+        document.getElementById('result').innerText += 3;
+    }
+    function fourNumber() {
+        document.getElementById('result').innerText += 4;
+    }
+    function fiveNumber() {
+        document.getElementById('result').innerText += 5;
+    }
+    function sixNumber() {
+        document.getElementById('result').innerText += 6;
+    }
+    function sevenNumber() {
+        document.getElementById('result').innerText += 7;
+    }
+    function eightNumber() {
+        document.getElementById('result').innerText += 8;
+    }
+    function nineNumber() {
+        document.getElementById('result').innerText += 9;
+    }
+    function zeroNumber() {
+        document.getElementById('result').innerText += 0;
+    }
+    function addNumber() {
+        document.getElementById('result').innerText +="+";
+    }
+    function equaNumber() {
+        let result= eval('=')
+        document.getElementById('result').innerText=result ;
+    }
+
+
+
+
+</script>
+</body>
+</html>

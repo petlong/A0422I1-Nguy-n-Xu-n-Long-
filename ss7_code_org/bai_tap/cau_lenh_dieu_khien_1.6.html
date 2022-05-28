@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai_6</title>
+</head>
+<body>
+<p>Doanh thu bán hàng: <input id="salesRevenue" type="text"> VND</p>
+<p id="commission">Hoa hồng nhận được: </p>
+<input type="button" value="calculate" onclick="calculate()">
+<script>
+    function calculate() {
+        let salesRevenue = parseInt(document.getElementById("salesRevenue").value);
+        let commission;
+        if (salesRevenue < 10000000) {
+            commission = salesRevenue * 5 / 100
+            document.getElementById('commission').innerHTML = "Hoa hồng nhận được: " + commission + "VND"
+        }else if(salesRevenue < 100000000){
+            commission = salesRevenue * 10 / 100
+            document.getElementById('commission').innerHTML = "Hoa hồng nhận được: " + commission + "VND"
+        }else if(salesRevenue < 1000000000){
+            commission = salesRevenue * 20 / 100
+            document.getElementById('commission').innerHTML = "Hoa hồng nhận được: " + commission + "VND"
+    }else {
+            commission = salesRevenue * 30 / 100
+            document.getElementById('commission').innerHTML = "Hoa hồng nhận được: " + commission + "VND"
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cau_truc_dieu_kien_2</title>
+</head>
+<body>
+<h4>Bài 1: Chuyển từ độ C sang độ F.</h4>
+<p>Temperature C : <input id="tempC" type="text"></p>
+<p id="tempF"></p>
+<input type="button" value="convert" onclick="cal1()">
+<br>
+<br>
+<br>
+<h4>Bài 2: Chuyển từ mét sang feet.</h4>
+<p>Meter : <input id="meter" type="text"></p>
+<p id="feet"></p>
+<input type="button" value="convert" onclick="cal2()">
+<br>
+<br>
+<br>
+<h4>Bài 3: Tính diện tích hình vuông khi biết cạnh a.</h4>
+<p>Side A: <input type="text" id="sideA"></p>
+<p id="areaSquare"></p>
+<input type="button" value="Calculate" onclick="cal3()">
+
+<br>
+<br>
+<br>
+<h4>Bài 4: Tính diện tích hình  chữ nhật khi biết 02 cạnh a, b.</h4>
+<p>Side A: <input type="text" id="sideAA"></p>
+<p>Side B: <input type="text" id="sideBB"></p>
+<p id="areaRectangle"></p>
+<input type="button" value="Calculate" onclick="cal4()">
+
+<br>
+<br>
+<br>
+<h4>Bài 5: Tính diện tích tam giác vuông khi biết 02 cạnh kề a, b.</h4>
+<p>Adjacent Side A: <input type="text" id="adjacentSideA"></p>
+<p>Adjacent Side B: <input type="text" id="adjacentSideB"></p>
+<p id="areaRightAngledTriangle"></p>
+<input type="button" value="Calculate" onclick="cal5()">
+
+
+
+<br>
+<br>
+<br>
+<h4>Bài 6: Giải phương trình bậc 1.</h4>
+<h4>ax+b=0.</h4>
+<p>Enter a: <input type="text" id="valueA"></p>
+<p>Enter b: <input type="text" id="valueB"></p>
+<p id="valueX">x = </p>
+<input type="button" value="Calculate" onclick="cal6()">
+
+<br>
+<br>
+<br>
+<h4>Bài 7: Giải phương trình bậc 2.</h4>
+<h4>ax<sup>2</sup>+ bx + c = 0</h4>
+<p>Enter a: <input type="text" id="valueAA"></p>
+<p>Enter b: <input type="text" id="valueBB"></p>
+<p>Enter c: <input type="text" id="valueCC"></p>
+<p id="valueXX"> </p>
+<input type="button" value="Calculate" onclick="cal7()">
+
+<br>
+<br>
+<br>
+<br>
+<h4>Bài 8: Kiểm tra xem một số nhập vào có phải là tuổi của một người không.<br>
+    Một số nguyên là tuổi của một người khi nhỏ 120 và lớn hơn 0.</h4>
+<p>Enter number: <input type="text" id="numberAge"></p>
+<p id="resutlAge"></p>
+<input type="button" value="Check" onclick="cal8()">
+
+<br>
+<br>
+<br>
+<br>
+<h4>Bài 9: Kiểm tra xem 3 số thực (a,b,c) nhập vào có phải là cạnh của một tam giác.<br>
+    Điều kiện để a,b,c là cạnh của một tam giác là:<br>
+       a,b,c > 0<br>
+       a + b > c<br>
+       b + c > a<br>
+       a + c > b<br>
+</h4>
+<p>Enter number a: <input type="text" id="numberA"></p>
+<p>Enter number b: <input type="text" id="numberB"></p>
+<p>Enter number c: <input type="text" id="numberC"></p>
+<p id="resutlTriangle"></p>
+<input type="button" value="check" onclick="cal9()">
+
+
+<br>
+<br>
+<br>
+<h4>Bài 10: Viết chương trình tính giá điện.</h4>
+<p>Enter number electric power consumption (kwh): <input type="text" id="electricPowwer"></p>
+<p id="moneyElectric"></p>
+<input type="button" value="calculate" onclick="cal10()">
+
+
+
+
+
+
+<br>
+<br>
+<br>
+<h4>Bài 11: Viết chương trình tính thuế thu nhập cá nhân.</h4>
+<p>Salary range (VND): <input type="text" id="salaryRange"></p>
+<p id="incomeTaxes"></p>
+<input type="button" value="calculate" onclick="cal11()">
+
+
+<br>
+<br>
+<br>
+<h4>Bài 12: Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lãi con) <br>
+    khi biết số tiền ban đầu, số tháng cho vay và lãi xuất hàng tháng.</h4>
+
+<p>Money lending (VND): <input type="text" id="moneyLending"></p>
+<p>Number month:  <input type="text" id="numberMonth"></p>
+<p>% Interest: 2%/month</p>
+<p id="moneyInterest"></p>
+<input type="button" value="calculate" onclick="cal12()">
+
+
+
+<script>
+
+    //Bài 1: Chuyển từ độ C sang độ F.
+    function cal1() {
+    let tempC=parseFloat(document.getElementById("tempC").value);
+     tempF= tempC * 9 / 5 + 32
+    document.getElementById("tempF").innerHTML="Temperature F: "+ tempF;
+    }
+
+    //Bài 2: Chuyển từ mét sang feet.
+    function cal2() {
+    let meter=parseFloat(document.getElementById("meter").value);
+    feet= meter * 3.2808
+    document.getElementById("feet").innerHTML="Feet: "+ feet;
+    }
+
+
+    //Bài 3: Tính diện tích hình vuông khi biết cạnh a.
+    function cal3() {
+        let sideA=parseFloat(document.getElementById("sideA").value);
+        if (sideA<0) {
+            document.getElementById("areaSquare").innerHTML = "Please enter number bigger 0";
+        }else {
+                    areaSquare = sideA * sideA;
+                    document.getElementById("areaSquare").innerHTML = "Area of Square: " + areaSquare;
+                }
+            }
+
+      // Bài 4: Tính diện tích hình  chữ nhật khi biết 02 cạnh a, b.
+            function cal4() {
+        let sideAA=parseFloat(document.getElementById("sideAA").value);
+        let sideBB=parseFloat(document.getElementById("sideBB").value);
+
+        if (sideAA<0 || sideBB<0) {
+            document.getElementById("areaRectangle").innerHTML = "Please enter number bigger 0";
+        }else {
+            areaRetangle = sideAA * sideBB;
+            document.getElementById("areaRectangle").innerHTML = "Area of Retangle: " + areaRetangle;
+        }
+    }
+
+
+    //Bài 5: Tính diện tích tam giác vuông khi biết 02 cạnh kề a, b.
+    function cal5() {
+        let adjacentSideA=parseFloat(document.getElementById("adjacentSideA").value);
+        let adjancentSideB=parseFloat(document.getElementById("adjacentSideB").value);
+        if (adjacentSideA<0 || adjancentSideB<0) {
+            document.getElementById("areaRightAngledTriangle").innerHTML = "Please enter number bigger 0";
+        }else {
+            areaRightAngledTriangle = adjacentSideA * adjancentSideB / 2;
+            document.getElementById("areaRightAngledTriangle").innerHTML = "Area of Right-Angled Triangle: " + areaRightAngledTriangle;
+        }
+    }
+
+
+    //Bài 6: Giải phương trình bậc 1.
+    function cal6() {
+        let valueA=parseInt(document.getElementById("valueA").value);
+        let valueB=parseInt(document.getElementById("valueB").value);
+        let valueX;
+        if (valueA==0){
+            if (valueB==0){
+                document.getElementById("valueX").innerHTML = "Phương trình vô số nghiệm";
+            }else {
+                document.getElementById("valueX").innerHTML = "Phương trình vô nghiệm";
+            }
+        }else {
+            valueX= (0-valueB)/valueA
+            document.getElementById("valueX").innerHTML = "x = "+valueX;
+        }
+    }
+
+    //Bài 7: Giải phương trình bậc 2.
+    function cal7() {
+        let valueAA = parseInt(document.getElementById("valueAA").value);
+        let valueBB = parseInt(document.getElementById("valueBB").value);
+        let valueCC = parseInt(document.getElementById("valueCC").value);
+        let valueDelta;
+        let valueXX1;
+        let valueXX2;
+        if (valueAA == 0) {
+            if (valueBB == 0) {
+                if (valueCC == 0) {
+                    document.getElementById("valueXX").innerHTML = "Phương trình vô số nghiệm";
+                } else {
+                    document.getElementById("valueXX").innerHTML = "Phương trình vô nghiệm";
+                }
+            } else {
+                valueXX1 = (0 - valueCC) / valueBB
+                document.getElementById("valueXX").innerHTML = "Phương trình có một nghiệm: x = " + valueXX1;
+            }
+        } else {
+            valueDelta = valueBB * valueBB - 4 * valueAA * valueCC
+            if (valueDelta < 0) {
+                document.getElementById("valueXX").innerHTML = "Phương trình vô nghiệm";
+            } else if (valueDelta == 0) {
+                valueXX1 = (0 - valueBB) / (2 * valueAA)
+                document.getElementById("valueXX").innerHTML = "Phương trình có nghiệm kép: x1 = x2 = " + valueXX1;
+            } else if (valueDelta > 0) {
+                valueXX1 = (0 - valueBB + Math.sqrt(valueDelta)) / (2 * valueAA)
+                valueXX2 = (0 - valueBB - Math.sqrt(valueDelta)) / (2 * valueAA)
+                document.getElementById("valueXX").innerHTML = "Phương trình có hai nghiệm: x1 = " + valueXX1 + "; x2 =" + valueXX2;
+            }
+        }
+    }
+
+
+    /*Bài 8: Kiểm tra xem một số nhập vào có phải là tuổi của một người không.
+    Một số nguyên là tuổi của một người khi nhỏ 120 và lớn hơn 0.*/
+    function cal8() {
+        let numberAge = parseInt(document.getElementById("numberAge").value);
+        let ageInteger = Number.isInteger(numberAge);
+        if (ageInteger==true){
+        if (numberAge >0 && numberAge<120){
+            document.getElementById("resutlAge").innerHTML = "This is age of the person"
+        } else {
+            document.getElementById("resutlAge").innerHTML = "This is not age of the person"
+        }
+    }else {
+            document.getElementById("resutlAge").innerHTML = "Please enter again number is an integer"
+        }
+    }
+
+
+//Bài 9:Kiểm tra xem 3 số thực (a,b,c) nhập vào có phải là cạnh của một tam giác.
+    function cal9() {
+        let numberA = parseFloat(document.getElementById("numberA").value);
+        let numberB = parseFloat(document.getElementById("numberB").value);
+        let numberC = parseFloat(document.getElementById("numberC").value);
+        if (numberA>0 && numberB>0 && numberC>0){
+            if((numberA + numberB)>numberC){
+                if((numberB + numberC)>numberA){
+                    if((numberA + numberC)>numberB){
+                        document.getElementById("resutlTriangle").innerHTML="These are three side of triangle"
+                    }else {
+                        document.getElementById("resutlTriangle").innerHTML="These are not three side of triangle"
+                    }
+                }else {
+                    document.getElementById("resutlTriangle").innerHTML="These are not three side of triangle"
+                }
+            }else {
+                document.getElementById("resutlTriangle").innerHTML="These are not three side of triangle"
+            }
+        }else {
+            document.getElementById("resutlTriangle").innerHTML="These are not three side of triangle"
+        }
+    }
+
+    //Bài 10: Viết chương trình tính giá điện.
+    function cal10() {
+        let electricalPower = parseInt(document.getElementById("electricPowwer").value);
+        const levelOne = 1.678
+        const levelTwo = 1.734
+        const levelThree = 2.014
+        const levelFour = 2.536
+        const levelFive = 2.834
+        const levelSix = 2.927
+        let moneyLevelOne=electricalPower*levelOne;
+        let moneyLevelTwo=(electricalPower-50)*levelTwo + 50*levelOne;
+        let moneyLevelThree=(electricalPower-100)*levelThree + 50*levelTwo + 50*levelOne;
+        let moneyLevelFour=(electricalPower-200)*levelFour + 100*levelThree + 50*levelTwo + 50*levelOne;
+        let moneyLevelFive=(electricalPower-300)*levelFive + 100*levelFour + 100*levelThree + 50*levelTwo + 50*levelOne;
+        let moneyLevelSix=(electricalPower-400)*levelSix + 100*levelFive + 100*levelFour + 100*levelThree + 50*levelTwo + 50*levelOne;
+
+        if (electricalPower<0){
+            document.getElementById("moneyElectric").innerHTML="Please again number bigger 0"
+        }else if(electricalPower<51){
+            document.getElementById("moneyElectric").innerHTML="Electricity Price: " + moneyLevelOne + " VND";
+
+        }else if(electricalPower<101){
+            document.getElementById("moneyElectric").innerHTML="Electricity Price: " + moneyLevelTwo + " VND";
+
+        }else if(electricalPower<201){
+            document.getElementById("moneyElectric").innerHTML="Electricity Price: " + moneyLevelThree + " VND";
+
+        }else if(electricalPower<301){
+            document.getElementById("moneyElectric").innerHTML="Electricity Price: " + moneyLevelFour + " VND";
+
+        }else if(electricalPower<401){
+            document.getElementById("moneyElectric").innerHTML="Electricity Price: " + moneyLevelFive + " VND";
+
+        }else {
+            document.getElementById("moneyElectric").innerHTML="Electricity Price: " + moneyLevelSix + " VND";
+        }
+    }
+
+
+
+    //Bài 11: Viết chương trình tính thuế thu nhập cá nhân.
+    function cal11() {
+        let salaryRange = parseFloat(document.getElementById("salaryRange").value);
+        let incomeTaxes;
+        if (salaryRange < 0) {
+            document.getElementById("incomeTaxes").innerHTML = "Please enter again number bigger 0";
+        } else if (salaryRange < 11000000) {
+            incomeTaxes = salaryRange * 0
+            document.getElementById("incomeTaxes").innerHTML = "IncomeTaxes: " + incomeTaxes + " VND";
+        } else if (salaryRange < 15000000) {
+            incomeTaxes = (salaryRange - 11000000) * 5 / 100
+            document.getElementById("incomeTaxes").innerHTML = "IncomeTaxes: " + incomeTaxes + " VND";
+        } else if (salaryRange < 20000000) {
+            incomeTaxes = (salaryRange - 11000000) * 8 / 100
+            document.getElementById("incomeTaxes").innerHTML = "IncomeTaxes: " + incomeTaxes + " VND";
+        } else if (salaryRange < 30000000) {
+            incomeTaxes = (salaryRange - 11000000) * 10 / 100
+            document.getElementById("incomeTaxes").innerHTML = "IncomeTaxes: " + incomeTaxes + " VND";
+        }else {
+            incomeTaxes = (salaryRange - 11000000) * 12 / 100
+            document.getElementById("incomeTaxes").innerHTML = "IncomeTaxes: " + incomeTaxes + " VND";
+        }
+    }
+
+   //Bài 12: Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lãi con)
+    function cal12() {
+        let moneyLending = parseInt(document.getElementById("moneyLending").value);
+        let numberMonth=parseInt(document.getElementById("numberMonth").value);
+        let moneyInterest=0.02*moneyLending
+        if( moneyLending <0 && numberMonth <0){
+            document.getElementById("incomeTaxes").innerHTML = "Please enter again number bigger 0";
+        }else {
+            for (let i=1; i<numberMonth; i++) {
+                moneyInterest = moneyInterest + moneyInterest * 0.02;
+            document.getElementById("moneyInterest").innerHTML = "Money Interest: "+ moneyInterest + " VND";}
+        }
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai_5</title>
+</head>
+<body>
+<form>
+<p>15 minutes test score: <input id="test15" type="text"></p>
+<p>45 minutes test score: <input id="test45" type="text"></p>
+<p>Midterm exam score: <input id="midtermExam" type="text"></p>
+<p>Final exam score: <input id="finalExam" type="text"></p>
+    <p>Average score: <input id="averageScore"></p>
+    <p id="rankerAcademics">Ranked academics:</p>
+    <input type="button" value="calculate" onclick="calculate()">
+</form>
+<script>
+    function calculate() {
+        let test15 = parseInt(document.getElementById("test15").value);
+        let test45 = parseInt(document.getElementById("test45").value);
+        let midtermExam = parseInt(document.getElementById("midtermExam").value);
+        let finalExam = parseInt(document.getElementById("finalExam").value);
+        averageScore = (test15 + test45*2 + midtermExam*3 + finalExam*4) / 10
+        document.getElementById("averageScore").value = averageScore;
+        if (averageScore > 9.0) {
+            document.getElementById('rankerAcademics').innerHTML = "Ranked academics: Excellent"
+                }else if (averageScore > 8.0) {
+            document.getElementById('rankerAcademics').innerHTML = "Ranked academics: Good"
+                    }else if (averageScore > 6.5) {
+            document.getElementById('rankerAcademics').innerHTML = "Ranked academics:Enough"
+                        }else if (averageScore > 5.0) {
+            document.getElementById('rankerAcademics').innerHTML="Ranked academics: Medium"
+                            } else {
+            document.getElementById('rankerAcademics').innerHTML="Ranked academics: Less"
+                    }
+    }
+</script>
+</body>
+</html>

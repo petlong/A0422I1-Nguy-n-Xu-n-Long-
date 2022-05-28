@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai_7</title>
+</head>
+<body>
+<p>Số phút gọi: <input type="text" id="minutesCall"></p>
+<p id="rate">Giá cước: </p>
+<input type="button" value="calculate" onclick="calculate()">
+<script>
+    function calculate() {
+        let minutesCall = parseInt(document.getElementById("minutesCall").value);
+        let rateMoney;
+        if (minutesCall < 0) {
+            document.getElementById("rate").innerHTML = "Yêu cầu nhập sơ lớn hơn 0";
+        } else if (minutesCall < 2) {
+            rateMoney = minutesCall * 1000
+        } else if (minutesCall < 2) {
+            document.getElementById("rate").innerHTML = "Giá cước: " + rateMoney + " VND";
+        }else if (minutesCall < 10) {
+            rateMoney= minutesCall * 900;
+            document.getElementById("rate").innerHTML = "Giá cước: " + rateMoney + " VND";
+        }else if (minutesCall < 20) {
+            rateMoney= minutesCall * 700
+            document.getElementById("rate").innerHTML = "Giá cước: " + rateMoney + " VND";
+        }else {
+            rateMoney= minutesCall * 500
+            document.getElementById("rate").innerHTML = "Giá cước: " + rateMoney + " VND";
+        }
+    }
+</script>
+</body>
+</html>
