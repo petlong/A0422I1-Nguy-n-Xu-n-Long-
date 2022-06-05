@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai_5</title>
+</head>
+<body>
+<h4>Bài 5: Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lãi con) <br>
+    khi biết số tiền ban đầu, số tháng cho vay và lãi xuất hàng tháng.</h4>
+
+<p>Money lending (VND): <input type="text" id="moneyLending"></p>
+<p>Number month:  <input type="text" id="numberMonth"></p>
+<p>% Interest: 2%/month</p>
+<p id="moneyInterest"></p>
+<input type="button" value="calculate" onclick="cal()">
+
+<script>
+function cal() {
+let moneyLending = parseInt(document.getElementById("moneyLending").value);
+let numberMonth=parseInt(document.getElementById("numberMonth").value);
+let moneyInterest=0.02*moneyLending
+if( moneyLending <0 && numberMonth <0){
+document.getElementById("incomeTaxes").innerHTML = "Please enter again number bigger 0";
+}else {
+for (let i=1; i<numberMonth; i++) {
+moneyInterest = moneyInterest + moneyInterest * 0.02;
+document.getElementById("moneyInterest").innerHTML = "Money Interest: "+ moneyInterest + " VND";}
+}
+}
+</script>
+</body>
+</html>
