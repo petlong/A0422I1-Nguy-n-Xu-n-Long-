@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai_2</title>
+</head>
+<body>
+<p>Nhập vào tháng, năm bất kỳ. In ra số ngày tương ứng với tháng, năm đó</p>
+<p>Enter month: <input id="month" type="text"> </p>
+<p>Enter year: <input id="year" type="text"> </p>
+<p><button type="button" onclick="cal()">Calculate</button> </p>
+<p id="numberDay"></p>
+<script>
+    function cal() {
+        let month=parseInt(document.getElementById("month").value);
+        let year=parseInt(document.getElementById("year").value);
+        switch (month) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                document.getElementById('numberDay').innerHTML= "31 ngày";
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                document.getElementById('numberDay').innerHTML= "31 ngày";
+                break;
+            case 2:
+                if(year%4==0) {
+                    if (year % 100 == 0) {
+                        if (year % 400 == 0) {
+                            document.getElementById('numberDay').innerHTML = "29 ngày";
+                        } else {
+                            document.getElementById('numberDay').innerHTML = "28 ngày";
+                        }
+                    }
+                    else{
+                        document.getElementById('numberDay').innerHTML = "29 ngày";
+                    }
+                }
+                }
+                break;
+                default:
+                    document.getElementById('numberDay').innerHTML= "yêu cầu nhập lại";
+        }
+    }
+
+</script>
+</body>
+</html>

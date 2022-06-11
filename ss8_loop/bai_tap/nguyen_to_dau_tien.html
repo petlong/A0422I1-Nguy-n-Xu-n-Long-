@@ -6,9 +6,24 @@
 </head>
 <body>
 <script>
+    // hiển thị 20 số nguyên tố đầu tiên.
 
-
-
+    let number = prompt(("Enter number: "));
+    let n=2
+    for(let j=0; j<number; ) {
+        let count = 0;
+        for (let i = 1; i <= n; i++) {
+            if (n % i == 0) {
+                count++;
+            }
+        }
+        if (count == 2) {
+            document.write(n +" ")
+            j++
+        } else {
+            document.write("")
+        }n++
+    }
 </script>
 </body>
 </html>

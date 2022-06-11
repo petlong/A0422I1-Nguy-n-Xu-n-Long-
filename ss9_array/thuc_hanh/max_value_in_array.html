@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>max_value</title>
+</head>
+<body>
+<script>
+    let numbers=[11,5,7,-2,4,10];
+    let max=numbers[0];
+    let index=0;
+    for(let i=0;i<numbers.length;i++){
+        if(numbers[i]>max){
+            max=numbers[i]
+            index=i;
+        }
+    }alert("max: " + max + " at position " + index);
+
+
+</script>
+</body>
+</html>

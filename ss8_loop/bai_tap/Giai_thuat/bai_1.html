@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai_1</title>
+</head>
+<body>
+<SCRIPT>
+    /*Viết chương trình in ra các dấu * theo cấu trúc như sau (cho n là chiều cao của tháp, cần
+     ra n dòng):
+    *****
+    *****
+    *****
+    *****
+    *****
+    *****
+    */
+    let n=parseInt(prompt("Nhập vào một số lớn hơn hoặc bằng 1:"));
+    if(n<1){
+        alert("Nhập vào một số lớn hơn hoặc bằng 1")
+    } else {
+        for (let i=0; i<n; i++ ){
+            for(let j=0; j<5; j++){
+                document.write("*");
+            }document.write("<br>")
+        }
+    }
+
+</SCRIPT>
+</body>
+</html>

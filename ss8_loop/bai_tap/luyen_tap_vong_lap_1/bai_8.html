@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai_8</title>
+</head>
+<body>
+
+<p><button type="button" value="play" onclick="play()">Play</button> </p>
+<script>
+function play() {
+let  num;
+let numGame;
+        for (let i=0; i<3; i++){
+            num = parseInt(prompt("Nhập vào một số trong khoảng từ 1 đên 10"));
+            if(num<1 || num>10){
+                alert("Vui lòng nhập lại một số trong khoảng từ 1 đên 10")
+            } else {
+                numGame= Math.floor(Math.random() * 10);
+                    if( num=numGame){
+                        alert("Chúc mừng bạn");
+                        break;
+                    } else {
+                        alert("Không chính xác, vui lòng nhập lại")
+           }
+       }
+    }
+
+}
+
+</script>
+</body>
+</html>

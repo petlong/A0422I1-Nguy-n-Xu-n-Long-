@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai_3</title>
+</head>
+<body>
+<p> Viết chương trình tính :
+    S=1+1/2+1/3+....+1/n </p>
+<p>Với n (là số nguyên dương)= : <input id="num" type="text"></p>
+<p><button type="button" value="cal" onclick="cal()"></p>
+<p id="result"></p>
+
+<script>
+    function cal() {
+        let n=parseInt(document.getElementById("num").value);
+        let sum=0;
+        for (let i=1; i<=n;i++){
+            sum=sum+1/i
+        }document.getElementById("result").innerHTML="S = "+sum;
+
+    }
+</script>
+</body>
+</html>

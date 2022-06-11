@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>train_array_1</title>
+</head>
+<body>
+<p><b>Bài 1- Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử.<br>
+Chương trình thực hiện tính và hiển thị xem có bao nhiêu số nguyên lớn hơn hoặc bằng 10.<br>
+<p>The integers: -3,5,7,12,35,3,-8,0,23,32 </p>
+<input type="button" value="cal1" onclick="cal1()">
+
+<br>
+<br>
+<br>
+<p>Bài 2- Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử khác nhau.<br>
+    Chương trình hiển thị ra được phần tử có giá trị lớn nhất trong mảng và vị trí của phần tử đó.<p/>
+<p>The integers: -3,5,7,12,35,3,-8,0,23,32 </p>
+<input type="button" value="cal2" onclick="cal2()">
+
+<br>
+<br>
+<br>
+<p>Bài 3- Viết chương trình khởi tạo mảng số nguyên.<br>
+    Hiển hiện giá trị lớn nhất trong mảng đó. In ra giá trị trung bình của các phần tử trong mảng.<p/>
+<p>The integers: -3,5,7,12,35,3,-8,0,23,32 </p>
+<input type="button" value="max value" onclick="maxvalue()">
+<input type="button" value="average value" onclick="averagevalue()">
+
+<p>Bài 4- Viết chương trình khởi tạo/nhập vào một mảng số nguyên và đảo ngược các phần tử trong mảng đó .<p/>
+<p>The integers: -3,5,7,12,35,3,-8,0,23,32 </p>
+<input type="button" value="reverse" onclick="cal4()">
+
+
+<script>
+    //bai1
+    // function cal1(){
+    //     let integers=[-3,5,7,12,35,3,-8,0,23,32];
+    //     for(let i=0; i<integers.length;i++){
+    //         if(integers[i]>=10){
+    //             document.write("the interger >=10: " + integers[i]+"<br>")
+    //         }
+    //     }
+    // }
+
+
+
+//bai2
+//     function cal2(){
+//         let integers=[-3,5,7,12,35,3,-8,0,23,32];
+//         let max=integers[0];
+//         let index=0;
+//         for(let i=0; i<integers.length;i++){
+//             if(integers[i]>max){
+//                 max=integers[i];
+//                 index=i;
+//             }
+//         }document.write("max integer is "+ max +" at position "+index );
+//     }
+
+//bai 3
+    function maxvalue(){
+        let integers=[-3,5,7,12,35,3,-8,0,23,32];
+        let max=integers[0];
+        let index=0;
+        for(let i=0; i<integers.length;i++){
+            if(integers[i]>max){
+                max=integers[i];
+                index=i;
+            }
+        }document.write("max integer is "+ max  );
+    }
+
+    // function averagevalue(){
+    //     let integers=[-3,5,7,12,35,3,-8,0,23,32];
+    //     let sum=0;
+    //     let average;
+    //     let index=0;
+    //     for(let i=0; i<integers.length;i++){
+    //             sum+=integers[i];
+    //             index=i;
+    //
+    //     }average=sum/index
+    //     document.write("Average is "+ average);
+    // }
+    
+    //bai:4
+    function cal4() {
+        let integers=[-3,5,7,12,35,3,-8,0,23,32];
+        let a;
+        for(let i=0; i<integers.length; i++){
+
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>usefunction</title>
+</head>
+<body>
+<script>
+    // bai 1:
+    //     let myColor = ["Red", "Green", "White", "Black"];
+    //     console.log(myColor.join());
+
+
+    //bai 2
+    // let number=prompt();
+    // let string=number.toString();
+    // let result=[string[0]];
+    // for (let i=1; i<string.length; i++){
+    //     if(string[i-1]%2===0 && string[i]%2===0){
+    //         result.push("-", string[i])
+    //     }else {
+    //         result.push(string[i])
+    //     }
+    // }
+    // document.write(result.join(''));
+
+//bai3
+    let str = 'nfefHWMFW';
+   let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let LOWER = 'abcdefghijklmnopqrstuvwxyz';
+   let result = [];
+
+    for(let i=0; i<str.length; i++)
+    {
+        if(UPPER.indexOf(str[i]) !== -1)
+        {
+            result.push(str[i].toLowerCase());
+        }
+        else if(LOWER.indexOf(str[i]) !== -1)
+        {
+            result.push(str[i].toUpperCase());
+        }
+        else
+        {
+            result.push(str[i]);
+        }
+    }
+    document.write(result.join(''));
+
+</script>
+</body>
+</html>
