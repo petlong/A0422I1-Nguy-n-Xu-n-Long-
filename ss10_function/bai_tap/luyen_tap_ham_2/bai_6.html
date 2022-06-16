@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai6</title>
+</head>
+<body>
+<script>
+    //Bài 6: Viết hàm nhận vào một số, kiểm tra xem nếu số đưa vào có phải là nguyên dương không.
+    // Nếu là nguyên dương trả về true, ngược lại trả về false.
+
+    let number=parseInt(prompt("Enter a number"));
+    if (isNaN(number)){
+        document.write("Enter again a number")
+    }else {
+        document.write(checkNumber(number));
+    }
+    function checkNumber(value) {
+        if(value>0){
+            return true
+        }else if(value<0){
+            return false
+        }else if (value==0){
+            return value
+        }
+    }
+</script>
+</body>
+</html>

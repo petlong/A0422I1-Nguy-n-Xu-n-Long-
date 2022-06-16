@@ -6,7 +6,7 @@
 </head>
 <body>
 <script>
-    let cars = ["Honda","Toyota","BMW", "Audi"];
+    // let cars = ["Honda","Toyota","BMW", "Audi"];
     // let cars = new Array("Honda", "Toyota", "BMW", "Audi");
     // cars.push("KIA"); // Thêm phần tử vào vị trí cuối
     // cars.pop(); // xóa phần tử ở vị trí cuối
@@ -14,34 +14,34 @@
     // // splice: thêm nếu có 3 tham số( vị trí thêm, 0, giá trị cần thêm)
     // cars.splice(1,0,"Mazda");
     //
-    // document.writeln(cars.join("#"))
+    // document.writeln(cars.join(" "))
     //
     // for (let i = 0; i < cars.length; i++) {
     //     document.writeln(cars[i]);
     // }
-    for(let i of cars) {
-        document.writeln(cars)
-        document.writeln("for-in")}
+    // for(let i in cars) {
+    //     document.writeln(i)}
+        // document.writeln("for-in")}
     // //
 
-    // let arr1 = [
-    //     ["Toyota", "Mazda", "Mitsubisi"],
-    //     ["KIA", "Huynda"]
-    // ]
+    let arr1 = [
+        ["Toyota", "Mazda", "Mitsubisi"],
+        ["KIA", "Huynda"]
+    ]
     // //
     // let arr2 = new Array(["Toyota", "Mazda", "Mitsubisi"],["KIA", "Huynda"])
     //
-    // // for(let i =0; i<arr2.length; i++) {
-    // //     for (let j =0; j<arr2[i].length; j++) {
-    // //         document.writeln(arr2[i][j]);
-    // //     }
-    // // }
-    //
-    // for(let i in arr1) {
-    //     for(let j of arr1[i]) {
-    //         document.writeln(j);
+    // for(let i =0; i<arr2.length; i++) {
+    //     for (let j =0; j<arr2[i].length; j++) {
+    //         document.writeln(arr2[i][j]);
     //     }
     // }
+    //
+    for(let i in arr1) {
+        for(let j of arr1[1]) {
+            document.writeln(j);
+        }
+    }
 </script>
 
 </body>

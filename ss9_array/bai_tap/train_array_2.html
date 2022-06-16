@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>trainarray2</title>
+</head>
+<body>
+<p><b>Bài 1: Viết chương trình khởi tạo mảng 2 chiều, gồm một bộ các phần tử có sẵn,  in ra các phần tử trong mảng.</p>
+<p>Bài 2: Viết một chương trình để in các ký tự trong một mảng theo thứ tự đảo ngược</p>
+<p>Bài 3: Viết một chương trình khai báo một mảng ký tự và kích thước của mảng. <br>
+    Chương trình này đếm số ký tự số trong mảng. </p>
+<p>Bài 4: Viết một chương trình để đếm số từ trong một chuỗi<br>
+    string: "codegym"
+</p>
+
+<p>Bài 5: Viết một chương trình nhập vào 2 chuỗi, sau đó kiểm tra xem hai chuỗi có giống nhau hay không.<br>
+    string1: "codegym"
+    string1: "codegym"
+</p>
+
+<p>Bài 6: Viết chương trình nhập vào một mảng ký tự, tìm tất cả các ký tự trong mảng là (-) và thay thế các ký tự này bởi ký tự ( _ )<br>
+    string: codegym-vn
+</p>
+
+<script>
+
+        // //bai1
+        // let a = [
+        //     [1, 2, 1, 24],
+        //     [8, 11, 9, 4],
+        //     [7, 0, 7, 27],
+        //     [7, 4, 28, 14],
+        //     [3, 10, 26, 7]
+        // ]
+        // for (let i=0; i<a.length; i++){
+        //     document.write("row" + i + "<br>")
+        //     for (let j=0; j<a[i].length; j++){
+        //         document.write(a[i][j]+ "<br>");
+        //     }
+        // }
+
+    //     //bai2:
+    // let arrays=[ 'c', 's', 'c', '2', '6', '1' ]
+    //    //  let first=0;
+    //    //  let last=arrays.length-1
+    //    //  let a;
+    //    // while (first<last){
+    //    //      a=arrays[first]
+    //    //    arrays[first]= arrays[last]
+    //    //     arrays[last]=a
+    //    //     first++
+    //    //     last--
+    //    //  }document.write(arrays.join(" "))
+    //     let array2=arrays.reverse()
+    //     document.write(array2.join(" "))
+
+
+    //bai3:
+
+    // let arrays=[3,"h","d","t",6];
+    // let count=0
+    // for(let i=0; i<arrays.length; i++){
+    //     if(isNaN(arrays[i])){
+    //         count++
+    //     }
+    // }document.write("Amount number in arrays: " + (arrays.length-count))
+
+
+    //bai4:
+
+    // let str="codegym";
+    // let arr=str.split("")
+    // document.write("Amount character of string: "+ arr.length)
+
+    //bai5:
+//     let str1="codegym"
+//     let str2="codegym"
+//         let arr1=str1.split("")
+//         let arr2=str2.split("")
+//     let count=0;
+// if(arr1.length!=arr2.length) {
+//     document.write("two strings is different")
+// }
+// else {
+//     for(let i=0; i<arr1.length;i++){
+//         let j=i;
+//             if(arr1[i]===arr2[j]){
+//                 count++
+//         }
+//     }if(count==arr1.length){
+//         document.write("two strings is alike")
+//     }else {
+//         document.write("two strings is different")
+//     }
+// }
+
+
+//bai6:
+    let str="codegym-vn"
+    let arr=str.split("")
+        let a="-"
+    for (let i=0; i<arr.length;i++){
+        if(a===arr[i]){
+            arr[i]="_"
+        }
+    }document.write(arr.join(""));
+
+    </script>
+
+</body>
+</html>

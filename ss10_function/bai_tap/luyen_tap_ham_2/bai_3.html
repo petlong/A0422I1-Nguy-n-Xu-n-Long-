@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai_3</title>
+</head>
+<body>
+<script>
+    //Bài 3: Viết hàm tính giai thừa của một số nguyên bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.
+
+    let number=prompt("Enter a number")
+    if (isNaN(number)){
+        document.write("Enter again a number")
+    }else {
+        document.write("Factorial of number you entered   = "+ getFactorial(number));
+
+    }
+    function getFactorial(value) {
+        let firstFactorial=1
+        for(let i=1; i<=value; i++){
+            firstFactorial*=i;
+        }return firstFactorial
+    }
+    
+</script>
+</body>
+</html>

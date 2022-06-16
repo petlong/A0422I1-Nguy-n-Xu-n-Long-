@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai5</title>
+</head>
+<body>
+<script>
+    function getConstellation(stars) {
+        let arrayStars = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"]
+        let arrayConstellation = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"]
+        let outputConstellation;
+        for (let i = 0; i < arrayStars.length; i++) {
+            let j = i;
+            if (stars == arrayStars[i]) {
+                outputConstellation = arrayConstellation[j]
+                return outputConstellation;
+            }
+        }
+    }
+    let inputStar=prompt("Enter name of star")
+    document.write(getConstellation(inputStar));
+</script>
+</body>
+</html>

@@ -27,9 +27,68 @@ Chương trình thực hiện tính và hiển thị xem có bao nhiêu số ngu
 <input type="button" value="max value" onclick="maxvalue()">
 <input type="button" value="average value" onclick="averagevalue()">
 
+<br>
+<br>
+<br>
 <p>Bài 4- Viết chương trình khởi tạo/nhập vào một mảng số nguyên và đảo ngược các phần tử trong mảng đó .<p/>
 <p>The integers: -3,5,7,12,35,3,-8,0,23,32 </p>
 <input type="button" value="reverse" onclick="cal4()">
+
+
+
+<br>
+<br>
+<br>
+<p>Bài 5- Viết chương trình đếm số lượng nguyên âm trong một chuỗi<p/>
+<p>String: Codegym </p>
+<input type="button" value="Check" onclick="cal5()">
+
+
+
+<br>
+<br>
+<br>
+<p>Bài 6- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V.<br>
+    Chương trình tìm xem V có nằm trong mảng số nguyên không?<br>
+    Nếu V thuộc mảng số nguyên thì in ra "V is in the array" còn lại in ra "V is not in the array".
+<p/>
+<p>The integers: -3,5,7,12,35,3,-8,0,23,32 </p>
+<input type="button" value="Check" onclick="cal6()">
+<p id="result"></p>
+
+
+<br>
+<br>
+<br>
+<p>Bài 7- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V. <br>
+    Chương trình kiểm tra xem V có thuộc mảng đã cho không, nếu V thuộc mảng đã cho xoá V khỏi mảng<br>
+    (Bản chất việc xoá ở đây tức là dịch phần tử ở bên phải V sang vị trí của V, và gán 0 cho phần tử cuối cùng của mảng)
+<p/>
+<p>The integers: -3,5,7,12,35,3,-8,0,23,32 </p>
+<input type="button" value="Check" onclick="cal7()">
+
+<br>
+<br>
+<br>
+<p>Bài 8- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử. <br>
+    Chương trình sắp xếp mảng theo thứ tự giảm dần và hiển thị ra mảng đã được sắp xếp.
+<p/>
+<p>The integers: -3,5,7,12,35,3,-8,0,23,32 </p>
+<input type="button" value="Check" onclick="cal8()">
+
+<br>
+<br>
+<br>
+<p>Bài 9- Viết chương trình khởi tạo/nhập vào 2 mảng số nguyên gồm 10 phần tử, gọi là mảng a và b.  <br>
+    Mảng c là một mảng được khai báo gồm 20 phần tử số nguyên. <br>
+    Chương trình sẽ lưu các phần tử được nối từ hai mảng b và a vào mảng c. Hiển thị mảng c.
+<p/>
+<p>The array A: -3,5,7,12,35 </p>
+<p>The array B: -4,8,4,23,11</p>
+<p>The array C: -4,6,7,2,5,74,-54,24,67,26 </p>
+<input type="button" value="join" onclick="cal9()">
+
+
 
 
 <script>
@@ -86,11 +145,83 @@ Chương trình thực hiện tính và hiển thị xem có bao nhiêu số ngu
     
     //bai:4
     function cal4() {
-        let integers=[-3,5,7,12,35,3,-8,0,23,32];
-        let a;
-        for(let i=0; i<integers.length; i++){
+        // let x=[-3,5,7,12,35,3,-8,0,23,32];
+        // let first=0;
+        // let last=x.length-1;
+        // while(first<last){
+        //     let b= x[first];
+        //     x[first]=x[last];
+        //     x[last]=b;
+        //     first++
+        //     last--;
+        // } document.write(x);
+        let x=[-3,5,7,12,35,3,-8,0,23,32];
+        let y=x.reverse();
+        document.write(y);
+    }
 
+
+    //bai 5
+    function cal5() {
+        let str='Codegym'
+        let nguyenAm='aeiouyAEI0UY'
+        let amount=0
+        for (let i=0; i<str.length; i++){
+            for(let j=0; j<nguyenAm.length;j++){
+                if(str[i]===nguyenAm[j]){
+                    amount++
+            }
+            }
+        } document.write("số lượng nguyên âm là: "+ amount);
+    }
+
+
+    //bai 6:
+
+    function cal6() {
+        let integers=[-3,5,7,12,35,3,-8,0,23,32];
+        let V=prompt("Enter one integer");
+        for( let i=0; i<integers.length;i++){
+            if(V!=integers[i]){
+                document.getElementById("result").innerHTML =V+ " is not in the array"
+            }else {
+                document.getElementById("result").innerHTML =V+ " is in the array"
+                break;
+            }
         }
+    }
+
+    //bai 7:
+
+    function cal7() {
+        let integers=[-3,5,7,12,35,3,-8,0,23,32];
+        let V=prompt("Enter one integer");
+        for( let i=0; i<integers.length;i++){
+            if(V==integers[i]){
+                integers.splice(i,1);
+            }
+        } document.write(integers);
+    }
+
+    //bai 8:
+
+    function cal8() {
+        let integers=[-3,5,7,12,35,3,-8,0,23,32];
+        let newIntegers=integers.sort(function(a,b){return b-a});
+        document.write(newIntegers);
+    }
+
+
+    //bai9
+
+    function cal9() {
+        let arrayA=[-3,5,7,12,35];
+        let arrayB=[-4,8,4,23,11]
+        let arrayC=[-4,6,7,2,5,74,-54,24,67,26]
+        let arrayD=arrayA.concat(arrayB)
+        arrayC.push(arrayD)
+        // let arrayD=arrayC.concat(arrayA,arrayB);
+        document.write(arrayC);
     }
 </script>
 </body>

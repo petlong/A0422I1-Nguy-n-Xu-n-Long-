@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let loaiXe="Yamaha"
+    function diCho(soTien) {
+        console.log(soTien)
+        let monAn = "";
+        console.log("Lấy xe "+ loaiXe);
+        if (soTien > 200000) {
+            monAn = "Thịt bò"
+        } else {
+            monAn = "rau";
+        }
+        console.log("lựa thực đơn");
+        console.log("Trả giá");
+        console.log("Đi về");
+        return monAn;
+    }
+
+    console.log(loaiXe)
+    function nauAn() {
+        let monAn = diCho();
+        console.log("Nấu món: " + monAn);
+    }
+
+    nauAn();
+    // diCho(150000);
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai_2</title>
+</head>
+<body>
+<script>
+    //Bài 2: Viết hàm tính diện tích, hàm tính chu vi hình tròn. Gọi hàm vừa xây dựng được
+
+    let number=prompt("Enter a number")
+    if (isNaN(number)){
+        document.write("Enter again a number")
+    }else {
+        document.write("Are of circle   = "+ getAreCircle(number)+"<br>");
+        document.write("Perimeter of circle= "+ getPerimeterCircle(number));
+    }
+    
+    function getAreCircle(value) {
+        let are=value*value*3.14
+        return are;
+    }
+
+    function getPerimeterCircle(value) {
+        let perimeter=2*3.14*value
+        return perimeter;
+    }
+
+</script>
+</body>
+</html>

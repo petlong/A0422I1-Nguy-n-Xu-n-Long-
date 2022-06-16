@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>convertfeettometer</title>
+</head>
+<body>
+<p>Foot: <input id="inFoot" type="number" oninput="footToMeter(value)" > </p>
+<p>Meter:<span id="outMeter"></span></p>
+
+<p>Meet: <input id="inMeter" type="number" oninput="meterToFoot(value)" > </p>
+<p>Foot:<span id="outFoot"></span></p>
+
+
+<script>
+
+    function footToMeter(foot) {
+         foot=parseFloat(foot)
+        let meter = 0.305 * foot;
+        document.getElementById("outMeter").innerHTML=meter;
+    }
+
+    function meterToFoot(meter) {
+        meter=parseFloat(meter)
+        let foot = meter/0.305;
+        document.getElementById("outFoot").innerHTML=foot;
+    }
+
+</script>
+
+</html>

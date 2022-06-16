@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai3</title>
+</head>
+<body>
+<H3> Bài 3: Tạo hàm nhận vào hai tham số.
+    Nếu giá trị của tham số thứ nhất lớn hơn tham số thứ hai, hiển thị hộp thoại thông báo cho người dùng.
+    Nếu giá trị của tham số thứ nhất nhỏ hơn hoặc bằng tham số thứ hai, trả về tổng của hai tham số.</H3>
+
+<SCRIPT>
+    let number1=parseFloat(prompt("Enter first number"));
+    let number2=parseFloat(prompt("Enter second number"));
+       getParameter(number1,number2);
+
+    function getParameter(param1,param2) {
+        if(param1>param2){
+            alert(param1+">"+param2)
+        }else if(param1<=param2){
+            let sum=param1+param2
+            document.write("Sum= "+ sum)
+        }
+
+        }
+
+</SCRIPT>
+</body>
+</html>
