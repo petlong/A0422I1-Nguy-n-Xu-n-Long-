@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo</title>
+</head>
+<body>
+<script>
+    class Student {
+        constructor(nameStudent, age, email, codeStudent, address) {
+            this.codeStudent = codeStudent;
+            this.nameStudent = nameStudent;
+            this.age = age;
+            this.email = email;
+            this.address = address;
+        }
+        exam(subject) {
+            console.log("Đi thi môn"+ subject+ " của anh"+ this.nameStudent)
+        }
+        teach() {
+            console.log("Đi học.")
+        }
+    }
+    let stdHaiTT = new Student("HaiTT", 24,"hai.truong@codegym.vn", 1 , "Quảng Nam");
+    let stdTrungDP = new Student("TrungDP", 37,"trung.doan@codegym.vn", 2 , "Đà Nẵng");
+    console.log(typeof stdHaiTT);
+    console.log(stdTrungDP.nameStudent)
+    stdTrungDP.exam("Công nghệ thông tin");
+    stdHaiTT.teach()
+</script>
+</body>
+</html>

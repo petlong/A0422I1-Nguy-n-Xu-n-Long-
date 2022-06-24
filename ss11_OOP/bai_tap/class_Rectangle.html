@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>classRectangle</title>
+</head>
+<body>
+<!--<canvas id="myCanvas" ></canvas>-->
+<script>
+
+    // class Rectangle{
+    //     constructor(lenght,width) {
+    //         this.lenght=lenght
+    //         this.width=width;
+    //         this.getAre=function () {
+    //             return  this.lenght*this.width
+    //         }
+    //         this.getPerimeter=function () {
+    //            return (this.lenght+this.width)*2;
+    //         }
+    //     }
+    // }
+    // let rectangle=new Rectangle(2,3);
+    // let are=rectangle.getAre();
+    // let perimeter=rectangle.getPerimeter();
+    // document.write("Are: "+are+"<br>");
+    // document.write("Perimeter:"+perimeter);
+
+    class Rectangle{
+        constructor(lenght,width) {
+            this.lenght = lenght
+            this.width = width;
+        }
+        getAre() {
+                return this.lenght*this.width
+            }
+        getPerimeter() {
+               return (this.lenght+this.width)*2;
+            }
+    }
+
+    let rectangle=new Rectangle(4,3);
+    let are=rectangle.getAre();
+    let perimeter=rectangle.getPerimeter();
+    document.write("Are: "+are+"<br>");
+    document.write("Perimeter:"+perimeter);
+
+
+</script>
+</body>
+</html>

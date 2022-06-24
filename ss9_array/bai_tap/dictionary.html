@@ -5,11 +5,37 @@
     <title>dictionary</title>
 </head>
 <body>
-<p>Nhập từ cần tìm kiếm: <input type="text"></p>
+<p>Enter word:<input type="text" id="wordinput"></p>
+<button type="button" value="search" onclick="search()">Search</button>
+ <p id="result"></p>
 <script>
-    let arrayEnlish=[cat,dog,duck,tiger,lion,mouse];
-    let arrayVietNam=[mèo;]
+//     let arrayEnlish=["cat","dog","duck","tiger","lion","mouse"];
+//     let arrayVietNam=["mèo","chó","vịt","hổ","sư tử","chuột"];
+//     let wordInput=prompt("Search word" )
+//         document.write(searchEnglishWord(wordInput));
+// function searchEnglishWord(value) {
+//     for (let i=0; i<arrayEnlish.length;i++){
+//         let j=i
+//             if(value===arrayEnlish[i]){
+//                 return arrayVietNam[j];
+//             }
+//         } return "No search out"
+//     }
+function search() {
+    let wordInput = document.getElementById("wordinput").value;
+    document.getElementById("result").innerHTML = "Mean: "+ searchEnglishWord(wordInput);
+}
 
+function searchEnglishWord(value) {
+    let arrayEnlish = ["cat", "dog", "duck", "tiger", "lion", "mouse"];
+    let arrayVietNam = ["mèo", "chó", "vịt", "hổ", "sư tử", "chuột"];
+    for (let i=0; i<arrayEnlish.length;i++){
+        let j=i
+            if(value===arrayEnlish[i]){
+                return arrayVietNam[j];
+            }
+        } return "No search out"
+    }
 
 </script>
 </body>

@@ -5,17 +5,90 @@
     <title>Title</title>
 </head>
 <body>
+<!--<canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;">-->
 <script>
-    let iMax = 20;
-    let jMax = 10;
-    let f = new Array();
+    // let iMax = 20;
+    // let jMax = 10;
+    // let f = new Array();
+    //
+    // for (i = 0; i < iMax; i++) {
+    //     f[i] = new Array();
+    //     for (j = 0; j < jMax; j++) {
+    //         f[i]=1;
+    //     }
 
-    for (i = 0; i < iMax; i++) {
-        f[i] = new Array();
-        for (j = 0; j < jMax; j++) {
-            f[i]=1;
+
+    // } console.log (f)
+    // function Apple (type) {
+    //     this.type = type;
+    //     this.color = "red";
+    // }
+    // Apple.prototype.getInfo = function() {
+    //     return this.color + ' ' + this.type + ' apple';
+    // };
+    //
+    // let apple = new Apple('macintosh');
+    // apple.color = "reddish";
+    // alert(apple.getInfo());
+
+
+    // var c = document.getElementById("myCanvas");
+    // var ctx = c.getContext("2d");
+    // ctx.beginPath();
+    // ctx.arc(100,50,30,0,2*Math.PI);
+    // ctx.stroke();
+
+
+
+
+    //bài: mobile
+
+    // class Mobile{
+    //     constructor(id,name) {
+    //         this.id=id
+    //         this.name=name;
+    //         this.message=" "
+    //     }
+    //     setMessage(message){
+    //         this.message=message;
+    //     }
+    //     getMessage(){
+    //         return this.message
+    //     }
+    //
+    //     sendMessage(message,mobile){
+    //         mobile.sendMessage(message)
+    //     }
+    // }
+    //
+    // let mobile1=new Mobile(1,"iphone");
+    // let mobile2=new Mobile(2,"Samsung")
+    // mobile1.setMessage("alo")
+    // mobile1.sendMessage("alo",mobile2);
+    // let message=mobile2.getMessage()
+    // console.log(message)
+    class Mobile{
+        constructor(id,name) {
+            this.id=id
+            this.name=name;
         }
-    } console.log (f)
+        setMessage(message){
+            this.message=message;
+        }
+        getMessage(){
+            return this.message
+        }
+
+        sendMessage(message,mobile){
+            mobile.setMessage(message)
+        }
+    }
+
+    let mobile1=new Mobile(1,"iphone");
+    let mobile2=new Mobile(2,"Samsung")
+    mobile1.sendMessage("alo",mobile2);
+    let message=mobile2.getMessage()
+    console.log(message)
     </script>
 </body>
 </html>

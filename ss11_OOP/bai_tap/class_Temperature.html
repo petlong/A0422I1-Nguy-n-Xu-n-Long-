@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>temperature</title>
+</head>
+<body>
+<script>
+    class Temperature{
+        constructor(tempC) {
+            this.tempC=tempC
+        }
+       f(){
+            return this.tempC*1.8+32
+        }
+        k(){
+            return this.tempC+273.15
+        }
+    }
+
+    function inputDoC() {
+        let tempDoC = parseInt(prompt("Mời bạn nhập độ c: "));
+        displayTemp(tempDoC)
+    }
+    function displayTemp(tempDoC) {
+        let temperature = new Temperature(tempDoC);
+        alert(temperature.k()+"K");
+        alert(temperature.f()+"F");
+    }
+    inputDoC();
+</script>
+</body>
+</html>

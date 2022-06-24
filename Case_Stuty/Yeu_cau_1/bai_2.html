@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai_2</title>
+</head>
+<body>
+<p>Bài 2: Vẽ tam giác vuông cân rỗng có chiều cao h. </p>
+
+<script>
+
+
+    let height=parseInt(prompt("Enter height "));
+
+    drawTriangleEmpty();
+
+function drawTriangleEmpty() {
+}
+  for (let i=0; i<height; i++){
+      for( let j=0; j<height; j++){
+            if(i==height-1||j==0){
+                document.write("*")
+            }else if(i==j){
+                document.write("*")
+            }else {
+                document.write("&nbsp&nbsp")
+            }
+        }document.write("<br>")
+    }
+</script>
+</body>
+</html>

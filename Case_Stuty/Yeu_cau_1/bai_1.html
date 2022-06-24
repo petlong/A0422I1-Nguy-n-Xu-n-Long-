@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai1</title>
+</head>
+<body>
+<p>Bài 1: Vẽ hình chữ nhật rỗng chiều dài n và chiều rộng m</p>
+
+<script>
+    
+    let height=parseInt(prompt("Enter height"));
+    let width=parseInt(prompt("Enter width"));
+    drawEmtyRectangle(height,width)
+    function drawEmtyRectangle(height,width) {
+        for (let i = 0; i < height; i++) {
+            for (let j = 0; j < width; j++) {
+
+                if (i == 0 || i ==height-1  || j == 0 || j == width-1) {
+                    document.write("*")
+
+                } else {
+                    document.write("&nbsp&nbsp")
+                }
+            }
+            document.write("<br>")
+        }
+    }
+</script>
+</body>
+</html>

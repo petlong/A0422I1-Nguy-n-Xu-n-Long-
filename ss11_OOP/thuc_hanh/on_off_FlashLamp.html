@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flashLamp</title>
+</head>
+<body>
+<script>
+    class Battery{
+        constructor(energy) {
+            this.energy=energy
+        }
+        setEnergy(energy){
+            this.energy = energy;
+        }
+        getEnergy(){
+            return this.energy;
+        }
+        decreaseEnergy(){
+            if(this.energy>0){
+                this.energy--;
+            }
+        }
+    }
+
+    class FlashLamp {
+        constructor(status,battery) {
+            this.status = status
+            this.battery = battery;
+        }
+        setBattery(battery){
+            this.battery=battery;
+        }
+        getBatteryInfo(){
+            return this.battery.getEnergy()
+        }
+
+        getLight(){
+                    if(this.status){
+                        document.write("lighting"+"<br>");
+                    }else{
+                        document.write("not lighting"+"<br>")
+                    }
+                }
+        turnOn(){
+            this.status=true
+                }
+        turnOff(){
+            this.status=false;
+                }
+    }
+
+    let battery = new Battery(5);
+    // document.write(battery.getEnergy());
+    // battery.setEnergy(10)
+    // document.write("<br>"+ battery.getEnergy());
+    let flashLamp=new FlashLamp(false,battery);
+
+    document.write("Battery info:" + flashLamp.getBatteryInfo() + "<br/>");
+    flashLamp.getLight();
+
+
+    document.write("Turn on<br/>")
+    flashLamp.turnOn();
+    flashLamp.getLight();
+    document.write("Battery info:" + flashLamp.getBatteryInfo() + "<br/>");
+
+
+    document.write("Turn off<br/>")
+    flashLamp.turnOff();
+    flashLamp.getLight();
+
+
+    
+
+
+
+
+    // let Battery = function () {
+    //     this.setEnergy = function (energy) {
+    //         this.energy = energy;
+    //     }
+    //     this.getEnergy = function () {
+    //         return this.energy;
+    //     }
+    //     this.decreaseEnergy = function () {
+    //         if (this.energy > 0) {
+    //             this.energy--;
+    //         }
+    //     }
+    // }
+    //
+    // let FlashLamp = function () {
+    //     this.setBattery = function (battery) {
+    //         this.battery = battery;
+    //     }
+    //     this.getBatteryInfo = function () {
+    //         return this.battery.getEnergy();
+    //     }
+    //
+    //     this.light = function () {
+    //         if(this.status){
+    //                     document.write("lighting");
+    //                 }else{
+    //                     document.write("not lighting")
+    //                 }
+    //     };
+    //     this.turnOn = function () {
+    //         this.status = true;
+    //     };
+    //     this.turnOff = function () {
+    //         this.status = false;
+    //     }
+    // }
+    //
+    //
+    // let battery = new Battery();
+    // battery.setEnergy(90);
+    //
+    // let flashLamp = new FlashLamp();
+    // flashLamp.setBattery(battery);
+    //
+    // document.write("Battery info:" + flashLamp.getBatteryInfo() + "<br/>");
+    // flashLamp.light();
+    //
+    // document.write("Turn on<br/>")
+    // flashLamp.turnOn();
+    // flashLamp.light();
+    // document.write("Battery info:" + flashLamp.getBatteryInfo() + "<br/>");
+    //
+    // document.write("Turn off<br/>")
+    // flashLamp.turnOff();
+    // flashLamp.light();
+</script>
+</body>
+</html>

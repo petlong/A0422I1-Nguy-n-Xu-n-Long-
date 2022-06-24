@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>check</title>
+</head>
+<body>
+<p>Check nguyên âm: 'o', 'u', 'i', 'a', 'e' hoặc 'O', 'U', 'I', 'A', 'E'</p>
+<script>
+let nguyenAm=['o', 'u', 'i', 'a', 'e','O', 'U', 'I', 'A', 'E']
+let input=prompt("Nhập vào một kí tự")
+    for(let i=0;i<nguyenAm.length;i++){
+        let count=0;
+        if(input===nguyenAm[i]){
+           document.write(input +" là nguyên âm")
+            break;
+        }else {
+            count++
+        }
+    }if (count==nguyenAm.length){
+    document.write(input +" không phải là nguyên âm")
+}
+</script>
+</body>
+</html>

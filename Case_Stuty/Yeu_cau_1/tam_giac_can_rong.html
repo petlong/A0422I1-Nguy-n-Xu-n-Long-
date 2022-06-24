@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai4</title>
+</head>
+<body>
+<p>Bài 4: Vẽ tam giác cân rỗng có chiều cao h</p>
+<script>
+
+    let heightTriangle=parseInt(prompt("Enter height of Triangle"));
+    drawTriangle(heightTriangle);
+
+    function drawTriangle(height) {
+
+        for (let i = 0; i < height; i++) {
+            for (let j = 1; j < height * 2; j++) {
+                if (j==height-i) {
+                    document.write("*")
+                }else if(j==height+i){
+                    document.write("*")
+                }else if(i==height-1){
+                    document.write("*")
+                }
+                 else {
+                    document.write("&nbsp ");
+                }
+            }
+            document.write("<br>")
+        }
+    }
+</script>
+
+</body>
+</html>

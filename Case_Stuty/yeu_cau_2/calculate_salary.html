@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai1</title>
+</head>
+<body>
+<p>Total Salary: <input type="number" id="salary"></p>
+<button type="button" value="calculate" onclick="calculate()">Calculate</button>
+<p id="truthSalary"></p>
+<script>
+
+    function calculate() {
+       let salary=parseInt(document.getElementById("salary").value);
+        let truthSalary;
+        if(salary<=0){
+            document.getElementById("truthSalary").innerHTML=0
+        }
+        else if(salary<7){
+            truthSalary=salary-(salary*5/100);
+            // document.getElementById("truthSalary").innerHTML="TruthSalary: "+truthSalary
+        }
+        else if (salary<15) {
+            truthSalary=salary-(salary*10/100);
+            // document.getElementById("truthSalary").innerHTML="TruthSalary: "+truthSalary
+        }
+        else {
+            truthSalary=salary-(salary*20/100);
+            // document.getElementById("truthSalary").innerHTML="TruthSalary: "+truthSalary
+        }
+        document.getElementById("truthSalary").innerHTML="TruthSalary: "+truthSalary
+        }
+
+</script>
+</body>
+</html>
