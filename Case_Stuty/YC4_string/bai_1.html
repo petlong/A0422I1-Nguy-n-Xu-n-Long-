@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai1</title>
+</head>
+<body>
+<p>1) Viết một hàm chuẩn hóa xâu ký tự: <br>
+    biến đổi xâu ký tự thành xâu sao cho trong xâu không có 2 dấu cách liền nhau và bắt đầu mỗi từ phải in hoa. <br>
+    Ví dụ tRuong    TaN   HAI => Truong Tan Hai.</p>
+
+<p>2)hàm tìm từ dài nhất trong 1 xâu ký tự. <br>
+    Hàm main sử dụng các hàm này để nhập xâu ký tự từ bàn phím, in ra xâu trước và sau khi chuẩn hóa, 1 từ dài nhất trong xâu đó.</p>
+<script>
+//hàm 1
+    let str="   tRuong    TaN   HAI"
+
+    function validateName(name) {
+        name = name.trim().toLowerCase();
+        let replaceName = "";
+        for (let i = 0; i < name.length; i++) {
+            if (name.charAt(i) === " " && name.charAt(i + 1) === " ") {
+                continue;
+            }
+            if (name.charAt(i - 1) === " " || i === 0) {
+                replaceName += name.charAt(i).toLocaleUpperCase();
+                continue;
+            }
+            replaceName += name.charAt(i)
+        }
+        return name = replaceName;
+    }
+    console.log(validateName(str))
+
+
+    //ham2
+function longestWord(string){
+    let arrayStr=string.split(" ")
+    let longestWord1=arrayStr[0]
+    for (let i=0;i<arrayStr.length;i++){
+        if(arrayStr[i].length>longestWord1){
+            longestWord1=arrayStr[i]
+        }
+    }return longestWord1
+}
+
+    console.log("Longest Word is: "+ longestWord( validateName(str)))
+
+</script>
+</body>
+</html>

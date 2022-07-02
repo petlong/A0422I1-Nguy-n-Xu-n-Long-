@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai1</title>
+</head>
+<body>
+<p>
+    Viết hàm tính tổng các số chẵn trong ma trận có kích thước m*n. <br>
+    Với m, n là các số nhập từ bàn phím.
+</p>
+<script>
+    let arrayM=[24,3,6,7];
+    let arrayN=[4,6,9,14];
+    function sumEvenNumber(array1,array2){
+        let array=[array1,array2];
+    let sum=0;
+    for(let i=0;i<array.length;i++){
+    for(let j=0; j<array[i].length;j++){
+        if(array[i][j]%2==0){
+            sum+=array[i][j]
+        }
+    }
+    }return sum
+    }
+    console.log(sumEvenNumber(arrayM,arrayN))
+
+</script>
+</body>
+</html>

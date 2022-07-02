@@ -17,14 +17,20 @@
 
 </p>
 <body>
+
 <script>
     let n=parseInt(prompt("Nhập vào độ dài của mảng"));
     let arrayA=new Array();
     let arrayB=new Array();
-    arrayB[0]=1
+    let a=0
+    let b=0;
      for(let i=0; i<n;i++){
-         arrayB[i]=arrayA[0]
-     }
+         a++
+         b+=a
+         arrayA.push(a)
+         arrayB.push(b)
+     }document.write("Mảng A: "+arrayA+"<br>")
+      document.write("Mảng B: "+arrayB)
 </script>
 </body>
 </html>

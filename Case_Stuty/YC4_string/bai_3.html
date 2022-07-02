@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai3</title>
+</head>
+<body>
+<p>
+   Cho hai xâu kí tự, tìm số lượng kí tự chung giữa chúng.<br>
+    Ví dụ: s1 = "aabcc" và s2 = "adcaa", thì kết quả commonCharacterCount(s1, s2) = 3.<br>
+    ⇨	2 xâu s1 và s2 có 3 kí tự chung: 2 kí tự 'a' và 1 kí tự 'c'.
+
+</p>
+<script>
+    let str1="aabcc"
+    let str2="adcaa"
+    let arrayStr1=str1.split("")
+    let arrayStr2=str2.split("")
+        arrayStr1.sort()
+        arrayStr2.sort()
+    let arraySameWord=new Array()
+    for (let i=0;i<arrayStr1.length;i++){
+        for(let j=0;j<arrayStr2.length;j++){
+            if(arrayStr1[i]==arrayStr2[j]&&arrayStr1[i]==arrayStr1[i+1]){
+                arraySameWord.push(arrayStr1[i])
+            }
+        }
+    }console.log(arraySameWord)
+</script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai5</title>
+</head>
+<style type="text/css">
+    body {
+        padding: 100px;
+    }
+
+    table {
+        width: 50%;
+
+        border: 1px solid;
+
+    }
+
+    td, th {
+        height: 20px;
+        width: 100px;
+        border: 1px solid black;
+    }
+</style>
+<body>
+
+<table>
+    <tr>
+        <th>STT</th>
+        <th>MENU</th>
+        <th>SỐ LƯỢNG</th>
+        <th>ĐƠN GIÁ</th>
+        <th>TỔNG GIÁ</th>
+        <th>ChỌN</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Cafe</td>
+        <td><input type="number" oninput="moneyCafe(value)"></td>
+        <td>10000</td>
+        <td id="moneyCafe"></td>
+        <td>
+            <button type="button" onclick="one()" value="chọn">Chọn</button>
+        </td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Cam vắt</td>
+        <td><input type="number" oninput="moneyCam(value)"></td>
+        <td>20000</td>
+        <td id="moneyCam"></td>
+        <td>
+            <button type="button" onclick="two()" value="chọn">Chọn</button>
+        </td>
+    </tr>
+    <!--    <tr>-->
+    <!--        <td>3</td>-->
+    <!--        <td>Nước ép cà rốt</td>-->
+    <!--        <td id="carot"></td>-->
+    <!--        <td><button type="button" onclick="three()" value="chọn">Chọn</button></td>-->
+    <!--    </tr>-->
+</table>
+<p id="result">Tổng tiền</p>
+<script>
+    let sum = 0;
+
+    function moneyCafe(numCafe) {
+        numCafe = parseFloat(numCafe);
+        let moneyCafe1 = numCafe * 10000
+        document.getElementById("moneyCafe").innerHTML = moneyCafe1;
+    }
+
+    function moneyCam(numCam) {
+        numCam = parseFloat(numCam);
+        let moneyCam1 = numCam * 20000
+        document.getElementById("moneyCam").innerHTML = moneyCam1;
+    }
+
+    function one() {
+        sum+=parseInt(document.getElementById("moneyCafe").innerHTML)
+        document.getElementById("result").innerHTML = "Tổng số tiền thanh toán: "+sum
+    }
+    function two() {
+        sum+=parseInt(document.getElementById("moneyCam").innerHTML)
+        document.getElementById("result").innerHTML = "Tổng số tiền thanh toán: "+sum
+    }
+</script>
+</body>
+</html>

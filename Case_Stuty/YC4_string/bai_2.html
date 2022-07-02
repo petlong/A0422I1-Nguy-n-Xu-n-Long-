@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2</title>
+</head>
+<body>
+<p>
+    Cho xâu kí tự. Hãy đếm số lượng kí tự khác nhau trong xâu đó<br>
+    Ví dụ: s = "cabca", thì kết quả differentSymbolsNaive(s) = 3.<br>
+    ⇨	Có 3 kí tự khác nhau là a, b và c.
+
+</p>
+<script>
+
+    let string=prompt("Enter one string")
+    function countDifferentSybol(string) {
+       arrayString = string.toLowerCase().split("")
+        arrayString.sort()
+        let arrayString2=new Array()
+        for( let i=0;i<arrayString.length;i++){
+            if(arrayString[i]!=arrayString[i-1]){
+                arrayString2.push(arrayString[i])
+            }
+        }return arrayString2
+    }
+    console.log(countDifferentSybol(string))
+    console.log(countDifferentSybol(string).length)
+</script>
+</body>
+</html>

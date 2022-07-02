@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai4</title>
+</head>
+<body>
+<p>
+    Bài 4: Viết một chương trình nhập một số từ bàn phím và in ra màn hình bằng chữ. <br>
+    Ví dụ 1234, kết quả in ra màn hình là một hai ba bốn.
+</p>
+<script>
+    let inputNumber=prompt("enter 1 number");
+    let arrayNumber=["1","2","3","4","5","6","7","8","9","0"];
+    let arrayWord=["một", "hai","ba","bốn","năm","sáu","bảy","tám","chín","không"];
+    let arrayOutWord=new Array()
+    let arrayInputNumber=inputNumber.split("")
+    console.log(arrayInputNumber)
+    for(let i=0;i<arrayInputNumber.length;i++){
+        for(j=0;j<arrayNumber.length;j++){
+            if(arrayInputNumber[i]===arrayNumber[j]){
+               arrayOutWord.push(arrayWord[j])
+            }
+        }
+    }document.write("Number you enter: "+arrayOutWord.join(" "))
+
+</script>
+</body>
+</html>
