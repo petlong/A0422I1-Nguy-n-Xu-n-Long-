@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai4</title>
+</head>
+<body>
+<input id="id" type="text" placeholder="Enter id">
+<input id="name" type="text" placeholder="Enter name">
+<input id="product" type="text" placeholder="Enter product">
+<input id="price" type="text" placeholder="Enter price">
+<input type="button" value="Add New " onclick="addNewPhone()"><br>
+<p id="result"></p>
+<script>
+    class Phone {
+        constructor(id, name, product, price) {
+            this.id = id;
+            this.name = name;
+            this.product = product;
+            this.price = price;
+        }
+
+        setId(id) {
+            this.id = id;
+        }
+
+        getId() {
+            return this.id;
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+
+        getName() {
+            return this.name
+        }
+
+        setProduct(product) {
+            this.product = product;
+        }
+
+        getProduct() {
+            return this.product
+        }
+
+        setPrice(price) {
+            this.price = price;
+        }
+
+        getPrice() {
+            return this.price
+        }
+
+        toString(){
+            console.log("thông tin của Phone: "
+                + Phone.getId() + " "+ Phone.getName() + " "+ Phone.getProduct() + " "+ Phone.getPrice() + " ")
+        }
+    }
+
+    let listPhone = [];
+    listPhone.push(new Phone("001","Glaxy1", "samsung1", 10000));
+    listPhone.push(new Phone("002","Glaxy2", "samsung2", 20000));
+    listPhone.push(new Phone("003","Glaxy3", "samsung3", 40000));
+    display(listPhone);
+
+    function addNewPhone() {
+        let id = document.getElementById("id").value;
+        let name = document.getElementById("name").value;
+        let product = document.getElementById("product").value;
+        let price = document.getElementById("price").value;
+        let newPhone = new Phone(id,name,product,price);
+        listPhone.push(newPhone);
+        display(listPhone)
+    }
+
+    function display(phone) {
+        let tableString = '<table border="1" style="border-collapse: collapse">\n' +
+            '    <tr>\n' +
+            '        <th>STT</th>\n' +
+            '        <th>id</th>\n' +
+            '        <th>Name</th>\n' +
+            '        <th>Product</th>\n' +
+            '        <th>Price</th>\n' +
+            '    </tr>';
+        for (let i = 0; i < phone.length; i++) {
+            tableString += '<tr>\n' +
+                '        <td>' + (1 + i) + '</td>\n' +
+                '        <td>' + phone[i].getId() + '</td>\n' +
+                '        <td>' + phone[i].getName() + '</td>\n' +
+                '        <td>' + phone[i].getProduct() + '</td>\n' +
+                '        <td>' + phone[i].getPrice() + '</td>\n' +
+                '    </tr>';
+        }
+        tableString += '</table>'
+        document.getElementById("result").innerHTML = tableString;
+    }
+
+
+
+
+
+
+    // function sort(phone) {
+    //     let arrayWordSort = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q",
+    //         "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+    //     let count = 0;
+    //     while (count != phone.length-1) {
+    //         count = 0;
+    //         for (let i = 0; i < phone.length-1; i++) {
+    //             if (arrayWordSort.indexOf((phone[i].getName()).charAt((phone[i].getName()).lastIndexOf(" ") + 1)) >
+    //                 arrayWordSort.indexOf((phone[i + 1].getName()).charAt((phone[i + 1].getName()).lastIndexOf(" ") + 1))) {
+    //                 let temp = phone[i];
+    //                 phone[i] = phone[i + 1];
+    //                 phone[i + 1] = temp;
+    //             } else {
+    //                 count++;
+    //                 console.log(count);
+    //
+    //             }
+    //             console.log(phone);
+    //             // console.log(count);
+    //
+    //         }
+    //     }
+    //     console.log(phone);
+    //
+    //     display(phone);
+    //
+    // }
+
+
+</script>
+</body>
+</html>

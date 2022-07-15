@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sanpham</title>
+</head>
+<body>
+<input id="id" type="text" placeholder="Enter id">
+<input id="name" type="text" placeholder="Enter Name">
+<input id="price" type="text" placeholder="Enter price">
+<input type="button" value="Add new product" onclick="addNewProduct()"><br>
+<span>Amount : </span>
+<span id="amount"></span><br>
+<p id="result"></p>
+
+<script>
+
+        class Products{
+            constructor(id,name,price) {
+                this.id=id;
+                this.name=name;
+                this.price=price
+            }
+            setId (id){
+                this.id=id;
+            }
+            getId (){
+                return this.id;
+            }
+            setName(name){
+                this.name=name
+            }
+            getName(){
+                return this.name
+            }
+            setPrice(price){
+                this.price=price
+            }
+            getPrice(){
+                return this.price
+            }
+            }
+
+        function display(products) {
+            let tableString = '<table border="1" style="border-collapse: collapse">\n' +
+                '    <tr>\n' +
+                '        <th>STT</th>\n' +
+                '        <th>id</th>\n' +
+                '        <th>Name</th>\n' +
+                '        <th>Price</th>\n' +
+                '        <th>Delete</th>\n' +
+                '        <th>Edit</th>\n' +
+                '    </tr>';
+            for (let i = 0; i < products.length; i++) {
+                tableString += '<tr>\n' +
+                    '        <td>' + (1 + i) + '</td>\n' +
+                    '        <td>' + products[i].getId() + '</td>\n' +
+                    '        <td>' + products[i].getName() + '</td>\n' +
+                    '        <td>' + products[i].getPrice() + '</td>\n' +
+                    '        <td><button type="button" onclick="deleteProduct('+i+')">Delete</button></td>\n' +
+                    '        <td><button type="button" onclick="editProduct('+i+')">Edit</button></td>\n' +
+                    '    </tr>';
+            }
+            tableString += '</table>'
+            document.getElementById("result").innerHTML = tableString;
+            document.getElementById("amount").innerHTML = products.length;
+        }
+
+        let productList=[];
+        productList.push(new Products("001","samsung",10000));
+        productList.push(new Products("002","LG",20000));
+        productList.push(new Products("002","iphone",30000));
+        display(productList)
+
+        function addNewProduct() {
+            let id=document.getElementById("id").value;
+            let name=document.getElementById("name").value;
+            let price=document.getElementById("price").value;
+            let newProduct=new Products(id,name,price)
+            productList.push(newProduct)
+            display(productList)
+        }
+
+        function deleteProduct(index) {
+            let conf=confirm("Do you want to delete product: "+productList[index].getName() + " ?")
+            if(conf){
+                productList.splice(index,1)
+            }display(productList)
+        }
+
+        // function editProduct(index) {
+        //     let confID=confirm("Do you want to edit id product: "+productList[index].getId() + " ?")
+        //     if(confID){
+        //         let newId=prompt("Enter new id");
+        //         productList[index].setId(newId)
+        //     }
+        //     let confName=confirm("Do you want to edit name product: "+productList[index].getName() + " ?")
+        //     if(confName){
+        //         let newName=prompt("Enter new name");
+        //         productList[index].setName(newName)
+        //     }
+        //     let confPrice=confirm("Do you want to edit price product: "+productList[index].getPrice() + " ?")
+        //     if(confPrice){
+        //         let newPrice=prompt("Enter new price");
+        //         productList[index].setPrice(newPrice)
+        //     }
+        //     display(productList)
+        // }
+    </script>
+</body>
+</html>

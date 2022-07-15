@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai1</title>
+</head>
+<body>
+<script>
+    let array = new Array();
+    let n = parseInt(prompt("Nhập vào số lượng phần tử của mảng (n>0 và n<=20)"));
+    if (isNaN(n) || n < 0 || n>20) {
+        alert("Vui lòng Nhập vào số lượng phần tử của mảng (n>0 và n<=20)");
+    }
+    else {
+        let sumChan=0
+        let sumLe=0
+        let result;
+        for (let i = 0; i <n; i++) {
+            array[i] = parseInt(prompt("Nhập giá trị của array[" + i + "]:"));
+            if(array[i]%2==0){
+                sumChan+=array[i];
+            }
+            else {
+                sumLe+=array[i];
+            }
+        }
+        result=sumChan-sumLe;
+        document.write("Mảng nhập vào là : " +"[" + array + "]" + "<br>")
+        document.write("Kết quả:"+result)
+        }
+</script>
+</body>
+</html>

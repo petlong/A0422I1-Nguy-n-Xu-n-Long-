@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai3</title>
+</head>
+<body>
+<script>
+
+    function getElementInArray(array,n){
+        array.sort()
+        let count=0;
+        for(let i=0; i<array.length; i++){
+            if(array[i]%n==0 && array[i]!=array[i-1]){
+                count++;
+            }
+        }return count
+    }
+
+
+    let n=parseInt(prompt("Nhập vào một số nguyên dương"))
+    let array = new Array();
+    let amountElementInArray = parseInt(prompt("Nhập vào số lượng phần tử của mảng: "));
+    if (isNaN(amountElementInArray) || amountElementInArray < 0) {
+        alert("Vui lòng nhập lại số lượng phần tử của mảng (là số nguyên dương) và số nguyên n (là số nguyên dương)");
+    }else {
+        for (let i = 0; i < amountElementInArray; i++) {
+            array[i] = parseInt(prompt("Nhập giá trị của array[" + i + "]:"));
+        }
+    }
+    document.write(array+"<br>");
+    console.log("Số lượng: "+getElementInArray(array,n));
+
+
+</script>
+</body>
+</html>

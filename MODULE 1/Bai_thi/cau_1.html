@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cau1</title>
+</head>
+<body>
+<script>
+    let integer=parseInt(prompt("Nhập vào một số nguyên lớn hơn 0: "));
+    let result=" ";
+    if(integer<=0){
+        alert("Nhập lại một số nguyên lớn hơn 0");
+    }else if(isNaN(integer)){
+        alert("Không phải số, yêu cầu nhập lại một số nguyên lớn hơn 0");
+    }else {
+        for (let i=1; i<=integer; i++){
+            if(integer%i==0){
+                result+=i+ " "
+
+            }
+        } document.write("Ước của "+integer+" : "+ result)
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2</title>
+</head>
+<body>
+<script>
+
+    function indexMinMax(arr) {
+        let min = arr[0];
+        let max = arr[0];
+        let indexMin=0;
+        let indexMax=0;
+        let indexMinMax = new Array();
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] < min) {
+                min = arr[i]
+                indexMin = i
+            }
+                if(arr[i]>max){
+                    max=arr[i]
+                    indexMax = i
+                }
+            }
+        indexMinMax.push(indexMin);
+        indexMinMax.push(indexMax);
+        return indexMinMax
+    }
+
+    let array = new Array();
+    let n = prompt("Nhập vào số lượng phần tử của mảng: ");
+    let checkInteger = n;
+    n = parseInt(n);
+    if (isNaN(n) || n != checkInteger || n < 0) {
+        alert("Vui lòng nhập lại số lượng phần tử của mảng là số nguyên dương (với n>0)");
+    } else {
+        for (let i = 0; i < n; i++) {
+            array[i] = parseInt(prompt("Nhập giá trị của array[" + i + "]:"));
+        }
+
+        document.write("Vị trí xuất hiện sớm nhất của phần tử có giá trị nhỏ nhất và lớn nhất của mảng [" + array + "] là:"+"<br>");
+        document.write("["+indexMinMax(array)+"]");
+    }
+
+
+
+
+</script>
+</body>
+</html>

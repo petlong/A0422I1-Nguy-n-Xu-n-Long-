@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<center><h2>Danh sách bệnh nhân</h2>
+<p id="result"></p>
+<input id="ten" type="text" placeholder="Nhập tên">
+<input id="tuoi" type="text" placeholder="Nhập tuổi">
+<input id="diachi" type="text" placeholder="Nhập địa chỉ">
+<input id="sodienthoai" type="text" placeholder="Nhập số điện thoại">
+<input type="button" value="Thêm mới " onclick="addNewBenhNhan()"><br></center>
+
+<script>
+    class BenhNhan {
+        constructor(ten, tuoi, diachi, sodienthoai) {
+            this.ten = ten;
+            this.tuoi = tuoi;
+            this.diachi = diachi;
+            this.sodienthoai = sodienthoai;
+        }
+
+        setTen(ten) {
+            this.ten = ten;
+        }
+
+        getTen() {
+            return this.ten;
+        }
+
+        setTuoi(tuoi) {
+            this.tuoi = tuoi;
+        }
+
+        getTuoi() {
+            return this.tuoi
+        }
+
+        setDiaChi(diachi) {
+            this.diachi = diachi;
+        }
+
+        getDiaChi() {
+            return this.diachi
+        }
+
+        setSoDienThoai(sodienthoai) {
+            this.sodienthoai = sodienthoai;
+        }
+
+        getSoDienThoai() {
+            return this.sodienthoai
+        }
+    }
+
+    let listBenhNhan = [];
+    listBenhNhan.push(new BenhNhan("Nguyễn Lê Hoàng A", 20 , "Quảng Nam" , "090"));
+    listBenhNhan.push(new BenhNhan("Nguyễn Lê Hoàng B", 21 , "Quảng Nam" ,"090"));
+    listBenhNhan.push(new BenhNhan("Nguyễn Lê Hoàng C", 22 , "Quảng Nam" , "090"));
+    listBenhNhan.push(new BenhNhan("Nguyễn Lê Hoàng D", 23 , "Quảng Nam" , "090"));
+    display(listBenhNhan);
+
+    function addNewBenhNhan() {
+        let ten = document.getElementById("ten").value;
+        let tuoi = document.getElementById("tuoi").value;
+        let diachi = document.getElementById("diachi").value;
+        let sodienthoai = document.getElementById("sodienthoai").value;
+        let newBenhNhan = new BenhNhan(ten, tuoi, diachi, sodienthoai);
+        listBenhNhan.push(newBenhNhan);
+        display(listBenhNhan)
+    }
+
+    function display(benhnhan) {
+        let tableString = '<table border="1" style="border-collapse: collapse">\n' +
+            '    <tr>\n' +
+            '        <th>STT</th>\n' +
+            '        <th>Họ và Tên</th>\n' +
+            '        <th>Tuổi</th>\n' +
+            '        <th>Địa chỉ</th>\n' +
+            '        <th>Số điện thoại</th>\n' +
+            '    </tr>';
+        for (let i = 0; i < benhnhan.length; i++) {
+            tableString += '<tr>\n' +
+                '        <td>' + (1 + i) + '</td>\n' +
+                '        <td>' + benhnhan[i].getTen() + '</td>\n' +
+                '        <td>' + benhnhan[i].getTuoi() + '</td>\n' +
+                '        <td>' + benhnhan[i].getDiaChi() + '</td>\n' +
+                '        <td>' + benhnhan[i].getSoDienThoai() + '</td>\n' +
+                '    </tr>';
+        }
+        tableString += '</table>'
+        document.getElementById("result").innerHTML = tableString;
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2</title>
+</head>
+<body>
+<script>
+    function checkChar(str) {
+        let arrayUpper = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","X","Y","Z"];
+        let count=0;
+        for (let i=0; i<str.length; i++){
+            for (let j=0; j<arrayUpper.length; j++){
+                if(str[i]===arrayUpper[j]){
+                    count++
+                }
+            }
+        }
+        if(count>0){
+            return count
+        }else {
+            alert("String is not cointain upper char")
+        }
+    }
+
+    let string=prompt("Enter one string")
+    // if(isNaN(string)){
+    //     document.write(checkChar(string))
+    // } else {
+    //     alert("Nhập lại một chuỗi các kí tự bất kì")
+    // }
+    document.write("Amount of char in string: "+ checkChar(string));
+</script>
+</body>
+</html>
