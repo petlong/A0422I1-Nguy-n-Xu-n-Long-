@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class DrwaingMenu {
     public static void main(String[] args) {
-        int choice = 0 ;
+        int choice = 0;
         Scanner scanner = new Scanner(System.in);
 
         while (choice != 4) {
@@ -18,7 +18,7 @@ public class DrwaingMenu {
             int length;
             int height = 0;
             int typeOfTriangle;
-            String shape="";
+            String shape = "";
             switch (choice) {
                 case 1:
                     System.out.println("Print the rectangle");
@@ -29,10 +29,11 @@ public class DrwaingMenu {
                     System.out.print("Enter length: ");
                     length = scanner.nextInt();
 
-                    for(int i=0; i<height; i++){
-                        for (int j=0; j<length; j++){
+                    for (int i = 0; i < height; i++) {
+                        for (int j = 0; j < length; j++) {
                             System.out.print("*");
-                        }System.out.print("\n");
+                        }
+                        System.out.print("\n");
                     }
                     break;
                 case 2:
@@ -67,45 +68,49 @@ public class DrwaingMenu {
                                 System.out.print("\n");
                             }
                             break;
-//                        case 3:
-//                            System.out.println("Print square triangle has side in bottom right: ");
-//                            for(int i=0; i<height; i++){
-//                                for (int j=i; j<height; j++){
-//                                    System.out.print("*");
-//                                }System.out.print("\n");
-//                            }
-//                            break;
+                        case 3:
+                            System.out.println("Print square triangle has side in bottom right: ");
+                            for (int i = 0; i < height; i++) {
+                                for (int j = 0; j < height; j++) {
+                                    if (j < height - 1 - i)
+                                        System.out.print(" ");
+                                    else
+                                        System.out.print("*");
+                                }
+                                System.out.print("\n");
+                            }
+                            break;
+                        case 4:
+                            System.out.println("Print square triangle has side in top right: ");
+                            for (int i = 0; i < height; i++) {
+                                for (int j = 0; j < height; j++) {
+                                    if (j >= i)
+                                        System.out.print("*");
+                                    else
+                                        System.out.print(" ");
+
+                                }
+                                System.out.print("\n");
+                            }
+                            break;
                         default:
                             System.out.println("No choice!");
                     }
+                    break;
+
                 case 3:
                     System.out.println("Print isosceles triangle");
                     System.out.print("Enter height: ");
-
-//                    for (int i=1; i<=height;i++) {
-//                        for (int j =0; j<height*2; j++) {
-//                            if (j < height - 1) {
-//                                System.out.print(" ");
-//                            }else if(j>height+1){
-//                                System.out.print(" ");
-//                            }else {
-//                                System.out.print("*");
-//                            }
-//                        }System.out.print("\n");
-//                    }
-                    //=========Cách khác============
                     height = scanner.nextInt();
-                    length=height*2-1;
-                    for (int i=1; i<=height;i++){
-                        for (int j =0; j<length/2-i; j++){
-                            shape+=" ";
+                    for (int i = 0; i < height; i++) {
+                        for (int j = 1; j <= height * 2 - 1; j++) {
+                            if (j >= height - i && j <= height + i)
+                                System.out.print("*");
+                            else
+                                System.out.print(" ");
                         }
-                        for (int k=0; k<i*2-1; k++){
-                            shape+="*";
-                        }
-                        shape+="\n";
+                        System.out.print("\n");
                     }
-                    System.out.print(shape);
                     break;
                 case 4:
                     System.exit(0);//Khi System.exit() được gọi, quá trình thực thi của JVM sẽ bị chấm dứt và dừng chương trình.
@@ -115,4 +120,3 @@ public class DrwaingMenu {
         }
     }
 }
-
