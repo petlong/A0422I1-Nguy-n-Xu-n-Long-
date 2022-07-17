@@ -1,9 +1,10 @@
-package ss2_ArrayAndLoop.Exercise;
+package ss2_Array_Loop_Method.Exercise;
 
 import java.util.Scanner;
 
-public class FindMinElementOfArray2D {
+public class FindMaxElementOfArrayMatrix {
     public static void main(String[] args) {
+
         int column;
         int row;
         int[][] matrix;
@@ -26,18 +27,18 @@ public class FindMinElementOfArray2D {
                 matrix[i][j] = scanner.nextInt();
             }
         }
-        int min = matrix[0][0];
-//        int indexRow=0;
-//        int indexCol = 0;
+        int max = matrix[0][0];
+        int indexRow = 0;
+        int indexCol = 0;
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
-                if (matrix[i][j] < min) {
-                    min = matrix[i][j];
-//                    indexRow=i;
-//                    indexCol=j;
+                if (matrix[i][j] > max) {
+                    max = matrix[i][j];
+                    indexRow = i;
+                    indexCol = j;
                 }
             }
         }
-        System.out.println("Value of min element in array: " + min);
+        System.out.println("Max element in array: element [" + indexRow + "][" + indexCol + "]");
     }
 }

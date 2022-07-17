@@ -1,4 +1,4 @@
-package ss2_ArrayAndLoop.Practice;
+package ss2_Array_Loop_Method.Practice;
 
 public class ShowPrimeSmallerHundred {
     public static void main(String[] args) {

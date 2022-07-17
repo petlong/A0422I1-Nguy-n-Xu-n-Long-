@@ -1,4 +1,4 @@
-package ss2_ArrayAndLoop.Demo;
+package ss2_Array_Loop_Method.Demo;
 
 public class ArrayStudy {
     public static void main(String[] args) {

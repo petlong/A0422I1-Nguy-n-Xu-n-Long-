@@ -1,4 +1,4 @@
-package ss2_ArrayAndLoop.Exercise;
+package ss2_Array_Loop_Method.Exercise;
 
 import java.util.Scanner;
 
