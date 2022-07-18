@@ -6,14 +6,14 @@ public class Fan {
     private final int FAST = 3;
     private int speed;
     private boolean on = false;
-    private  double radius = 5;
+    private double radius = 5;
     private String color = "blue";
 
-    public Fan(){
+    public Fan() {
         speed = SLOW;
     }
 
-    public Fan(int speed, boolean on, double radius, String color){
+    public Fan(int speed, boolean on, double radius, String color) {
         this.speed = speed;
         this.on = on;
         this.radius = radius;
@@ -65,11 +65,11 @@ public class Fan {
         this.color = color;
     }
 
-     public String toString(){
-        if(on){
+    public String toString() {
+        if (on) {
             return "Fan is on, speed: " + speed + ",color: " + color + ", radius: " + radius;
-        }else {
+        } else {
             return "Fan is off,color: " + color + ", radius: " + radius;
         }
-     }
+    }
 }
