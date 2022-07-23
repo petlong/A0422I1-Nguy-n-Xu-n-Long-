@@ -22,14 +22,13 @@ public class StopWatchMain {
             arr1[i] = (int) (Math.random() * 100);
         }
 
-        StopWatch stopWatch = new StopWatch();
-
+        StopWatch time = new StopWatch();
 
         System.out.println("Before Selection Sort");
         for (int i : arr1) {
             System.out.print(i + " ");
         }
-        System.out.println("\nTimes start sort: " + stopWatch.getStartTime());
+        System.out.println("\nTimes start sort: " + time.getStartTime());
 
         selectionSort(arr1);//sorting array using selection sort
 
@@ -38,8 +37,8 @@ public class StopWatchMain {
             System.out.print(i + " ");
         }
 
-        stopWatch.stop();//in thời gian kết thúc sort
-        System.out.println("\nTimes stop sort: " + stopWatch.getEndTime());
-        System.out.println("Times sort: " + stopWatch.getElapsedTime());
+        time.stop();//in thời gian kết thúc sort
+        System.out.println("\nTimes stop sort: " + time.getEndTime());
+        System.out.println("Times sort: " + time.getElapsedTime());
     }
 }
