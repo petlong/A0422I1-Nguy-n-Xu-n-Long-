@@ -1,4 +1,4 @@
-package ss6_Inheritance.Practice;
+package ss6_inheritance.practice;
 
 public class ShapeTest {
     public static void main(String[] args) {

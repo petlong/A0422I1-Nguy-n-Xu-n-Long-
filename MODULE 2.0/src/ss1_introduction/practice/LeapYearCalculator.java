@@ -1,5 +1,4 @@
-package ss1_Introduction.Exercise;
-
+package ss1_introduction.practice;
 import java.util.Scanner;
 
 public class LeapYearCalculator {

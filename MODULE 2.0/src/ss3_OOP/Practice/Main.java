@@ -1,4 +1,4 @@
-package ss3_OOP.Practice;
+package ss3_oop.practice;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package ss6_Inheritance.Practice;
+package ss6_inheritance.practice;
 
 public class Rectangle extends Shape{
     private double width = 1.0;

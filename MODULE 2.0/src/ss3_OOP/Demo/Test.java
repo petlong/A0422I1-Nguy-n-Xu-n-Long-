@@ -1,4 +1,4 @@
-package ss3_OOP.Demo;
+package ss3_oop.demo;
 
 public class Test {
     public static void main(String[] args) {

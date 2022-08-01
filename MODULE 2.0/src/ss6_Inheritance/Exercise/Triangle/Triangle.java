@@ -1,6 +1,7 @@
-package ss6_Inheritance.Exercise.Triangle;
+package ss6_inheritance.exercise.triangle;
 
-import ss6_Inheritance.Practice.Shape;
+
+import ss6_inheritance.practice.Shape;
 
 public class Triangle extends Shape {
     private double side1 = 1.0;

@@ -1,4 +1,4 @@
-package ss5_Access_Modifier.Practice.StaticMethod;
+package ss5_access_modifier.practice.staticmethod;
 
 public class SetStacticMethod {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package ss6_Inheritance.Practice;
+package ss6_inheritance.practice;
 
 public class Circle extends Shape {
     private double radius = 1.0;

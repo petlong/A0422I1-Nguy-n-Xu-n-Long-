@@ -1,4 +1,4 @@
-package ss6_Inheritance.Exercise.Point_MoveablePoint;
+package ss6_inheritance.exercise.point_moveablepoint;
 
 public class PointTest {
     public static void main(String[] args) {

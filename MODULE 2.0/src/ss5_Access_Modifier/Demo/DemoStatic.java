@@ -1,4 +1,4 @@
-package ss5_Access_Modifier.Demo;
+package ss5_access_modifier.demo;
 
 public class DemoStatic {
     public static int count;

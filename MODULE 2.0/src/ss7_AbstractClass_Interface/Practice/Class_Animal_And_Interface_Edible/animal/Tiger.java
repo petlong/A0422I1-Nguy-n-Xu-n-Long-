@@ -1,4 +1,4 @@
-package ss7_AbstractClass_Interface.Practice.Class_Animal_And_Interface_Edible;
+package ss7_abstractclass_interface.practice.class_animal_and_interface_edible.animal;
 
 public class Tiger extends Animal{
 

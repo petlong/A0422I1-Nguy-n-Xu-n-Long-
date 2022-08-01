@@ -1,4 +1,4 @@
-package ss6_Inheritance.Exercise.Triangle;
+package ss6_inheritance.exercise.triangle;
 
 import java.util.Scanner;
 

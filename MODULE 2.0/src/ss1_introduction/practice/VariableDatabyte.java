@@ -1,4 +1,4 @@
-package ss1_Introduction.Exercise;
+package ss1_introduction.practice;
 
 public class VariableDatabyte {
 

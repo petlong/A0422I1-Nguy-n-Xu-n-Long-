@@ -1,4 +1,4 @@
-package ss6_Inheritance.Exercise.Point2D_3D;
+package ss6_inheritance.exercise.point;
 
 public class Point3DTest {
     public static void main(String[] args) {

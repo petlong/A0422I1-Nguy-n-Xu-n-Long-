@@ -1,8 +1,8 @@
-package ss7_abstractclass_interface.exercise.interface_resizeable.codegym;
+package ss7_abstractclass_interface.exercise.interface_resizeable;
 
-import ss7_abstractclass_interface.exercise.interface_resizeable.Resizeable;
+import ss7_abstractclass_interface.exercise.interface_colorable.Colorable;
 
-public class Circle extends Shape implements Resizeable {
+public class Circle extends Shape implements Resizeable, Colorable {
     private double radius = 1.0;
 
     public Circle() {
@@ -43,6 +43,11 @@ public class Circle extends Shape implements Resizeable {
 
     @Override
     public void resize(double percent) {
+        setRadius(getRadius() + percent*getRadius()/100);
+    }
 
+    @Override
+    public void howToColor() {
+        setColor("blue");
     }
 }

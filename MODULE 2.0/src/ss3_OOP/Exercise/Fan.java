@@ -1,4 +1,4 @@
-package ss3_OOP.Exercise;
+package ss3_oop.exercise;
 
 public class Fan {
     private final int SLOW = 1;

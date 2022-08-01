@@ -1,4 +1,4 @@
-package ss3_OOP.Exercise;
+package ss3_oop.exercise;
 
 import java.util.Date;
 

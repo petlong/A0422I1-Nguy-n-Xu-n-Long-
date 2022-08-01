@@ -1,4 +1,4 @@
-package ss7_abstractclass_interface.exercise.interface_resizeable.codegym;
+package ss7_abstractclass_interface.exercise.interface_resizeable;
 
 public class RectangleTest {
     public static void main(String[] args) {

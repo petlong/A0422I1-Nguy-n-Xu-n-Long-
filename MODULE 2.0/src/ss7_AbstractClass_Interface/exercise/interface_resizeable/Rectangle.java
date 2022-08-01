@@ -1,8 +1,8 @@
-package ss7_abstractclass_interface.exercise.interface_resizeable.codegym;
+package ss7_abstractclass_interface.exercise.interface_resizeable;
 
-import ss7_abstractclass_interface.exercise.interface_resizeable.Resizeable;
+import ss7_abstractclass_interface.exercise.interface_colorable.Colorable;
 
-public class Rectangle extends Shape implements Resizeable {
+public class Rectangle extends Shape implements Resizeable , Colorable {
     private double width = 1.0;
     private double length = 1.0;
 
@@ -56,6 +56,12 @@ public class Rectangle extends Shape implements Resizeable {
 
     @Override
     public void resize(double percent) {
+        setWidth(getWidth() + percent * getWidth() / 100);
+        setLength(getLength() + percent * getLength() / 100);
+    }
 
+    @Override
+    public void howToColor() {
+        setColor("yellow");
     }
 }

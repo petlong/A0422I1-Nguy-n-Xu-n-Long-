@@ -1,4 +1,4 @@
-package ss5_Access_Modifier.Practice.StaticProperty;
+package ss5_access_modifier.practice.staticproperty;
 
 public class SetStaticProperty {
     public static void main(String[] args) {
