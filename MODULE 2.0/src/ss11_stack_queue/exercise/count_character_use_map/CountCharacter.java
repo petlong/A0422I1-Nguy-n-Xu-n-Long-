@@ -6,7 +6,7 @@ import java.util.Set;
 
 public class CountCharacter {
     public static void main(String[] args) {
-        String srt = "Hom nay la ngay thu tu";
+        String srt = "codegym danang";
         Map map = count(srt);
 
         Set<Character> keys = map.keySet();
