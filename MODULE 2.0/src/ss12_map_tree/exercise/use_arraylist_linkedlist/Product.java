@@ -1,48 +1,48 @@
 package ss12_map_tree.exercise.use_arraylist_linkedlist;
 
 public class Product {
-    private String name;
     private int id;
-    private String product;
+    private String name;
     private float price;
 
-    public Product(String name, int id, String product, float price) {
-        this.name = name;
+    public Product(){}
+
+    public Product(int id, String name, float price) {
         this.id = id;
-        this.product = product;
+        this.name = name;
         this.price = price;
     }
 
-    public String getName() {
-        return name;
+    public Product(String name, long price) {
+        this.name = name;
+        this.price = price;
     }
 
     public int getId() {
         return id;
     }
 
-    public String getProduct() {
-        return product;
+    public String getName() {
+        return name;
     }
 
     public float getPrice() {
         return price;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public void setId(int id) {
         this.id = id;
     }
 
-    public void setProduct(String product) {
-        this.product = product;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public void setPrice(float price) {
         this.price = price;
     }
 
+    public String toString(){
+        return "Id:" + id +"; Name Product:" + name + "; Price:" + price+ "$";
+    }
 }

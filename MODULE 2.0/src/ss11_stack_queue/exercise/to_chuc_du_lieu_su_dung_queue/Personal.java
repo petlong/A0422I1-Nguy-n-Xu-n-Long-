@@ -1,16 +1,18 @@
 package ss11_stack_queue.exercise.to_chuc_du_lieu_su_dung_queue;
 
+import java.time.LocalDate;
+
 public class Personal {
     private String name;
     private String sex;
-    private int age;
+    private LocalDate dateOfBirth;
 
     public Personal(){}
 
-    public Personal(String name, String sex, int age) {
+    public Personal(String name, String sex, LocalDate dateOfBirth) {
         this.name = name;
         this.sex = sex;
-        this.age = age;
+        this.dateOfBirth = dateOfBirth;
     }
 
     public String getName() {
@@ -21,19 +23,19 @@ public class Personal {
         return sex;
     }
 
-    public int getAge() {
-        return age;
+    public LocalDate getDateOfBirth() {
+        return dateOfBirth;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public boolean isMale(){
+        if(sex.equals("male")){
+            return true;
+        }
+        return false;
     }
 
-    public void setSex(String sex) {
-        this.sex = sex;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
+    @Override
+    public String toString(){
+        return "Name:" + name + " Sex:" + sex + " Date of Birth" + dateOfBirth;
     }
 }
