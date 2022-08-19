@@ -16,12 +16,12 @@ public class ProductManagerArrayList {
         productArrayList.set(id - 1, product);
     }
 
-    public void removeProduct(int id) {
+    public void removeProductById(int id) {
         productArrayList.remove(id - 1);
             }
 
     public void removeProductByName(String name){
-        productArrayList.remove(name);
+        productArrayList.remove(findProductByName(name));
     }
 
     public void displayProduct() {

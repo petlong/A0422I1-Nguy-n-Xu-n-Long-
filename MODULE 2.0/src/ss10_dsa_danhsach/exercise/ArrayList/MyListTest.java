@@ -1,5 +1,7 @@
 package ss10_dsa_danhsach.exercise.ArrayList;
 
+import java.util.ArrayList;
+
 public class MyListTest {
     public static void main(String[] args) {
         MyList<Integer> list = new MyList<>();
@@ -7,10 +9,13 @@ public class MyListTest {
         list.add(2);
         list.add(3);
         list.add(4);
+        ArrayList<String> list1 = new ArrayList<>();
+
+
         System.out.println("element 1: "+list.get(1));
 
-//        list.remove(1);
-//        System.out.println("element 1: "+list.get(1));
+        list.remove(1);
+        System.out.println("element 1: "+list.get(1));
 
         list.add(3,5);
         System.out.println("element 3: "+list.get(3));
