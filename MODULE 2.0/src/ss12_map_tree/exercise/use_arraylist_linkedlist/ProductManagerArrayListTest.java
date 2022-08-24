@@ -26,7 +26,7 @@ public class ProductManagerArrayListTest {
                     product.addProduct(addProductList());
                     break;
                 case 2:
-//                    product.displayProduct();
+                    product.displayProduct();
                     do {
                         System.out.print("Enter the id to set: ");
                         id = scanner.nextInt();
