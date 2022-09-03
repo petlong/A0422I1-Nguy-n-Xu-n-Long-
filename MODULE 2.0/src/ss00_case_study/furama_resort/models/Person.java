@@ -1,17 +1,17 @@
 package ss00_case_study.furama_resort.models;
 
-public abstract class Person {
+public class Person {
     private String id;
     private String name;
     private String dateOfBirth;
     private String gender;
     private String idCard;
-    private int phoneNumber;
+    private String phoneNumber;
     private String email;
     private String address;
 
     public Person(){}
-    public Person(String id, String name, String dateOfBirth, String gender, String idCard, int phoneNumber, String email, String address) {
+    public Person(String id, String name, String dateOfBirth, String gender, String idCard, String phoneNumber, String email, String address) {
         this.id = id;
         this.name = name;
         this.dateOfBirth = dateOfBirth;
@@ -42,7 +42,7 @@ public abstract class Person {
         return idCard;
     }
 
-    public int getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
@@ -74,7 +74,7 @@ public abstract class Person {
         this.idCard = idCard;
     }
 
-    public void setPhoneNumber(int phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 

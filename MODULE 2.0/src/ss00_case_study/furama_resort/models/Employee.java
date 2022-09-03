@@ -13,12 +13,14 @@ public class Employee extends Person{
         this.salary = salary;
     }
 
-    public Employee(String id, String name, String dateOfBirth, String gender, String idCard, int phoneNumber, String email, String address, String educationLevel, String position, double salary) {
+    public Employee(String id, String name, String dateOfBirth, String gender, String idCard, String phoneNumber, String email, String address, String educationLevel, String position, double salary) {
         super(id, name, dateOfBirth, gender, idCard, phoneNumber, email, address);
         this.educationLevel = educationLevel;
         this.position = position;
         this.salary = salary;
     }
+
+
 
     public String getEducationLevel() {
         return educationLevel;
@@ -47,7 +49,7 @@ public class Employee extends Person{
     @Override
     public String toString() {
         return "Employee{" + super.toString() +
-                "educationLevel='" + educationLevel + '\'' +
+                ", educationLevel='" + educationLevel + '\'' +
                 ", position='" + position + '\'' +
                 ", salary=" + salary +
                 '}';

@@ -112,6 +112,7 @@ public class ProductManagerArrayListTest {
         long price = enterPriceProduct();
         return new Product(id,name,price);
     }
+
     public static Product setProductList(int id) {
         String name = enterNameProduct();
         long price = enterPriceProduct();
