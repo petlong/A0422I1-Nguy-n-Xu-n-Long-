@@ -114,3 +114,54 @@ update student
 set class_id = '2'
 where student_name = 'Hung';
 
+
+---- ss4 thuc_hanh
+use quan_ly_sinh_vien;
+
+---- 1 Hiển thị số lượng sinh viên ở từng nơi
+select address, count(student_id) as 'so_luong_sinh_vien'
+from student
+group by address;
+
+---- 2 Tính điểm trung bình các môn học của mỗi học viên
+select s.student_id, s.student_name, avg(m.mark)
+from student s 
+inner join mark m on s.student_id = m.student_id
+group by s.student_id, s.student_name;
+
+--- 3 Hiển thị những bạn học viên co điểm trung bình các môn học lớn hơn 8
+select s.student_id, s.student_name, avg(m.mark) as 'diem_trung_binh'
+from student s 
+inner join mark m on s.student_id = m.student_id
+group by s.student_id, s.student_name
+having avg(m.mark) >8;
+
+--- 4 Hiển thị thông tin các học viên có điểm trung bình lớn nhất.
+select s.student_id, s.student_name, avg(mark)
+from student s 
+inner join mark m on s.student_id = m.student_id
+group by s.student_id, s.student_name
+having avg(mark) >= all(select avg(mark) from mark group by mark.student_id);
+
+--- ss4 bài tập
+--- 1 Hiển thị tất cả các thông tin môn học (bảng `subject`) có credit lớn nhất.
+select * from `subject` 
+where credit = (select max(credit) from `subject`);
+
+--- hoặc
+select sub_id, sub_name, max(credit), `status`
+from `subject`;
+
+--- 2 Hiển thị các thông tin môn học có điểm thi lớn nhất.
+select s.sub_id, s.sub_name, max(m.mark) as 'diem_thi_lon_nhat'
+from `subject` s
+inner join mark m on s.sub_id = m.sub_id;
+
+--- 3 Hiển thị các thông tin sinh viên và điểm trung bình của mỗi sinh viên, 
+--- xếp hạng theo thứ tự điểm giảm dần
+
+select s.student_id, s.student_name, s.address, s.phone,s.class_id, avg(m.mark)
+from student s 
+inner join mark m on s.student_id = m.student_id
+group by s.student_id 
+order by avg(m.mark) desc;
