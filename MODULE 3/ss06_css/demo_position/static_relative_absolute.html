@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .static{
+            background: red;
+            position: static;
+            left: 100px;
+            top: 110px;
+        }
+        .relative{
+            background: yellow;
+            position: relative;
+            top: 50px;
+            left: 50px;
+            height: 50px;
+        }
+        .absolute{
+            background: yellow;
+            position: absolute;
+            margin: 0px;
+            left: 150px;
+            top: 100px;
+        }
+        .parent{
+            background: green;
+            position: static;
+            left: 200px;
+            top: 200px;
+            height: 100px;
+            width: 100px;
+            /*opacity: 0.5;*/
+        }
+        .ong-noi{
+            background-color: aquamarine;
+            position: relative;
+            height: 300px;
+            top: 100px;
+            left: 100px;
+        }
+
+    </style>
+</head>
+<body>
+<!--    <div class="relative">Hello</div>-->
+    <div class="ong-noi">
+        <div class="parent" style="background-color: antiquewhite">p1</div>
+        <div class="parent">
+            <div class="absolute">ssfsfs</div>
+        </div>
+    </div>
+<!--    <div class="parent">-->
+<!--        <div class="absolute">Thẻ con</div>-->
+<!--    </div>-->
+
+
+
+</body>
+</html>
