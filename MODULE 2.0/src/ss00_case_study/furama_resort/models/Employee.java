@@ -1,19 +1,22 @@
 package ss00_case_study.furama_resort.models;
 
-public class Employee extends Person{
+import java.io.Serializable;
+
+public class Employee extends Person implements Serializable {
     public String educationLevel;
     public String position;
-    public double salary;
+    public int salary;
 
     public Employee(){}
 
-    public Employee(String educationLevel, String position, double salary) {
+    public Employee(String educationLevel, String position, int salary) {
         this.educationLevel = educationLevel;
         this.position = position;
         this.salary = salary;
     }
 
-    public Employee(String id, String name, String dateOfBirth, String gender, String idCard, String phoneNumber, String email, String address, String educationLevel, String position, double salary) {
+    public Employee(int id, String name, String dateOfBirth, String gender, String idCard, String phoneNumber, String email, String address, String educationLevel, String position, int
+            salary) {
         super(id, name, dateOfBirth, gender, idCard, phoneNumber, email, address);
         this.educationLevel = educationLevel;
         this.position = position;
@@ -42,7 +45,7 @@ public class Employee extends Person{
         this.position = position;
     }
 
-    public void setSalary(double salary) {
+    public void setSalary(int salary) {
         this.salary = salary;
     }
 

@@ -11,8 +11,8 @@ public class House extends Facility{
         this.numberFloors = numberFloors;
     }
 
-    public House(String nameFacility, double areaUse, double rentalCosts, int maxNumberOfPeople, String typeRent, String standardRooms, int numberFloors) {
-        super(nameFacility, areaUse, rentalCosts, maxNumberOfPeople, typeRent);
+    public House(String idFacility, String nameFacility, double areaUse, double rentalCosts, int maxNumberOfPeople, String typeRent, String standardRooms, int numberFloors) {
+        super(idFacility, nameFacility, areaUse, rentalCosts, maxNumberOfPeople, typeRent);
         this.standardRooms = standardRooms;
         this.numberFloors = numberFloors;
     }
@@ -31,5 +31,13 @@ public class House extends Facility{
 
     public void setNumberFloors(int numberFloors) {
         this.numberFloors = numberFloors;
+    }
+
+    @Override
+    public String toString() {
+        return "House{" + super.toString() +
+                "standardRooms='" + standardRooms + '\'' +
+                ", numberFloors=" + numberFloors +
+                '}';
     }
 }

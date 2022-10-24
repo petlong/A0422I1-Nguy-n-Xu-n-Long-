@@ -1,7 +1,9 @@
 package ss00_case_study.furama_resort.models;
 
-public class Person {
-    private String id;
+import java.io.Serializable;
+
+public abstract class Person implements Serializable {
+    private int id;
     private String name;
     private String dateOfBirth;
     private String gender;
@@ -11,7 +13,7 @@ public class Person {
     private String address;
 
     public Person(){}
-    public Person(String id, String name, String dateOfBirth, String gender, String idCard, String phoneNumber, String email, String address) {
+    public Person(int id, String name, String dateOfBirth, String gender, String idCard, String phoneNumber, String email, String address) {
         this.id = id;
         this.name = name;
         this.dateOfBirth = dateOfBirth;
@@ -22,7 +24,7 @@ public class Person {
         this.address = address;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
@@ -54,7 +56,7 @@ public class Person {
         return address;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 

@@ -11,12 +11,12 @@ public class TestObjectFile {
         students.add(new Student("Thanh", 19, "Da Nang"));
         students.add(new Student("Bao", 20, "Quang Nam"));
 
-//        writeFile("sampleObject.dat", students);
-        List<Student> list = (List<Student>)readFile("sampleObject.dat");
+        writeFile("G:\\CODE GYM\\A0422I1\\MODULE 2.0\\sample.dat", students);
+        List<Student> list = (List<Student>)readFile("G:\\CODE GYM\\A0422I1\\MODULE 2.0\\sample.dat");
         for (Student student:list){
             System.out.println(student);
         }
-//        list.forEach(System.out::println);
+        list.forEach(System.out::println);
     }
 
     public static void writeFile(String path, Object o) {

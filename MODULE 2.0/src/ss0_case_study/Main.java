@@ -1,2 +1,4 @@
-package ss0_case_study;public class Main {
+package ss0_case_study;
+
+public class Main {
 }

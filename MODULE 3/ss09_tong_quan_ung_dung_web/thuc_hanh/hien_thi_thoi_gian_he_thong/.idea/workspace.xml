@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0b8c91c7-c440-430e-81c5-b9352e544edf" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../ss07_thiet_ke_bo_cuc_trang_web/bai_tap/web_xem hoat_hinh/style_hoat_hinh.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss07_thiet_ke_bo_cuc_trang_web/bai_tap/web_xem hoat_hinh/web_hoat_hinh_288.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss07_thiet_ke_bo_cuc_trang_web/bai_tap/web_xem hoat_hinh/web_hoat_hinh_289.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss07_thiet_ke_bo_cuc_trang_web/demo/hoat_hinh/hoat_hinh.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss07_thiet_ke_bo_cuc_trang_web/demo/hoat_hinh/style-web_hh.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss07_thiet_ke_bo_cuc_trang_web/demo/hoat_hinh/style_hh.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss07_thiet_ke_bo_cuc_trang_web/demo/hoat_hinh/web-hh.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss08_bootstrap/bai_tap/tao_gallery_don_gian/gallery.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss08_bootstrap/bai_tap/tao_gallery_don_gian/gallery_don_gian.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss08_bootstrap/bai_tap/xay_dung_lading_page/xay_dung_lading_page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss08_bootstrap/demo/demo/demo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss08_bootstrap/thuc_hanh/form_login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss08_bootstrap/thuc_hanh/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ServerTimeServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/empoyee.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MODULE 2.0/empoyee.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/out/production/A0422I1MODULE 2.0/ss00_case_study/furama_resort/controllers/FuramaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MODULE 2.0/out/production/A0422I1MODULE 2.0/ss00_case_study/furama_resort/controllers/FuramaController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/out/production/A0422I1MODULE 2.0/ss00_case_study/furama_resort/models/Booking.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MODULE 2.0/out/production/A0422I1MODULE 2.0/ss00_case_study/furama_resort/models/Booking.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/out/production/A0422I1MODULE 2.0/ss00_case_study/furama_resort/models/Contract.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MODULE 2.0/out/production/A0422I1MODULE 2.0/ss00_case_study/furama_resort/models/Contract.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/out/production/A0422I1MODULE 2.0/ss00_case_study/furama_resort/models/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MODULE 2.0/out/production/A0422I1MODULE 2.0/ss00_case_study/furama_resort/models/Customer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/out/production/A0422I1MODULE 2.0/ss00_case_study/furama_resort/models/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MODULE 2.0/out/production/A0422I1MODULE 2.0/ss00_case_study/furama_resort/models/Employee.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/out/production/A0422I1MODULE 2.0/ss00_case_study/furama_resort/models/Facility.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MODULE 2.0/out/production/A0422I1MODULE 2.0/ss00_case_study/furama_resort/models/Facility.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/out/production/A0422I1MODULE 2.0/ss00_case_study/furama_resort/models/House.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MODULE 2.0/out/production/A0422I1MODULE 2.0/ss00_case_study/furama_resort/models/House.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/out/production/A0422I1MODULE 2.0/ss00_case_study/furama_resort/models/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MODULE 2.0/out/production/A0422I1MODULE 2.0/ss00_case_study/furama_resort/models/Person.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/out/production/A0422I1MODULE 2.0/ss00_case_study/furama_resort/models/Room.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MODULE 2.0/out/production/A0422I1MODULE 2.0/ss00_case_study/furama_resort/models/Room.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/out/production/A0422I1MODULE 2.0/ss00_case_study/furama_resort/models/Villa.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MODULE 2.0/out/production/A0422I1MODULE 2.0/ss00_case_study/furama_resort/models/Villa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/out/production/A0422I1MODULE 2.0/ss00_case_study/furama_resort/services/BookingService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MODULE 2.0/out/production/A0422I1MODULE 2.0/ss00_case_study/furama_resort/services/BookingService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/out/production/A0422I1MODULE 2.0/ss00_case_study/furama_resort/services/ContactService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/out/production/A0422I1MODULE 2.0/ss00_case_study/furama_resort/services/EmployeeServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/out/production/A0422I1MODULE 2.0/ss00_case_study/furama_resort/services/FacilityService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MODULE 2.0/out/production/A0422I1MODULE 2.0/ss00_case_study/furama_resort/services/FacilityService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/out/production/A0422I1MODULE 2.0/ss00_case_study/furama_resort/services/FacilityServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/out/production/A0422I1MODULE 2.0/ss00_case_study/furama_resort/services/Service.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MODULE 2.0/out/production/A0422I1MODULE 2.0/ss00_case_study/furama_resort/services/Service.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/out/production/A0422I1MODULE 2.0/ss0_case_study/FuramaDemo/controllers/FuramaController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/out/production/A0422I1MODULE 2.0/ss0_case_study/FuramaDemo/exception/UserException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/out/production/A0422I1MODULE 2.0/ss0_case_study/FuramaDemo/models/Customer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/out/production/A0422I1MODULE 2.0/ss0_case_study/FuramaDemo/models/Employee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/out/production/A0422I1MODULE 2.0/ss0_case_study/FuramaDemo/models/Facility.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/out/production/A0422I1MODULE 2.0/ss0_case_study/FuramaDemo/models/House.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/out/production/A0422I1MODULE 2.0/ss0_case_study/FuramaDemo/models/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/out/production/A0422I1MODULE 2.0/ss0_case_study/FuramaDemo/models/Room.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/out/production/A0422I1MODULE 2.0/ss0_case_study/FuramaDemo/models/Villa.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/out/production/A0422I1MODULE 2.0/ss0_case_study/FuramaDemo/services/CustomerService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/out/production/A0422I1MODULE 2.0/ss0_case_study/FuramaDemo/services/EmployeeService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/out/production/A0422I1MODULE 2.0/ss0_case_study/FuramaDemo/services/FacilityService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/out/production/A0422I1MODULE 2.0/ss0_case_study/FuramaDemo/services/Impl/CustomerServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/out/production/A0422I1MODULE 2.0/ss0_case_study/FuramaDemo/services/Impl/EmployeeServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/out/production/A0422I1MODULE 2.0/ss0_case_study/FuramaDemo/services/Impl/FacilityServiceIplm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/out/production/A0422I1MODULE 2.0/ss0_case_study/FuramaDemo/services/Service.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/out/production/A0422I1MODULE 2.0/ss0_case_study/FuramaDemo/validate/Message.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/out/production/A0422I1MODULE 2.0/ss0_case_study/FuramaDemo/validate/Validator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/out/production/A0422I1MODULE 2.0/ss17_binary_file/demo/TestObjectFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MODULE 2.0/out/production/A0422I1MODULE 2.0/ss17_binary_file/demo/TestObjectFile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/sample.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MODULE 2.0/sample.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/src/exam/data/longTerm.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/src/exam/data/shortTerm.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/src/exam/dich_vu/SoTietKiemDichVu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/src/exam/dich_vu/trien_khai_dich_vu/SoTietKiemTrienKhai.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/src/exam/doc_ghi_file/ReadAndWriteFile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/src/exam/doc_ghi_file/RegexData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/src/exam/doituong/KhachHang.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/src/exam/doituong/SoTietKiem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/src/exam/doituong/SoTietKiemCoThoiHan.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/src/exam/doituong/SoTietKiemDaihan.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/src/exam/doituong/SoTietKiemNganHan.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/src/exam/doituong/SoTietKiemVoThoiHan.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/src/exam/main/QuanlySoTietKiem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/src/ss00_case_study/furama_resort/controllers/FuramaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MODULE 2.0/src/ss00_case_study/furama_resort/controllers/FuramaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/src/ss00_case_study/furama_resort/data/employee.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MODULE 2.0/src/ss00_case_study/furama_resort/data/employee.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/src/ss00_case_study/furama_resort/exception/UserException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MODULE 2.0/src/ss00_case_study/furama_resort/exception/UserException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/src/ss00_case_study/furama_resort/models/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MODULE 2.0/src/ss00_case_study/furama_resort/models/Booking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/src/ss00_case_study/furama_resort/models/Contract.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MODULE 2.0/src/ss00_case_study/furama_resort/models/Contract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/src/ss00_case_study/furama_resort/models/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MODULE 2.0/src/ss00_case_study/furama_resort/models/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/src/ss00_case_study/furama_resort/models/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MODULE 2.0/src/ss00_case_study/furama_resort/models/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/src/ss00_case_study/furama_resort/models/Facility.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MODULE 2.0/src/ss00_case_study/furama_resort/models/Facility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/src/ss00_case_study/furama_resort/models/House.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MODULE 2.0/src/ss00_case_study/furama_resort/models/House.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/src/ss00_case_study/furama_resort/models/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MODULE 2.0/src/ss00_case_study/furama_resort/models/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/src/ss00_case_study/furama_resort/models/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MODULE 2.0/src/ss00_case_study/furama_resort/models/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/src/ss00_case_study/furama_resort/models/Villa.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MODULE 2.0/src/ss00_case_study/furama_resort/models/Villa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/src/ss00_case_study/furama_resort/services/BookingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MODULE 2.0/src/ss00_case_study/furama_resort/services/BookingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/src/ss00_case_study/furama_resort/services/ContractService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MODULE 2.0/src/ss00_case_study/furama_resort/services/ContractService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/src/ss00_case_study/furama_resort/services/FacilityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MODULE 2.0/src/ss00_case_study/furama_resort/services/FacilityService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/src/ss00_case_study/furama_resort/services/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MODULE 2.0/src/ss00_case_study/furama_resort/services/Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/src/ss00_case_study/furama_resort/services/impl/BookingServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MODULE 2.0/src/ss00_case_study/furama_resort/services/impl/BookingServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/src/ss00_case_study/furama_resort/services/impl/ContractServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MODULE 2.0/src/ss00_case_study/furama_resort/services/impl/ContractServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/src/ss00_case_study/furama_resort/services/impl/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MODULE 2.0/src/ss00_case_study/furama_resort/services/impl/CustomerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/src/ss00_case_study/furama_resort/services/impl/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MODULE 2.0/src/ss00_case_study/furama_resort/services/impl/EmployeeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/src/ss00_case_study/furama_resort/services/impl/FacilityServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MODULE 2.0/src/ss00_case_study/furama_resort/services/impl/FacilityServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/src/ss00_case_study/furama_resort/utils/BookingComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MODULE 2.0/src/ss00_case_study/furama_resort/utils/BookingComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/src/ss00_case_study/furama_resort/utils/ReadAndWriteFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MODULE 2.0/src/ss00_case_study/furama_resort/utils/ReadAndWriteFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/src/ss00_case_study/furama_resort/utils/RegexData.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MODULE 2.0/src/ss00_case_study/furama_resort/utils/RegexData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/src/ss00_case_study/furama_resort/validate/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MODULE 2.0/src/ss00_case_study/furama_resort/validate/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/src/ss00_case_study/furama_resort/validate/Validator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MODULE 2.0/src/ss00_case_study/furama_resort/validate/Validator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/src/ss0_case_study/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MODULE 2.0/src/ss0_case_study/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/src/ss0_case_study/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MODULE 2.0/src/ss0_case_study/MainTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MODULE 2.0/src/ss17_binary_file/demo/TestObjectFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MODULE 2.0/src/ss17_binary_file/demo/TestObjectFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss07_thiet_ke_bo_cuc_trang_web/bai_tap/giao_dien_facebook/fb.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss07_thiet_ke_bo_cuc_trang_web/bai_tap/giao_dien_facebook/fb.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss07_thiet_ke_bo_cuc_trang_web/bai_tap/tao_layout_voi_RWD/styleRWD.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss07_thiet_ke_bo_cuc_trang_web/bai_tap/tao_layout_voi_RWD/styleRWD.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss07_thiet_ke_bo_cuc_trang_web/bai_tap/tao_layout_voi_RWD/tao_layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss07_thiet_ke_bo_cuc_trang_web/bai_tap/tao_layout_voi_RWD/tao_layout.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectId" id="2GNlsxZF0IeLjxRYy15aCE9v4hh" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Tomcat 9.0.68" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.68" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="Gradle : org.example : hien_thi_thoi_gian_he_thong-1.0-SNAPSHOT.war">
+          <settings>
+            <option name="CONTEXT_PATH" value="" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="8ecaafda-becc-4255-b0ea-fd511cc38423" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="64218" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Gradle : org.example : hien_thi_thoi_gian_he_thong-1.0-SNAPSHOT.war" />
+        </option>
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0b8c91c7-c440-430e-81c5-b9352e544edf" name="Changes" comment="" />
+      <created>1666237136627</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1666237136627</updated>
+      <workItem from="1666237138418" duration="1506000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

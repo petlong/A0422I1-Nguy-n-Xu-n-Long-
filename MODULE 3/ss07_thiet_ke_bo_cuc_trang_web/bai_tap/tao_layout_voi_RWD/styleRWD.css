@@ -20,11 +20,16 @@ body{
 }
 
 .right {
-    background: darkgray;
+    background: darkgray    ;
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
+    /*flex-direction: column;*/
 }
 
 .contain {
     background: white;
+    height: 500px;
 }
 
 .row {
@@ -94,8 +99,6 @@ body{
 
 #menu {
     height: 40px;
-    padding: 0;
-    margin: 0;
 }
 
 #menu ul, #menu li {
@@ -111,7 +114,6 @@ body{
     padding: 0;
 }
 #menu li a {
-
     height: 30px;
     text-decoration: none;
     text-align: center;
@@ -135,7 +137,22 @@ body{
     padding: 30px;
     height: 100px;
     box-sizing: border-box;
-    list-style: none;
+    /*list-style: none;*/
     text-align: center;
     background-color: lightgray;
+}
+#login li{
+    height: 30px;
+    text-align: center;
+    color: lightgray;
+    list-style: none;
+    float: left;
+}
+a{
+    text-decoration: none;
+}
+
+.aa{
+    color: lightgray;
+    padding-bottom: 3px;
 }

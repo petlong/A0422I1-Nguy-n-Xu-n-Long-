@@ -1,7 +1,4 @@
-package ss00_case_study.furama_resort.utils;
-
-import ss00_case_study.furama_resort.models.Customer;
-import ss00_case_study.furama_resort.models.Facility;
+package ss00_case_study.furama_resort.models;
 
 public class Booking {
     private Integer idBooking;
@@ -58,5 +55,16 @@ public class Booking {
 
     public void setFacility(Facility facility) {
         this.facility = facility;
+    }
+
+    @Override
+    public String toString() {
+        return "Booking{" +
+                "idBooking=" + idBooking +
+                ", startDate='" + startDate + '\'' +
+                ", endDate='" + endDate + '\'' +
+                ", customer=" + customer +
+                ", facility=" + facility +
+                '}';
     }
 }

@@ -1,6 +1,7 @@
 package ss00_case_study.furama_resort.models;
 
 public abstract class Facility {
+    private String idFacility;
     private String nameFacility;
     private double areaUse;
     private double rentalCosts;
@@ -9,7 +10,8 @@ public abstract class Facility {
 
     public Facility(){}
 
-    public Facility(String nameFacility, double areaUse, double rentalCosts, int maxNumberOfPeople, String typeRent) {
+    public Facility(String idFacility, String nameFacility, double areaUse, double rentalCosts, int maxNumberOfPeople, String typeRent) {
+        this.idFacility = idFacility;
         this.nameFacility = nameFacility;
         this.areaUse = areaUse;
         this.rentalCosts = rentalCosts;
@@ -41,6 +43,14 @@ public abstract class Facility {
         return nameFacility;
     }
 
+    public String getIdFacility() {
+        return idFacility;
+    }
+
+    public void setIdFacility(String idFacility) {
+        this.idFacility = idFacility;
+    }
+
     public double getAreaUse() {
         return areaUse;
     }
@@ -57,5 +67,15 @@ public abstract class Facility {
         return typeRent;
     }
 
-
+    @Override
+    public String toString() {
+        return
+                "idFacility=" + idFacility +
+                ", nameFacility='" + nameFacility + '\'' +
+                ", areaUse=" + areaUse +
+                ", rentalCosts=" + rentalCosts +
+                ", maxNumberOfPeople=" + maxNumberOfPeople +
+                ", typeRent='" + typeRent + '\''
+                ;
+    }
 }
