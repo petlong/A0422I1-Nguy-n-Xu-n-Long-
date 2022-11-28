@@ -120,6 +120,7 @@ public class UserServlet extends HttpServlet {
 
     private void insertUser(HttpServletRequest request, HttpServletResponse response)
             throws SQLException, IOException, ServletException {
+
         String name = request.getParameter("name");
         String email = request.getParameter("email");
         String country = request.getParameter("country");

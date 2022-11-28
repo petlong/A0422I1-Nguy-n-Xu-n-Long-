@@ -29,4 +29,6 @@ public interface IUserDAO {
 
     public boolean updateUserStore(User user) throws SQLException;
 
+    void addUserTransaction(User user, int[] permision);
+
 }

@@ -240,6 +240,37 @@ public class UserDAO implements IUserDAO {
         return rowUpdated;
     }
 
+    @Override
+    public void addUserTransaction(User user, int[] permision) {
+//        Connection conn = null;
+//
+//        // for insert a new user
+//
+//        PreparedStatement pstmt = null;
+//
+//        // for assign permision to user
+//
+//        PreparedStatement pstmtAssignment = null;
+//
+//        // for getting user id
+//
+//        ResultSet rs = null;
+//
+//        try{
+//         conn = BaseRepository.getConnectDB();
+//         conn.setAutoCommit(false);
+//            //
+//
+//            // Insert user
+//
+//            //
+//            pstmt = conn.prepareStatement(INSERT_USERS_SQL, Statement.RETURN_GENERATED_KEYS)
+//        } catch (SQLException throwables) {
+//            throwables.printStackTrace();
+//        }
+    }
+
+
 
     private void printSQLException(SQLException ex) {
         for (Throwable e : ex) {
