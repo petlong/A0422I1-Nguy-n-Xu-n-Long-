@@ -26,7 +26,7 @@
     </form:select>
 
     <label>Spams Filter</label>
-    <form:radiobutton path="spamsFilter"/><br>
+    <form:checkbox path="spamsFilter"/><br>
 
     <label>Signature</label>
     <form:input type="text" name="signature" path="signature"/><br>

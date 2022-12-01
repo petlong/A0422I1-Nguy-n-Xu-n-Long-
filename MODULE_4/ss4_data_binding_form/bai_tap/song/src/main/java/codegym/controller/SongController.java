@@ -22,7 +22,10 @@ public class SongController {
 
     @GetMapping ("/create")
     public String showUpdate (Model model){
-        model.addAttribute("student", new Song());
+        model.addAttribute("song", new Song());
+
+        String[] kindOfMusicList = {"classic", "pop", "jazz"};
+        model.addAttribute("kindOfMusicList", kindOfMusicList);
 
         String[] fileList = {".mp3", ".mp4", ".mp5"};
         model.addAttribute("fileList", fileList);
@@ -35,4 +38,5 @@ public class SongController {
         iSongService.createOrUpdate(song);
         return "redirect:/song/list";
     }
+
 }

@@ -12,6 +12,7 @@
 </head>
 <body>
 <h2>Mail Information</h2>
+<a href="/edit">Setting</a>
 <table>
     <tr>
         <td>Language:</td>

@@ -13,7 +13,7 @@
 </head>
 <body>
 <h1>List songs</h1>
-<a href="/song/create">Create Student</a>
+<a href="/song/create">Create Song</a>
 <table border="1">
     <tr>
         <th>Name</th>

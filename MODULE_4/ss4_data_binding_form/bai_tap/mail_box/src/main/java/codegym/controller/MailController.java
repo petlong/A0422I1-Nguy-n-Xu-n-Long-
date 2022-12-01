@@ -5,6 +5,7 @@ import codegym.service.MailServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -15,14 +16,14 @@ public class MailController {
 @Autowired
     MailServiceImpl mailService;
 
-    @GetMapping("/list")
-    public String getListStudent(Model model) {
-        List<Mail> mailList = mailService.findAll();
-        model.addAttribute("mailList", mailList);
-        return "list";
-    }
+//    @GetMapping("/list")
+//    public String getListStudent(Model model) {
+//        List<Mail> mailList = mailService.findAll();
+//        model.addAttribute("mailList", mailList);
+//        return "list";
+//    }
 
-    @GetMapping ("/create")
+    @GetMapping ("/showForm")
     public String showForm (Model model){
         model.addAttribute("mail", new Mail());
 
@@ -35,9 +36,20 @@ public class MailController {
     }
 
     @PostMapping("/create")
-    public String doSetting(@ModelAttribute ("mail") Mail mail, RedirectAttributes redirectAttributes){
-        mailService.save(mail);
-        redirectAttributes.addFlashAttribute("msg"," Thêm mới thành công");
-        return "redirect:/list";
+    public String doSetting(@ModelAttribute ("mail") Mail mail, Model model){
+       model.addAttribute("languages",mail.getLanguages());
+       model.addAttribute("pageSize",mail.getPageSize());
+       model.addAttribute("spamsFilter",mail.isSpamsFilter());
+       model.addAttribute("signature",mail.getSignature());
+        return "list";
     }
+
+//    @PostMapping("/edit")
+//    public String doEdit(@ModelAttribute ("mail") Mail mail, ModelMap model){
+//        model.addAttribute("languages",mail.setLanguages(););
+//        model.addAttribute("pageSize",mail.setPageSize(););
+//        model.addAttribute("spamsFilter",mail.setSpamsFilter(););
+//        model.addAttribute("signature",mail.s());
+//        return "list";
+//    }
 }

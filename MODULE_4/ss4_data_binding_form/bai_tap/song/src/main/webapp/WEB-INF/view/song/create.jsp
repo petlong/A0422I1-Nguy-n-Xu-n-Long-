@@ -22,11 +22,11 @@
     <label>Singer: </label>
     <form:input type="text" path="singer"/><br>
 
-    <label>Kind of Music</label>
-    <form:input type="text" name="kindOfMusic" path="kindOfMusic"/><br>
+    <label>Kind of Music: </label>
+    <form:radiobuttons path="kindOfMusic" items="${kindOfMusicList}"></form:radiobuttons><br>
 
-    <label>File</label>
-    <form:radiobuttons path="file" items="${fileList}"></form:radiobuttons>
+    <label>File: </label>
+    <form:radiobuttons path="file" items="${fileList}"></form:radiobuttons><br>
 
     <button type="submit">Create</button>
 
