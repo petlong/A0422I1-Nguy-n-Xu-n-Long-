@@ -12,7 +12,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 @RequestMapping("/song")
 public class SongController {
     @Autowired
-    ISongService iSongService;
+    private ISongService iSongService;
 
     @GetMapping("/list")
     public String displayList (Model model){

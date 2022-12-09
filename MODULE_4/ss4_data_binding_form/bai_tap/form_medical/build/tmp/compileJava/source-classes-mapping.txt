@@ -1,0 +1,18 @@
+medical/bean/InformationPeople.java
+ medical.bean.InformationPeople
+medical/bean/Symptom.java
+ medical.bean.Symptom
+medical/repository/IMedicalRepository.java
+ medical.repository.IMedicalRepository
+medical/config/AppConfiguration.java
+ medical.config.AppConfiguration
+medical/controller/MedicalController.java
+ medical.controller.MedicalController
+medical/service/IMedicalService.java
+ medical.service.IMedicalService
+medical/repository/MedicalRepositoryImpl.java
+ medical.repository.MedicalRepositoryImpl
+medical/config/AppInitializer.java
+ medical.config.AppInitializer
+medical/service/MedicalServiceImpl.java
+ medical.service.MedicalServiceImpl

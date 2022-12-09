@@ -14,7 +14,7 @@ import java.util.List;
 @Controller
 public class MailController {
 @Autowired
-    MailServiceImpl mailService;
+    private MailServiceImpl mailService;
 
 //    @GetMapping("/list")
 //    public String getListStudent(Model model) {
