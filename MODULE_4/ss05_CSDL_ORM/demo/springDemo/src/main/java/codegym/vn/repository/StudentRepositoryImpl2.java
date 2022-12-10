@@ -40,7 +40,7 @@ public class StudentRepositoryImpl2 implements StudentRepository {
         //Nếu muốn dùng sql thuần thì dùng như bên dưới
 //        entityManager.createNativeQuery("câu lệnh sql");
         // Dùng HQL
-        return entityManager.createQuery("select s from Student s").getResultList();
+                return entityManager.createQuery("select s from Student s").getResultList();
 
     }
 

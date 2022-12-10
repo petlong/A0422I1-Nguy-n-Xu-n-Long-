@@ -52,7 +52,4 @@ public class StudentController {
         redirectAttributes.addFlashAttribute("msg","Thêm mới thành công");
         return "redirect:/list";
     }
-
-
-
 }
