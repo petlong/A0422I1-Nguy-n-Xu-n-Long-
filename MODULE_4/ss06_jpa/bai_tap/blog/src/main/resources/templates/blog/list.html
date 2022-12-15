@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/blog/layout :: head">
+</head>
+<body>
+<h1>List products</h1>
+
+<form th:action="@{/blog/search}" , method="get">
+    <input type="text" name="search" placeholder="enter name search">
+    <button type="submit">Search</button>
+</form>
+
+<p>
+    <a th:href="@{/blog/create}">
+        Add new product
+    </a>
+</p>
+<!--<div class="notify">-->
+<!--    <div th:if="${success}">-->
+<!--        <span th:text="${success}"></span>-->
+<!--    </div>-->
+<!--</div>-->
+<p th:text="${msgDelete}"></p> <!--báo lỗi vẫn chạy-->
+
+<table id="products">
+    <thead>
+    <tr>
+        <th>No</th>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Detail</th>
+        <th>Update</th>
+        <th>Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="blog, iter: ${blogList}" th:object="${blog}">
+        <td th:text="${iter.count}"></td>
+        <td th:text="*{id}"></td>
+        <td th:text="*{name}"></td>
+        <td><a th:href="@{/blog/detail/{id}(id=*{id})}">Detail</a></td>
+        <!--        dùng khi sử dụng @PathVariable-->
+        <!--                <td><a th:href="@{/product/detail(id=*{id})}">Detail</a></td>-->
+        <!--        dùng khi sử dụng  @RequestParam-->
+        <td><a th:href="@{/blog/update(id=*{id})}">Update</a></td>
+        <td><a th:href="@{/blog/delete(id=*{id})}">Delete</a></td>
+    </tr>
+    </tbody>
+</table>
+<footer th:replace="/blog/layout :: footer"></footer>
+</body>
+</html>

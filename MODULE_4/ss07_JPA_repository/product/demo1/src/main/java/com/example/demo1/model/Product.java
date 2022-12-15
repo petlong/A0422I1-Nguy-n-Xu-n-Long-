@@ -9,10 +9,10 @@ public class Product {
 //    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column (name = "id_song", columnDefinition = "VARCHAR(50)")
-    private String idSong;
+    private String id;
 
     @Column (name = "name_song",columnDefinition = "VARCHAR(50)")
-    private String nameSong;
+    private String name;
     private float price;
     private String producer;
     private String description;
@@ -20,20 +20,20 @@ public class Product {
     public Product() {
     }
 
-    public String getIdSong() {
-        return idSong;
+    public String getId() {
+        return id;
     }
 
-    public void setIdSong(String idSong) {
-        this.idSong = idSong;
+    public void setId(String idSong) {
+        this.id = idSong;
     }
 
-    public String getNameSong() {
-        return nameSong;
+    public String getName() {
+        return name;
     }
 
-    public void setNameSong(String nameSong) {
-        this.nameSong = nameSong;
+    public void setName(String nameSong) {
+        this.name = nameSong;
     }
 
     public float getPrice() {
