@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<!--<head th:replace="/layout :: head">-->
+<body>
+<!--<div class="main">-->
+<!--    <input type="checkbox" id="chk" aria-hidden="true">-->
+<!--    <div class="signup">-->
+<!--        <form th:action="@{/create}" method="post"  th:object="${user}">-->
+<!--            <label for="chk" aria-hidden="true">Sign up</label>-->
+<!--            <input type="text" name="firstname" placeholder="User name" required=""  th:field="*{firstname}" >-->
+<!--            &lt;!&ndash;            <span class="span-validate" th:if="${#fields.hasErrors('nameAccounts')}" th:errors="*{nameAccounts}"></span>&ndash;&gt;-->
+<!--            <input type="text" name="lastname" placeholder="User name" required=""  th:field="*{lastname}" >-->
+<!--            &lt;!&ndash;            <span class="span-validate" th:if="${#fields.hasErrors('nameAccounts')}" th:errors="*{nameAccounts}"></span>&ndash;&gt;-->
+<!--            <input type="text" name="age" placeholder="Age" required=""  th:field="*{age}" >-->
+
+<!--            <input type="email" name="email" placeholder="Email" required="" th:field="*{email}">-->
+<!--&lt;!&ndash;            <span class="span-validate" th:if="${#fields.hasErrors('emailAccounts')}" th:errors="*{emailAccounts}"></span>&ndash;&gt;-->
+<!--&lt;!&ndash;            <input type="password" name="pswd" placeholder="Password" required="" th:field="*{passWordAccounts}" >&ndash;&gt;-->
+<!--&lt;!&ndash;            <span class="span-validate" th:if="${#fields.hasErrors('passWordAccounts')}" th:errors="*{passWordAccounts}"></span>&ndash;&gt;-->
+<!--            <button type="submit">Sign up</button>-->
+<!--        </form>-->
+<!--    </div>-->
+
+    <!--    <div class="login" >-->
+    <!--        <form>-->
+    <!--            <label for="chk" aria-hidden="true">Login</label>-->
+    <!--            <input disabled type="email" name="email" placeholder="Email" required="">-->
+    <!--            <input disabled type="password" name="pswd" placeholder="Password" required="">-->
+    <!--            <button disabled>Login</button>-->
+    <!--        </form>-->
+    <!--    </div>-->
+<!--</div>-->
+<p th:text="${msg}"></p>
+<div id="form">
+    <form th:action="@{/create}" method="POST" th:object="${user}">
+        <!--        <input type="hidden" th:field="*{id}"/>-->
+        <label>ID</label>
+        <input type="text" th:field="*{firstname}"/>
+        <span th:if="${#fields.hasErrors('firstname')}" th:errors="*{firstname}"></span><br>
+        <div>
+            <label>Name</label>
+            <input type="text" th:field="*{lastname}"/>
+            <span th:if="${#fields.hasErrors('lastname')}" th:errors="*{lastname}"></span><br>
+        </div>
+        <div>
+            <label>Text</label>
+            <input type="text" th:field="*{age}"/>
+            <span th:if="${#fields.hasErrors('age')}" th:errors="*{age}"></span><br>
+        </div>
+        <div>
+            <label>Text</label>
+            <input type="text" th:field="*{email}"/>
+            <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span><br>
+        </div>
+        <input type="submit" value="Save"/> |
+        <input type="reset" value="Reset">
+    </form>
+</div>
+</body>
+</html>
