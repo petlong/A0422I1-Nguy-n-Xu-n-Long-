@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/book/layout :: head">
+</head>
+<body>
+<h1>List Book</h1>
+
+
+<form th:action="@{/book/searchCard}" , method="get">
+    <input type="text" name="searchCard" placeholder="enter Id Card to give-back book">
+    <button type="submit">Search ID card</button>
+</form>
+
+<!--<div>Category:-->
+<!--        <a class="p-2 link-secondary" th:href="@{/blog/searchCategory/{categoryName}(categoryName=music)}">Music</a>-->
+<!--        <a class="p-2 link-secondary" th:href="@{/blog/searchCategory/{categoryName}(categoryName=sport)}">Sport</a>-->
+<!--</div>-->
+
+<!--<p>-->
+<!--    <a th:href="@{/book/listCategory}">-->
+<!--        Category list-->
+<!--    </a>-->
+<!--</p>-->
+
+<p>
+    <a th:href="@{/book/create}">
+        Create new Book
+    </a>
+</p>
+<p>
+    <a th:href="@{/book/listCard}">
+        Give-back Book
+    </a>
+</p>
+<!--<div class="notify">-->
+<!--    <div th:if="${msgNew}">-->
+<!--        <span th:text="${msgNew}"></span>-->
+<!--    </div>-->
+<!--</div>-->
+<p th:text="${msgDelete}"></p> <!--báo lỗi vẫn chạy-->
+<p th:text="${msgNew}"></p> <!--báo lỗi vẫn chạy-->
+<table id="products">
+    <thead>
+    <tr>
+        <th>No</th>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Amount</th>
+        <th>Borrow</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="book, iter: ${books}" th:object="${book}">
+        <td th:text="${iter.count}"></td>
+        <td th:text="*{id}"></td>
+        <td th:text="*{name}"></td>
+        <td th:text="*{amount}"></td>
+<!--        <td th:text="*{#dates.format(datePublish, 'dd-MMM-yyyy')}"></td>-->
+        <td><a th:href="@{/book/borrow/{id}(id=*{id})}">Borrow</a></td>
+        <!--        dùng khi sử dụng @PathVariable-->
+        <!--                <td><a th:href="@{/product/detail(id=*{id})}">Detail</a></td>-->
+        <!--        dùng khi sử dụng  @RequestParam-->
+<!--        <td><a th:href="@{/blog/update(id=*{id})}">Update</a></td>-->
+<!--        <td><a th:href="@{/blog/delete(id=*{id})}">Delete</a></td>-->
+    </tr>
+    </tbody>
+</table>
+<footer th:replace="/book/layout :: footer"></footer>
+</body>
+</html>

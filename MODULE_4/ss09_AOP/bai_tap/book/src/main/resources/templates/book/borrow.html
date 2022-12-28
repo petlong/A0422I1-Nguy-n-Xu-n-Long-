@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/book/layout :: head"></head>
+
+<body>
+<h3>Borrow Book</h3>
+<p>
+    <a th:href="@{/book/list}">
+        Back to Book list
+    </a>
+</p>
+<div th:object="${book}">
+    <div>
+        <label>ID:</label>
+        <label th:text="*{id}"></label>
+    </div>
+    <div>
+        <label>Name:</label>
+        <label th:text="*{name}"></label>
+    </div>
+    <div>
+        <label>Amount:</label>
+        <label th:text="*{amount}"></label>
+    </div>
+    <p th:text="${message}"></p>
+</div>
+<form th:action="@{/book/borrow}" method="POST" th:object="${card}">
+    <th:block hidden>
+        <select th:field="${card.book}" hidden>
+            <option th:value="${book.id}" th:text="${book.name}"></option>
+        </select>
+    </th:block>
+    <input type="submit" value="Borrow"/> |
+</form>
+<footer th:replace="/book/layout :: footer"></footer>
+</body>
+</html>
