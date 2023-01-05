@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/blog/layout :: head"></head>
+
+<body>
+<h3>View Blog</h3>
+<p>
+    <a th:href="@{/blog/list}">
+        Back to Blog list
+    </a>
+</p>
+<div th:object="${blog}">
+    <div>
+        <label>ID:</label>
+        <label th:text="*{id}"></label>
+    </div>
+    <div>
+        <label>Name:</label>
+        <label th:text="*{name}"></label>
+    </div>
+    <div>
+        <label>Text:</label>
+        <label th:text="*{text}"></label>
+    </div>
+</div>
+<footer th:replace="/blog/layout :: footer"></footer>
+</body>
+</html>
