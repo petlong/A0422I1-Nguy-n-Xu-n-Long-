@@ -3,6 +3,7 @@ package com.furamam04.entity;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
+import javax.validation.constraints.*;
 import java.util.Date;
 import java.util.Set;
 
@@ -13,22 +14,35 @@ public class Customer {
     @Column(name = "customer_id")
     private Long id;
 
+//    @Pattern(regexp = "(KH)[-][\\d]{4}", message = "{customerId}")
+//    @Column(name = "customer_string_id")
+//    private String stringId;
+
+    @NotBlank(message = "{notempty}")
     @Column(name = "customer_name", length = 45, nullable = false)
     private String name;
 
+    @NotNull(message = "{notempty}")
+    @Past(message = "{birthday}")
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     @Column(name = "customer_birthday", nullable = false)
     private Date customerBirthday;
 
+
     @Column(name = "customer_gender", nullable = false)
     private Boolean gender;
 
+
+    @Pattern(regexp = "[\\d]{9}|[\\d]{12}", message = "{idCard}")
     @Column(name = "customer_id_card", nullable = false, length = 45)
     private String idCard;
 
+
+    @Pattern(regexp = "(090)[\\d]{7}|(091)[\\d]{7}|\\(84\\)\\+90[\\d]{7}|\\(84\\)\\+91[\\d]{7}", message = "{phone}")
     @Column(name = "customer_phone", nullable = false, length = 45)
     private String phone;
 
+    @Email(message = "{email}")
     @Column(name = "customer_email", length = 45)
     private String email;
 
@@ -38,7 +52,7 @@ public class Customer {
     @OneToMany(mappedBy = "customer", fetch = FetchType.LAZY)
     private Set<Contract> contracts;
 
-    @ManyToOne()
+    @ManyToOne
     //            (cascade = CascadeType.ALL) - thêm cái này thì xóa luôn bên bảng quan hệ kia
     @JoinColumn(name = "customer_type_id", referencedColumnName = "customer_type_id", nullable = false)
     private CustomerType customerType;

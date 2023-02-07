@@ -10,6 +10,8 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -85,11 +87,6 @@ public class CustomerController {
         return "customer/list";
     }
 
-//    @GetMapping("")
-//    public String list(Model model) {
-//        model.addAttribute("customers", customerService.findAll());
-//        return "customer/list";
-//    }
 
     @GetMapping("create")
     public String createForm(Model model) {
@@ -98,8 +95,22 @@ public class CustomerController {
         return "customer/create";
     }
 
+//    @PostMapping("create")
+//    public String doCreate(Model model, @ModelAttribute("customer") Customer customer) {
+//        customerService.save(customer);
+//        model.addAttribute("customer", new Customer());
+//        model.addAttribute("customerTypes", customerTypeService.findAll());
+//        model.addAttribute("message", "create new customer successful");
+//        return "customer/create";
+//    }
+
     @PostMapping("create")
-    public String doCreate(Model model, @ModelAttribute("customer") Customer customer) {
+    public String doCreate(Model model, @Validated @ModelAttribute("customer") Customer customer,
+                           BindingResult bindingResult) {
+        if (bindingResult.hasErrors()) {
+            model.addAttribute("customerTypes", customerTypeService.findAll());
+            return "customer/create";
+        }
         customerService.save(customer);
         model.addAttribute("customer", new Customer());
         model.addAttribute("customerTypes", customerTypeService.findAll());

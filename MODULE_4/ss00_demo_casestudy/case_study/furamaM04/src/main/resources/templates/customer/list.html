@@ -7,11 +7,13 @@
     <div th:insert="~{index::script}"></div>
 </head>
 <body>
-<div th:insert="~{common/header :: header}"></div>
+<div th:insert="~{common/header :: header}">
+
+</div>
 <h1>Customer List</h1>
 <form class="d-flex" th:action="@{/customer/search}" , method="get">
     <input class="form-control me-2" type="text" name="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-success" type="submit" style="color: white">Search</button>
+    <button class="btn btn-outline-success" type="submit" style="color: black">Search</button>
 </form>
 
 <th:block th:if="${message}">
