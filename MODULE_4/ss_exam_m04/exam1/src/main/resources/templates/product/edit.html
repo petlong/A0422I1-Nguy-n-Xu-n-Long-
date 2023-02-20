@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create product</title>
+    <link rel="stylesheet" th:href="@{/bootstrap-5.1.3-dist/css/bootstrap.css}">
+    <div th:fragment="script">
+        <script th:src="@{/bootstrap-5.1.3-dist/js/bootstrap.js}"></script>
+    </div>
+</head>
+<body>
+<div th:insert="~{common/header :: header}"></div>
+<div th:insert="~{common/common :: navNoSearch}"></div>
+
+<h1>Create new product</h1>
+<th:block th:if="${message}">
+    <span th:text="${message}" style="color: red"></span>
+</th:block>
+<form th:action="@{/product/edit}" method="post" th:object="${product}">
+    <input th:field="*{id}" hidden type="text">
+    <table>
+        <tr>
+            <th style="text-align: left">String id:</th>
+            <td><input type="text" th:field="*{stringId}">
+                <span th:if="${#fields.hasErrors('stringId')}" th:errors="*{stringId}" style="color: red"></span>
+            </td>
+
+        </tr>
+        <tr>
+            <th style="text-align: left">Product's name:</th>
+            <td><input type="text" th:field="*{name}"></td>
+        </tr>
+        <tr>
+            <th style="text-align: left">Price:</th>
+            <td><input type="text" th:field="*{price}"></td>
+        </tr>
+        <tr>
+            <th style="text-align: left">Quantity:</th>
+            <td><input type="text" th:field="*{quantity}"></td>
+        </tr>
+        <tr>
+            <th style="text-align: left">Color:</th>
+            <td><input type="text" th:field="*{color}"></td>
+        </tr>
+        <tr>
+            <th style="text-align: left">Description:</th>
+            <td><textarea type="text" th:field="*{description}"></textarea></td>
+        </tr>
+        <tr>
+            <th style="text-align: left">Category:</th>
+            <td>
+                <select th:field="*{category}">
+                    <option th:each="ca : ${categories}" th:value="${ca.id}"
+                            th:text="${ca.name}"></option>
+                </select>
+            </td>
+        </tr>
+
+        <td></td>
+        <td><input type="submit" value="Edit"></td>
+        </tr>
+    </table>
+
+
+</form>
+
+
+<div th:insert="~{common/footer :: footer}"></div>
+
+</body>
+</html>

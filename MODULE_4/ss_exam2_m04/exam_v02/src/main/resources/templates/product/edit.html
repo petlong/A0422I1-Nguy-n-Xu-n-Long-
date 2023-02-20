@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create product</title>
+    <div th:insert="~{index::link}"></div>
+
+</head>
+<body>
+<div th:insert="~{common/header :: header}"></div>
+<h1>Create new product</h1>
+<th:block th:if="${message}">
+    <span th:text="${message}" style="color: red"></span>
+</th:block>
+<form th:action="@{/product/create}" method="post" th:object="${product}">
+    <table>
+        <tr>
+            <th style="text-align: left">Product's string Id:</th>
+            <td><input type="text" th:field="*{stringId}">
+<!--                <span th:if="${#fields.hasErrors('stringId')}" th:errors="*{stringId}" style="color: red"></span>-->
+            </td>
+        </tr>
+        <tr>
+            <th style="text-align: left">Product's validate Id:</th>
+            <td><input type="text" th:field="*{validateId}">
+<!--                <span th:if="${#fields.hasErrors('validateId')}" th:errors="*{validateId}" style="color: red"></span>-->
+            </td>
+        </tr>
+        <tr>
+            <th style="text-align: left">Product's name:</th>
+            <td><input type="text" th:field="*{name}">
+<!--                <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}" style="color: red"></span>-->
+            </td>
+        </tr>
+        <tr>
+            <th style="text-align: left">Price:</th>
+            <td><input type="text" th:field="*{price}"></td>
+        </tr>
+        <tr>
+            <th style="text-align: left">Quantity:</th>
+            <td><input type="text" th:field="*{quantity}"></td>
+        </tr>
+        <tr>
+            <th style="text-align: left">Color:</th>
+            <td><input type="text" th:field="*{color}"></td>
+        </tr>
+        <tr>
+            <th style="text-align: left">Description:</th>
+            <td><textarea type="text" th:field="*{description}"></textarea></td>
+        </tr>
+        <tr>
+            <th style="text-align: left">Customer's dateManufacture:</th>
+            <td><input type="date" th:field="*{dateManufacture}">
+<!--                <span th:if="${#fields.hasErrors('dateManufacture')}" th:errors="*{dateManufacture}" style="color: red">-->
+                </span>
+            </td>
+        </tr>
+        <tr>
+            <th style="text-align: left">Customer's dateSale:</th>
+            <td><input type="date" th:field="*{dateSale}">
+                <!--                <span th:if="${#fields.hasErrors('dateSale')}" th:errors="*{dateSale}" style="color: red">-->
+                </span>
+            </td>
+        </tr>
+        <tr>
+            <th style="text-align: left">Category:</th>
+            <td>
+                <select th:field="*{category}">
+                    <option th:each="ca : ${categories}" th:value="${ca.id}"
+                            th:text="${ca.name}"></option>
+                </select>
+            </td>
+        </tr>
+
+<!--        <tr>-->
+<!--            <th style="text-align: left">Customer's gender:</th>-->
+<!--            <td>-->
+<!--                <select th:field="*{gender}">-->
+<!--                    <option th:value="0">Female</option>-->
+<!--                    <option th:value="1">Male</option>-->
+<!--                </select>-->
+<!--            </td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <th style="text-align: left">Customer's id card:</th>-->
+<!--            <td><input type="text" th:field="*{idCard}">-->
+<!--                <span th:if="${#fields.hasErrors('idCard')}" th:errors="*{idCard}" style="color: red"></span>-->
+<!--            </td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <th style="text-align: left">Customer's phone:</th>-->
+<!--            <td><input type="text" th:field="*{phone}">-->
+<!--                <span th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}" style="color: red"></span>-->
+<!--            </td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <th style="text-align: left">Customer's email:</th>-->
+<!--            <td><input type="text" th:field="*{email}">-->
+<!--                <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}" style="color: red"></span>-->
+<!--            </td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <th style="text-align: left">Customer's address:</th>-->
+<!--            <td><input type="text" th:field="*{address}"></td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+            <td></td>
+            <td><input type="submit" value="Create"></td>
+        </tr>
+    </table>
+
+</form>
+
+<div th:insert="~{common/footer :: footer}"></div>
+
+</body>
+</html>

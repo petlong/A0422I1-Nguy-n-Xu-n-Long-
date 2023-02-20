@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create customer</title>
+    <div th:insert="~{index::link}"></div>
+    <div th:insert="~{index::script}"></div>
+</head>
+<body>
+<div th:insert="~{common/header :: header}">
+
+</div>
+<h1>Customer List</h1>
+<form class="d-flex" th:action="@{/contract/search}" , method="get">
+    <input class="form-control me-2" type="text" name="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success" type="submit" style="color: black">Search</button>
+</form>
+
+<th:block th:if="${message}">
+    <span th:text="${message}" style="color: red"></span>
+</th:block>
+
+<a class="link-secondary" th:href="@{/contract/create}">Create new contract</a>
+<table class="table table-striped">
+    <tr>
+        <th>STT</th>
+        <th>Id</th>
+        <th>Contract Id</th>
+        <th>Customer</th>
+        <th>Type Service</th>
+        <th>Date contract</th>
+        <th>Price</th>
+        <th>Area</th>
+        <th>Action</th>
+        <th></th>
+        <th></th>
+    </tr>
+    <tr th:each="co, iter:${contracts}" th:object="${co}">
+        <td th:text="${iter.count + (pageCount - 1)*sizeCount}"></td>
+        <td th:text="*{id}"></td>
+        <td th:text="*{stringId}"></td>
+        <td th:text="*{customer.name}"></td>
+        <td th:text="*{type}"></td>
+        <td th:text="*{#dates.format(date, 'MMM-dd-yyyy')}"></td>
+        <td th:text="*{price}"></td>
+        <td th:text="*{area}"></td>
+        <!--        <td th:text="*{gender ? 'Male' : 'Female'}"></td>-->
+
+        <td><a th:href="@{/contract/edit/{id}(id=*{id})}">
+            <button class="btn btn-warning">Edit</button>
+        </a></td>
+        <td>
+            <button class="btn btn-danger" data-bs-toggle="modal" th:attr="data-bs-target='#exampleModal'+${co.id}">
+                Delete
+            </button>
+        </td>
+
+        <!-- Modal -->
+        <div class="modal fade"
+             th:attr="id='exampleModal'+${co.id}"
+             tabindex="-1" aria-labelledby="exampleModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Delete Contract</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <span>Do you want remove </span><span style="color: red" th:text="*{stringId}"></span>
+                        <span>?</span>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close
+                        </button>
+                        <a th:href="@{/contract/delete/{id}(id=*{id})}">
+                            <button type="button" class="btn btn-primary">Delete</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </tr>
+</table>
+
+<!--Phân trang-->
+<div class="block-outer block-outer--after">
+    <a th:href="@{/contract(size=${contracts.size}, page=${contracts.number})}"
+       th:if="${contracts.hasPrevious()}"
+       class="btn border border-primary" style="float: left">Previous</a>
+    <div th:if="${contracts.totalPages>0}"
+         th:each="pageNumber : ${pageNumbers}">
+        <a th:href="@{/contract(size=${contracts.size}, page=${pageNumber})}"
+           th:text="${pageNumber}"
+           th:class="${pageNumber==contracts.number +1} ? 'btn btn-primary' : 'btn border border-primary'"
+           style="float: left"></a>
+    </div>
+    <a th:href="@{/contract(size=${contracts.size}, page=${contracts.number+2})}"
+       th:if="${contracts.hasNext()}"
+       class="btn border border-primary" style="float: left">Next</a>
+</div>
+
+<!--<div th:insert="~{common/footer :: footer}"></div>-->
+
+</body>
+</html>
