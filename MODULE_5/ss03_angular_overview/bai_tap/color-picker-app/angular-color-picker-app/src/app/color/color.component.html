@@ -1,0 +1,16 @@
+<p>color works!</p>
+
+<select #input style="width: 100px">
+  <option value="black" style="background: black">Black</option>
+  <option value="red" style="background: red">Red</option>
+  <option value="white" style="background: white">white</option>
+</select>
+<button (click)="changeColor(input.value)">Change color</button>
+
+<div>
+  <table [ngStyle]="{'background': color}" border="1">
+    <tr>
+      <td style="width: 100px; height: 100px"></td>
+    </tr>
+  </table>
+</div>

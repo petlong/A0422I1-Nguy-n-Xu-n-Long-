@@ -1,19 +1,19 @@
-// happy coding 👻
-// console.log("hello world");
 
-function fibonacci(number:number): number {
-    if (number==1||number==0){
-        return number;
+function fibonacci(n: number): number {
+    if (n <= 0) {
+        return 0;
+    } else if (n == 1 || n == 2) {
+        return 1;
     }
-    return fibonacci(number-1) + fibonacci(number-2);
+    return fibonacci(n - 1) + fibonacci(n - 2);
 }
-console.log(fibonacci(2));
 
-function sum(num:number)  {
-    let sum = 0;
-    for(let i=0; i<num; i++){
-        sum += fibonacci(num)
-    }
-    return sum
+let sum = 0;
+let n: number = 10;
+for (let i = 0; i < n; i++) {
+    let value: number = fibonacci(i);
+    console.log("fibonacci(" + i + ")=" + value);
+    sum += value;
 }
-console.log(sum(3));
+
+console.log("Tong cua " + n + " so fibonacci la: " + sum);
