@@ -1,0 +1,25 @@
+<table class="table table-hover" width="100%">
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>DateOfBirth</th>
+    <th>Point</th>
+    <th>Rank</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let item of students, index as i" (click)="this.student = item">
+    <td>{{i}}</td>
+    <td>{{item.name|uppercase|slice: 0: 3}}...<a>Xem thêm</a></td>
+    <td>{{item.dateOfBirth|date: "EEEE, MMMM d, y"}}</td>
+    <td>{{item.point}}</td>
+    <td *ngIf="item.point <=7; else studentBlock">Not Good</td>
+    <ng-template #studentBlock>
+      <td>Good</td>
+    </ng-template>
+  </tr>
+  </tbody>
+</table>
+<app-student-detail [student]="student"></app-student-detail>
+<app-student-create (studentSubmit)="addStudent($event)"></app-student-create>
