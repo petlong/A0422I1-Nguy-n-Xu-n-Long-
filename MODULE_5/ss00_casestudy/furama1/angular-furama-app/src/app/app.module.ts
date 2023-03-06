@@ -7,14 +7,15 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { NavbarComponent } from './layout/navbar/navbar.component';
-// import { ServiceComponent } from './component/service/service.component';
-// import { CustomerComponent } from 'src/app/customer/customer.component';
 import { CustomerListComponent } from './component/customer/customer-list/customer-list.component';
 import { CustomerCreateComponent } from './component/customer/customer-create/customer-create.component';
-import { ServiceListComponent } from './component/service/service-list/service-list.component';
-import { ServiceCreateComponent } from './component/service/service-create/service-create.component';
-import { ServiceEidtComponent } from './component/service/service-eidt/service-eidt.component';
 import { CustomerEditComponent } from './component/customer/customer-edit/customer-edit.component';
+import { FacilityCreateComponent } from './component/facility/facility-create/facility-create.component';
+import { FacilityEditComponent } from './component/facility/facility-edit/facility-edit.component';
+import { FacilityListComponent } from './component/facility/facility-list/facility-list.component';
+import { ContractCreateComponent } from './component/contract/contract-create/contract-create.component';
+import { ContractListComponent } from './component/contract/contract-list/contract-list.component';
+import { ContractEditComponent } from './component/contract/contract-edit/contract-edit.component';
 
 @NgModule({
   declarations: [
@@ -24,10 +25,13 @@ import { CustomerEditComponent } from './component/customer/customer-edit/custom
     NavbarComponent,
     CustomerListComponent,
     CustomerCreateComponent,
-    ServiceListComponent,
-    ServiceCreateComponent,
-    ServiceEidtComponent,
     CustomerEditComponent,
+    FacilityCreateComponent,
+    FacilityEditComponent,
+    FacilityListComponent,
+    ContractCreateComponent,
+    ContractListComponent,
+    ContractEditComponent,
   ],
   imports: [
     BrowserModule,

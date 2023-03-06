@@ -1,5 +1,5 @@
-export interface Service {
-  id: number,
+export interface Facility {
+  id: string,
   name: string,
   area: number,
   cost: number,
