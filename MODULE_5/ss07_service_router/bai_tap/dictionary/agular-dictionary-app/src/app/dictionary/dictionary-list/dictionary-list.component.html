@@ -1,0 +1,18 @@
+<table class="table table-hover" width="100%">
+  <thead>
+  <tr>
+    <th>STT</th>
+    <th>Word</th>
+    <th>Detail</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let item of iWords, index as i">
+    <td>{{i+1}}</td>
+    <td>{{item.word}}</td>
+    <td><button [routerLink]="['/detail', item.word]" class="btn btn-warning">Translate</button></td>
+  </tr>
+  </tbody>
+</table>
+
+
