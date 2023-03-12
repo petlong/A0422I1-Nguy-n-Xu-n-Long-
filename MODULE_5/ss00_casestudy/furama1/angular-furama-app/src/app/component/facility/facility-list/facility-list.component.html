@@ -1,4 +1,5 @@
-
+<app-header></app-header>
+<app-navbar></app-navbar>
 <button class="btn btn-info" routerLink="/facility/create">Create Facility</button>
 <table class="table table-hover" width="100%">
   <thead>
@@ -17,7 +18,7 @@
   <tbody>
   <tr *ngFor="let item of facilities, index as i" (click)="this.facility=item">
     <!--  <tr *ngFor="let item of customers, index as i">-->
-    <td>{{i}}</td>
+    <td>{{i+1}}</td>
     <td>{{item.id}}</td>
     <td>{{item.name}}</td>
     <td>{{item.area}}</td>
@@ -26,7 +27,7 @@
     <td>{{item.floor}}</td>
     <td>{{item.other}}</td>
     <td><button [routerLink]="['/facility/edit', item.id]" class="btn btn-warning">Edit</button></td>
-    <!--    <td><button [routerLink]="['/delete', item.id]" class="btn btn-warning">Delete</button></td>-->
+        <td><button (click)="remove(item.id)" class="btn btn-warning">Delete</button></td>
   </tr>
   </tbody>
 </table>

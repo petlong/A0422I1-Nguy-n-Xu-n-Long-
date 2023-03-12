@@ -1,0 +1,184 @@
+<!--&lt;!&ndash;Reactive Form&ndash;&gt;-->
+<!--<br>&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;<br>-->
+<!--<form [formGroup]="customerForm" (ngSubmit)="addStudentWithReactive()" novalidate>-->
+<!--  <h3>Create Customer</h3>-->
+
+<!--  <label>ID</label>-->
+<!--  <input type="text" formControlName="id" name="id"><br>-->
+<!--  &lt;!&ndash;  <p style="color: red" *ngIf="customerForm.controls.id.hasError('required') && customerForm.controls.id.touched">Id không được để trống</p>&ndash;&gt;-->
+
+<!--  <label>Name</label>-->
+<!--  <input type="text" formControlName="name" name="name"><br>-->
+<!--  &lt;!&ndash;  <p style="color: red" *ngIf="customerForm.controls.name.hasError('minlength') && customerForm.controls.id.touched">Tên không được để trống</p>&ndash;&gt;-->
+<!--  &lt;!&ndash;  <p style="color: red" *ngIf="customerForm.hasError('invalidName')">Tên không phải là HaiTT</p>&ndash;&gt;-->
+
+<!--  <label>Date of birth</label>-->
+<!--  <input type="date" formControlName="dateOfBirth" name="dateOfBirth"><br>-->
+
+<!--  <label>ID Card</label>-->
+<!--  <input type="text" formControlName="idCard" name="idCard"><br>-->
+<!--  &lt;!&ndash;  <p style="color: red" *ngIf="customerForm.controls.point.hasError('invalidPoint')">Điểm không được nhỏ hơn 0</p>&ndash;&gt;-->
+
+<!--  <label>phone</label>-->
+<!--  <input type="text" formControlName="phone" name="phone"><br>-->
+<!--  &lt;!&ndash;  <p style="color: red" *ngIf="customerForm.controls.id.hasError('required') && customerForm.controls.id.touched">Id không đư&ndash;&gt;-->
+
+<!--  <label>Email</label>-->
+<!--  <input type="text" formControlName="email" name="email"><br>-->
+
+<!--  <label>Adress</label>-->
+<!--  <input type="text" formControlName="address" name="address"><br>-->
+
+<!--  <label>Type Customer</label>-->
+<!--  <input type="text" formControlName="typeCustomer" name="typeCustomer"><br>-->
+
+<!--  <button type="submit">Add Student</button>-->
+<!--</form>-->
+
+<h2 style="color: blue">Update Customer</h2>
+<form [formGroup]="customerForm" (ngSubmit)="addCustomerWithReactive()" novalidate>
+  <div class="mb-3 row">
+    <label for="id" class="col-sm-2 col-form-label">ID: </label>
+    <div class="col-sm-5">
+      <input
+        formControlName="id" name="id" type="text" id="id" class="form-control">
+    </div>
+    <div
+      *ngIf="!customerForm.controls.id?.valid && (customerForm.controls.id?.dirty || customerForm.controls.id?.touched)">
+      <div *ngIf="customerForm.controls.id.hasError('pattern')">
+        <p style="color: red"> ID have format: KH-XXXX </p>
+      </div>
+      <div *ngIf="customerForm.controls.id.hasError('required')">
+        <p style="color: red"> ID is not empty </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-3 row">
+    <label for="name" class="col-sm-2 col-form-label">Name: </label>
+    <div class="col-sm-5">
+      <input
+        formControlName="name" name="name" type="text" id= "name" class="form-control">
+    </div>
+    <div
+      *ngIf="!customerForm.controls.name?.valid && (customerForm.controls.name?.dirty || customerForm.controls.name?.touched)">
+      <div *ngIf="customerForm.controls.name.hasError('required')">
+        <p style="color: red"> Name is not empty </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-3 row">
+    <label class="col-sm-2 col-form-label">Gender</label>
+    <div class="col-sm-5>" style="width: 50%">
+      <div class="form-check" style="float: left">
+        <input class="form-check-input" type="radio"
+               formControlName="gender"
+               name="gender"
+               value="male">
+        <label class="form-check-label" >
+          Male
+        </label>
+      </div>
+      <div class="form-check" style="float: left; margin-left: 20px">
+        <input class="form-check-input" type="radio"
+               formControlName="gender"
+               name="gender"
+               value="female">
+        <label class="form-check-label">
+          Female
+        </label>
+      </div>
+    </div>
+    <div
+      *ngIf="!customerForm.controls.gender?.valid && (customerForm.controls.gender?.dirty || customerForm.controls.gender?.touched)">
+      <div *ngIf="customerForm.controls.gender.hasError('required')">
+        <p style="color: red"> Not empty </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-3 row">
+    <label for="dateOfBirth" class="col-sm-2 col-form-label">Date of birth: </label>
+    <div class="col-sm-5">
+      <input
+        formControlName="dateOfBirth" name="dateOfBirth" type="date" id= "dateOfBirth" class="form-control">
+    </div>
+  </div>
+
+  <div class="mb-3 row">
+    <label for="idCard" class="col-sm-2 col-form-label">ID Card: </label>
+    <div class="col-sm-5">
+      <input
+        formControlName="idCard" name="idCard" type="text" id="idCard" class="form-control">
+    </div>
+    <div
+      *ngIf="!customerForm.controls.idCard?.valid && (customerForm.controls.idCard?.dirty || customerForm.controls.idCard?.touched)">
+      <div *ngIf="customerForm.controls.idCard.hasError('pattern')">
+        <p style="color: red"> ID Card is not correct format. </p>
+      </div>
+      <div *ngIf="customerForm.controls.idCard.hasError('required')">
+        <p style="color: red"> ID Card is not empty </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-3 row">
+    <label for="phone" class="col-sm-2 col-form-label">Phone Number: </label>
+    <div class="col-sm-5">
+      <input
+        formControlName="phone" name="phone" type="text" id= "phone" class="form-control">
+    </div>
+    <div
+      *ngIf="!customerForm.controls.phone?.valid && (customerForm.controls.phone?.dirty || customerForm.controls.phone?.touched)">
+      <div *ngIf="customerForm.controls.phone.hasError('pattern')">
+        <p style="color: red"> Phone Number have format: 090xxxxxxx or 091xxxxxxx or (84)+90xxxxxxx or (84)+91xxxxxxx. </p>
+      </div>
+      <div *ngIf="customerForm.controls.phone.hasError('required')">
+        <p style="color: red"> Phone Number is not empty </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-3 row">
+    <label for="email" class="col-sm-2 col-form-label">Email</label>
+    <div class="col-sm-5">
+      <input
+        formControlName="email" name="email" type="text" class="form-control" id="email" value="email@example.com">
+    </div>
+    <div
+      *ngIf="!customerForm.controls.email?.valid && (customerForm.controls.email?.dirty || customerForm.controls.email?.touched)">
+      <div *ngIf="customerForm.controls.email.hasError('email')">
+        <p style="color: red"> Email is not correct format. </p>
+      </div>
+      <div *ngIf="customerForm.controls.email.hasError('required')">
+        <p style="color: red"> Email is not empty </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-3 row">
+    <label for="address" class="col-sm-2 col-form-label">Address</label>
+    <div class="col-sm-5">
+      <input
+        formControlName="address"
+        name="address"
+        type="address" class="form-control" id="address">
+    </div>
+  </div>
+
+  <div class="mb-3 row">
+    <label class="col-sm-2 col-form-label">Type of Customer</label>
+    <div class="col-sm-5">
+      <select class="form-select" aria-label="Default select example"
+              formControlName="typeCustomer"
+              name="typeCustomer"
+      >
+        <option selected value="">Open this select menu</option>
+        <option value="Vip">Vip</option>
+        <option value="Normal">Normal</option>
+      </select></div>
+  </div>
+
+  <button class="btn btn-danger" type="submit" [disabled]="!customerForm.valid">Submit</button>
+</form>

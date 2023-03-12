@@ -171,14 +171,15 @@
     <label class="col-sm-2 col-form-label">Type of Customer</label>
     <div class="col-sm-5">
       <select class="form-select" aria-label="Default select example"
-              formControlName="typeCustomer"
-              name="typeCustomer"
+              formControlName="customerType"
+              name="customerType"
       >
         <option selected value="">Open this select menu</option>
-        <option value="Vip">Vip</option>
-        <option value="Normal">Normal</option>
+<!--        <option *ngFor="let c of  customerTypes" value="{{c.id}}">{{c.name}}</option>-->
+        <option *ngFor="let customerType of  customerTypes" [ngValue]="customerType.id">{{customerType.name}}</option>
+<!--        <option value="Vip">Vip</option>-->
+<!--        <option value="Normal">Normal</option>-->
       </select></div>
   </div>
-
   <button class="btn btn-danger" type="submit" [disabled]="!customerForm.valid">Submit</button>
 </form>

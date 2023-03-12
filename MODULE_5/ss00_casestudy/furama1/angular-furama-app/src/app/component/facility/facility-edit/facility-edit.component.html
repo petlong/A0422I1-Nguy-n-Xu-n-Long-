@@ -1,1 +1,120 @@
-<p>facility-edit works!</p>
+<h2 style="color: blue">Edit Facility</h2>
+<label class="col-sm-2 col-form-label">ID: {{facility.id}}</label>
+<form [formGroup]="facilityForm" (ngSubmit)="editFacilityWithReactive(facility.id)" novalidate>
+<!--  <div class="mb-3 row">-->
+<!--    <label for="id" class="col-sm-2 col-form-label">ID: </label>-->
+<!--    <div class="col-sm-5">-->
+<!--      <input-->
+<!--        formControlName="id" name="id" type="text" id="id" class="form-control">-->
+<!--    </div>-->
+<!--    <div-->
+<!--      *ngIf="!facilityForm.controls.id?.valid && (facilityForm.controls.id?.dirty || facilityForm.controls.id?.touched)">-->
+<!--      <div *ngIf="facilityForm.controls.id.hasError('pattern')">-->
+<!--        <p style="color: red"> ID have format: DV-XXXX </p>-->
+<!--      </div>-->
+<!--      <div *ngIf="facilityForm.controls.id.hasError('required')">-->
+<!--        <p style="color: red"> ID is not empty </p>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+
+  <div class="mb-3 row">
+    <label for="name" class="col-sm-2 col-form-label">Name: </label>
+    <div class="col-sm-5">
+      <select class="form-select" aria-label="Default select example"
+              formControlName="name"
+              id="name"
+              name="name"
+      >
+        <option selected value="">Open this select menu</option>
+        <option value="Villa">Villa</option>
+        <option value="House">House</option>
+        <option value="Room">Room</option>
+      </select>
+    </div>
+    <div
+      *ngIf="!facilityForm.controls.name?.valid && (facilityForm.controls.name?.dirty || facilityForm.controls.name?.touched)">
+      <div *ngIf="facilityForm.controls.name.hasError('required')">
+        <p style="color: red"> Name is not empty </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-3 row">
+    <label for="area" class="col-sm-2 col-form-label">Area: </label>
+    <div class="col-sm-5">
+      <input
+        formControlName="area" name="area" type="number" id="area" class="form-control">
+    </div>
+    <div
+      *ngIf="!facilityForm.controls.area?.valid && (facilityForm.controls.area?.dirty || facilityForm.controls.area?.touched)">
+      <div *ngIf="facilityForm.controls.area.hasError('validateInteger')">
+        <p style="color: red"> Area must is integer </p>
+      </div>
+      <div *ngIf="facilityForm.controls.area.hasError('required')">
+        <p style="color: red"> Area is not empty </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-3 row">
+    <label for="cost" class="col-sm-2 col-form-label">Cost: </label>
+    <div class="col-sm-5">
+      <input
+        formControlName="cost" name="cost" type="number" id="cost" class="form-control">
+    </div>
+    <div
+      *ngIf="!facilityForm.controls.cost?.valid && (facilityForm.controls.cost?.dirty || facilityForm.controls.cost?.touched)">
+      <div *ngIf="facilityForm.controls.cost.hasError('validateInteger')">
+        <p style="color: red"> Cost must is integer </p>
+      </div>
+      <div *ngIf="facilityForm.controls.cost.hasError('required')">
+        <p style="color: red"> Cost is not empty </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-3 row">
+    <label for="standard" class="col-sm-2 col-form-label">Standard: </label>
+    <div class="col-sm-5">
+      <input
+        formControlName="standard" name="standard" type="text" id="standard" class="form-control">
+    </div>
+    <div
+      *ngIf="!facilityForm.controls.standard?.valid && (facilityForm.controls.standard?.dirty || facilityForm.controls.standard?.touched)">
+      <div *ngIf="facilityForm.controls.standard.hasError('required')">
+        <p style="color: red"> Standard is not empty </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-3 row">
+    <label for="floor" class="col-sm-2 col-form-label">Floor: </label>
+    <div class="col-sm-5">
+      <input
+        formControlName="floor" name="floor" type="number" id="floor" class="form-control">
+    </div>
+    <div
+      *ngIf="!facilityForm.controls.floor?.valid && (facilityForm.controls.floor?.dirty || facilityForm.controls.floor?.touched)">
+      <div *ngIf="facilityForm.controls.floor.hasError('validateInteger')">
+        <p style="color: red"> floor must is integer </p>
+      </div>
+      <div *ngIf="facilityForm.controls.cost.hasError('required')">
+        <p style="color: red"> floor is not empty </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-3 row">
+    <label for="other" class="col-sm-2 col-form-label">Other</label>
+    <div class="col-sm-5">
+      <input
+        formControlName="other"
+        name="other"
+        type="other" class="form-control" id="other">
+    </div>
+  </div>
+
+  <button class="btn btn-danger" type="submit" [disabled]="!facilityForm.valid">Submit</button>
+</form>
+

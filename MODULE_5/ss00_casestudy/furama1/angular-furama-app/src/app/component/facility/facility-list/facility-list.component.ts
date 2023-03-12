@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Facility} from "src/app/model/facility";
-import {FacilityService} from "src/app/service/facility/facility.service";
+import {Facility} from 'src/app/model/facility';
+import {FacilityService} from 'src/app/service/facility/facility.service';
 
 @Component({
   selector: 'app-facility-list',
@@ -11,20 +11,24 @@ export class FacilityListComponent implements OnInit {
 
   facilities: Facility[];
   facility: Facility = {
-    id: "",
-    name: "",
+    id: '',
+    name: '',
     area: 0,
     cost: 0,
-    standard: "",
+    standard: '',
     floor: 0,
-    other: "",
-  }
+    other: '',
+  };
 
   constructor(facilityService: FacilityService) {
     this.facilities = facilityService.getAll();
   }
 
   ngOnInit(): void {
+  }
+
+  remove(id: string) {
+    this.facilities.splice(this.facilities.findIndex(element => element.id === id), 1);
   }
 
 }

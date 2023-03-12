@@ -1,7 +1,7 @@
-import {ReactiveFormsModule} from "@angular/forms";
+import {HttpClientModule} from '@angular/common/http';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './layout/header/header.component';
@@ -16,6 +16,7 @@ import { FacilityListComponent } from './component/facility/facility-list/facili
 import { ContractCreateComponent } from './component/contract/contract-create/contract-create.component';
 import { ContractListComponent } from './component/contract/contract-list/contract-list.component';
 import { ContractEditComponent } from './component/contract/contract-edit/contract-edit.component';
+import { HomeComponent } from './layout/home/home/home.component';
 
 @NgModule({
   declarations: [
@@ -32,11 +33,14 @@ import { ContractEditComponent } from './component/contract/contract-edit/contra
     ContractCreateComponent,
     ContractListComponent,
     ContractEditComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
