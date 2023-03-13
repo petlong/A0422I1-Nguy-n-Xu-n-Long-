@@ -1,68 +1,32 @@
 {
   "customers": [
     {
-      "id": "KH0001",
-      "name": "Long",
+      "id": "KH-0011",
+      "name": "Xuan Long Nguyen",
       "gender": "male",
-      "dateOfBirth": "1998/01/01",
-      "idCard": "201560135",
-      "phone": "0935117090",
-      "email": "long@gmail.com",
-      "address": "Da Nang 1",
-      "customerType": {
-        "id": 1,
-        "name": "Vip"
-      }
-    },
-    {
-      "id": "KH0002",
-      "name": "Chương",
-      "gender": "male",
-      "dateOfBirth": "1998/01/01",
-      "idCard": "201560135",
-      "phone": "0935117090",
-      "email": "long@gmail.com",
-      "address": "Da Nang 1",
+      "dateOfBirth": "2023-03-15",
+      "idCard": "1111111111",
+      "phone": "0905117090",
+      "email": "xuanlongdmdn@gmail.com",
+      "address": "Lê Duẩn",
       "customerType": {
         "id": 2,
         "name": "Normal"
       }
     },
     {
-      "id": "KH-0004",
-      "name": "Xuan Long Nguyen",
-      "gender": "female",
-      "dateOfBirth": "2023-03-14",
-      "idCard": "1111111111",
-      "phone": "0905117090",
-      "email": "xuanlongdmdn@gmail.com",
-      "address": "Lê Duẩn"
-    },
-    {
-      "id": "KH-0005",
-      "name": "Xuan Long Nguyen",
-      "gender": "female",
-      "dateOfBirth": "2023-03-21",
-      "idCard": "1111111111",
-      "phone": "0905117090",
-      "email": "xuanlongdmdn@gmail.com",
-      "address": "Lê Duẩn",
-      "typeCustomer": {
-        "id": [
-          null
-        ]
-      }
-    },
-    {
-      "id": "KH-0009",
+      "id": "KH-0012",
       "name": "Xuan Long Nguyen",
       "gender": "male",
-      "dateOfBirth": "2023-03-21",
+      "dateOfBirth": "2023-03-07",
       "idCard": "1111111111",
       "phone": "0905117090",
       "email": "xuanlongdmdn@gmail.com",
       "address": "Lê Duẩn",
-      "customerType": 2
+      "customerType": {
+        "id": 2,
+        "name": "Normal"
+      }
     }
   ],
   "customerTypes": [

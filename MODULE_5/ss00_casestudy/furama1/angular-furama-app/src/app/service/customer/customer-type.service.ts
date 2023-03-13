@@ -1,6 +1,4 @@
 import {Injectable} from '@angular/core';
-import {Observable} from 'rxjs';
-import {Customer} from 'src/app/model/customer';
 import {CustomerType} from 'src/app/model/customer-type';
 
 @Injectable({

@@ -32,14 +32,14 @@
     <td>{{item.phone}}</td>
     <td>{{item.email}}</td>
     <td>{{item.address}}</td>
-<!--    <td>{{item.customerType.name}}</td>-->
-    <td>
-      <ng-container *ngFor="let c of customerTypes">
-        <div *ngIf="c.id == customer.customerType">
-          <span>{{c.name}}</span>
-        </div>
-      </ng-container>
-    </td>
+    <td>{{item.customerType.name}}</td>
+<!--    <td>-->
+<!--      <ng-container *ngFor="let c of customerTypes">-->
+<!--        <div *ngIf="c.id == customer.customerType">-->
+<!--          <span>{{c.name}}</span>-->
+<!--        </div>-->
+<!--      </ng-container>-->
+<!--    </td>-->
         <td><button [routerLink]="['/customer/edit', item.id]" class="btn btn-warning">Edit</button></td>
         <td><button (click)="removeCustomer(item.id)" class="btn btn-warning" type="button">Delete</button></td>
 <!--        <td><button class="btn btn-warning" data-toggle="modal" data-target="#deleteModal" type="button">Delete</button></td>-->
@@ -48,29 +48,27 @@
 </table>
 <app-footer></app-footer>
 
-<!-- Button trigger modal-->
-<!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">-->
-<!--  Launch demo modal-->
-<!--</button>-->
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Launch demo modal
+</button>
 
 <!-- Modal -->
-<!--<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">-->
-<!--  <div class="modal-dialog" role="document">-->
-<!--    <div class="modal-content">-->
-<!--      <div class="modal-header">-->
-<!--        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>-->
-<!--        <button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
-<!--          <span aria-hidden="true">&times;</span>-->
-<!--        </button>-->
-<!--      </div>-->
-<!--      <div class="modal-body">-->
-<!--        ...-->
-<!--      </div>-->
-<!--      <div class="modal-footer">-->
-<!--        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
-<!--        <button type="button" class="btn btn-primary">Save changes</button>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</div>-->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 
