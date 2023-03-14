@@ -12,8 +12,9 @@ import {consoleTestResultHandler} from 'tslint/lib/test';
   styleUrls: ['./customer-create.component.css']
 })
 export class CustomerCreateComponent implements OnInit {
-  constructor(private customerService: CustomerService, private router: Router, private customerTypeService: CustomerTypeService) { }
-  customerTypes: CustomerType [] = [];
+  constructor(private customerService: CustomerService, private router: Router,
+              private customerTypeService: CustomerTypeService) { }
+  customerTypes: CustomerType[];
 
   customerForm = new FormGroup({
     // id: new FormControl('', [Validators.required, Validators.min(1), Validators.max(2147483647)]),
@@ -31,7 +32,7 @@ export class CustomerCreateComponent implements OnInit {
   });
 
   ngOnInit(): void {
-    this.customerTypes = this.customerTypeService.getAll();
+    this.getAllcustomerType();
   }
 
   addCustomerWithReactive() {
@@ -42,6 +43,13 @@ export class CustomerCreateComponent implements OnInit {
     // };
     this.customerService.addCustomer(customer).subscribe(next => {
       this.router.navigateByUrl('customer');
+    });
+  }
+
+  getAllcustomerType() {
+    this.customerTypeService.getAll().subscribe(next => {
+      // @ts-ignore
+      this.customerTypes = next;
     });
   }
 }

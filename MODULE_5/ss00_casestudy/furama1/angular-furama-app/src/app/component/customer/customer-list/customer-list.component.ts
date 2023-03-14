@@ -29,7 +29,7 @@ export class CustomerListComponent implements OnInit {
 
   getAllCustomer() {
     this.customerService.getAll().subscribe(next => {
-      this.customerTypes = this.customerTypeService.getAll();
+      this.customerTypeService.getAll();
       console.log(next);
       // @ts-ignore
       this.customers = next;

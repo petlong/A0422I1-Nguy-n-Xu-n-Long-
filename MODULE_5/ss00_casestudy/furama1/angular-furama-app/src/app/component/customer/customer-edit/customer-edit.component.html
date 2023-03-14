@@ -21,7 +21,7 @@
     <label for="name" class="col-sm-2 col-form-label">Name: </label>
     <div class="col-sm-5">
       <input
-        formControlName="name" name="name" type="text" id= "name" class="form-control">
+        formControlName="name" name="name" type="text" id= "name" class="form-control" [ngModel]="customer.name">
     </div>
     <div
       *ngIf="!customerForm.controls.name?.valid && (customerForm.controls.name?.dirty || customerForm.controls.name?.touched)">
@@ -134,12 +134,10 @@
     <label class="col-sm-2 col-form-label">Type of Customer</label>
     <div class="col-sm-5">
       <select class="form-select" aria-label="Default select example"
-              formControlName="typeCustomer"
-              name="typeCustomer"
+              formControlName="customerType"
+              name="customerType"
       >
-        <option selected value="">Open this select menu</option>
-        <option value="Vip">Vip</option>
-        <option value="Normal">Normal</option>
+        <option *ngFor="let customerType of  customerTypes" [ngValue]="customerType">{{customerType.name}}</option>
       </select></div>
   </div>
   <button class="btn btn-danger" type="submit" [disabled]="!customerForm.valid">Submit</button>

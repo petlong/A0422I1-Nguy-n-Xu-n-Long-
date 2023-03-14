@@ -1,32 +1,32 @@
 {
   "customers": [
     {
-      "id": "KH-0011",
-      "name": "Xuan Long Nguyen",
-      "gender": "male",
-      "dateOfBirth": "2023-03-15",
+      "name": "Xuan Long Nguyen2222111",
+      "gender": "female",
+      "dateOfBirth": "2023-03-14",
       "idCard": "1111111111",
       "phone": "0905117090",
       "email": "xuanlongdmdn@gmail.com",
       "address": "Lê Duẩn",
       "customerType": {
         "id": 2,
-        "name": "Normal"
-      }
+        "name": "Normal "
+      },
+      "id": "KH-0004"
     },
     {
-      "id": "KH-0012",
-      "name": "Xuan Long Nguyen",
-      "gender": "male",
-      "dateOfBirth": "2023-03-07",
+      "name": "Xuan Long Nguyen1111",
+      "gender": "female",
+      "dateOfBirth": "2023-03-22",
       "idCard": "1111111111",
       "phone": "0905117090",
       "email": "xuanlongdmdn@gmail.com",
       "address": "Lê Duẩn",
       "customerType": {
         "id": 2,
-        "name": "Normal"
-      }
+        "name": "Normal "
+      },
+      "id": "KH-0001"
     }
   ],
   "customerTypes": [
